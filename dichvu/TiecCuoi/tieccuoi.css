@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #fffaf6;
+  color: #333;
+}
+
+/* ===== SLIDE ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #fff3e6, #ffe5d0);
+}
+
+.hero-text {
+  flex: 1;
+  animation: fadeInLeft 1s ease;
+}
+
+.hero-text h1 {
+  color: #c86b27;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: right;
+}
+
+.hero-image img {
+  width: 90%;
+  border-radius: 25px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  display: inline-block;
+  background: #c86b27;
+  color: #fff;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #a8521e;
+  transform: translateY(-3px);
+}
+
+/* ===== GIỚI THIỆU ===== */
+.highlights {
+  background: #fff7f0;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.highlights h2 {
+  font-size: 2.2rem;
+  color: #c86b27;
+  margin-bottom: 50px;
+}
+
+.highlight-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.highlight-card {
+  background: #fff;
+  border-radius: 20px;
+  width: 300px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.highlight-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-card img {
+  width: 70px;
+  margin-bottom: 20px;
+}
+
+.highlight-card h3 {
+  color: #a8521e;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+/* ===== MÂM TIỆC ===== */
+.mam-section {
+  text-align: center;
+  padding: 80px 10%;
+  background: #fff;
+}
+
+.mam-section h2 {
+  font-size: 2.3rem;
+  color: #c86b27;
+  margin-bottom: 10px;
+}
+
+.mam-section p {
+  color: #666;
+  margin-bottom: 50px;
+  font-size: 1rem;
+}
+
+.mam-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.mam-card {
+  background: #fffaf6;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.4s;
+}
+
+.mam-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.mam-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.mam-content {
+  padding: 25px;
+}
+
+.mam-content h3 {
+  color: #a8521e;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.mam-content p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+/* Hiệu ứng */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

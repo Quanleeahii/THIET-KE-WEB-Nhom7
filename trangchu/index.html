@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GâuGâu Food</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome (icon) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Home CSS -->
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+  <body>
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-- ==== NAV ==== -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light fixed-top custom-navbar"
+    >
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand fw-bold" href="index.html">
+          GâuGâu <span class="text-danger">.</span> Food
+        </a>
+        <!-- Toggle menu -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link smoothScroll" href="#home">TRANG CHỦ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link smoothScroll" href="#about">GIỚI THIỆU</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link smoothScroll" href="#team">DỊCH VỤ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link smoothScroll" href="#menu">THỰC ĐƠN</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link smoothScroll" href="#contact">LIÊN HỆ</a>
+            </li>
+          </ul>
+          <!-- Contact number / In4 -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Gọi Ngay! <i class="fa fa-phone text-danger"></i> 9999.999.999
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#footer" class="btn btn-danger ms-3">ĐẶT TIỆC</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-- ==== SLIDE ==== -->
+    <section id="home" class="slider">
+      <div
+        id="homeCarousel"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="4000"
+      >
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div
+            class="carousel-item active"
+            style="background-image: url(Img/Dat_Tiec_Slide.jpg)"
+          >
+            <div class="carousel-overlay"></div>
+            <div class="carousel-caption text-start">
+              <h3>GâuGâu Food</h3>
+              <h1>
+                Không chỉ là món ăn, mà là niềm vui sum vầy cùng GâuGâu Food.
+              </h1>
+              <a href="#team" class="btn btn-outline-light">Đặt tiệc ngay</a>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div
+            class="carousel-item"
+            style="background-image: url(Img/Gioi_Thieu_Slide.jpg)"
+          >
+            <div class="carousel-overlay"></div>
+            <div class="carousel-caption text-start">
+              <h3>Khoảnh Khắc Trọn Vẹn</h3>
+              <h1>Khám phá câu chuyện phía sau hương vị GâuGâu Food.</h1>
+              <a href="#menu" class="btn btn-outline-light">Giới thiệu</a>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div
+            class="carousel-item"
+            style="background-image: url(Img/Menu_Slide.jpg)"
+          >
+            <div class="carousel-overlay"></div>
+            <div class="carousel-caption text-start">
+              <h3>Ẩm Thực Hoàn Hảo</h3>
+              <h1>Từng món ăn – một niềm vui trọn vẹn cùng GâuGâu Food.</h1>
+              <a href="#contact" class="btn btn-outline-light">Khám phá Menu</a>
+            </div>
+          </div>
+        </div>
+        <!-- Nút điều hướng -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#homeCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#homeCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </section>
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-- ==== GIỚI THIỆU ==== -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h3 class="section-title mb-4 text-danger fw-bold">
+            <i class="bi bi-chevron-down me-2"></i> Giới thiệu chung
+          </h3>
+          <hr class="w-75 mx-auto mb-5" />
+        </div>
+        <div class="row align-items-center">
+          <!-- Hình ảnh giới thiệu -->
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <img
+              src="Img/Nha_Hang.jpg"
+              alt="GâuGâuFood"
+              class="img-fluid rounded shadow"
+            />
+          </div>
+          <!-- Nội dung giới thiệu -->
+          <div class="col-lg-6">
+            <h5 class="text-danger fw-bold mb-2">Về Chúng Tôi</h5>
+            <h2 class="fw-bold mb-3">GâuGâu Food</h2>
+            <p class="mb-3">
+              Được kế thừa tinh hoa từ <strong>MewMew Food</strong> (thành lập
+              năm 2019), <strong>GâuGâu Food</strong> nhanh chóng khẳng định vị
+              thế là đơn vị tiên phong trong lĩnh vực ẩm thực lưu động và tổ
+              chức tiệc trọn gói tại Đông Anh. Với phong cách phục vụ tận tâm và
+              menu linh hoạt, chúng tôi mang đến trải nghiệm ẩm thực tiện lợi,
+              sang trọng và đầy cảm xúc – dù là một mâm cỗ nhỏ hay buổi tiệc
+              lớn.
+            </p>
+            <p class="mb-4">
+              Tính đến nay, <strong>GâuGâu Food</strong> đã phục vụ thành công
+              hơn <strong>3.636 khách hàng</strong> trong hàng trăm sự kiện từ
+              tiệc công ty, sinh nhật, cưới hỏi đến hội nghị quy mô lớn. Mỗi bữa
+              tiệc là một hành trình chỉn chu, nơi chúng tôi đặt trọn tâm huyết
+              để mang đến hương vị trọn vẹn và trải nghiệm đáng nhớ nhất.
+            </p>
+            <a href="#menu" class="btn btn-outline-danger">TÌM HIỂU THÊM</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-- ===== THỐNG KÊ ===== -->
+    <section id="stats" class="py-5 text-center text-white">
+      <div class="stats-overlay">
+        <div class="container">
+          <div class="row">
+            <!-- Năm -->
+            <div class="col-md-3 mb-4 mb-md-0">
+              <i class="fa-solid fa-champagne-glasses fa-3x mb-3"></i>
+              <h3 class="text-warning fw-bold">5</h3>
+              <p>
+                Hơn <b>5 năm</b> kinh nghiệm mang đến những buổi tiệc trọn vẹn
+                và đáng nhớ
+              </p>
+            </div>
+            <!-- Tiệc -->
+            <div class="col-md-3 mb-4 mb-md-0">
+              <i class="fa-solid fa-utensils fa-3x mb-3"></i>
+              <h3 class="text-warning fw-bold">3,600</h3>
+              <p>
+                Đã phục vụ hơn <b>3.600 buổi tiệc</b> lưu động khắp Đông Anh và
+                lân cận
+              </p>
+            </div>
+            <!-- Đối tác -->
+            <div class="col-md-3 mb-4 mb-md-0">
+              <i class="fa-solid fa-handshake fa-3x mb-3"></i>
+              <h3 class="text-warning fw-bold">200</h3>
+              <p>
+                Được hơn <b>200 doanh nghiệp và tổ chức</b> tin tưởng đồng hành
+                trong các sự kiện lớn nhỏ
+              </p>
+            </div>
+            <!-- Món -->
+            <div class="col-md-3">
+              <i class="fa-solid fa-bowl-food fa-3x mb-3"></i>
+              <h3 class="text-warning fw-bold">100+</h3>
+              <p>Đa dạng hơn <b>100 món</b> ngon – phục vụ trọn gói từ A-Z</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-- ==== DỊCH VỤ ==== -->
+    <section id="service" class="service-section py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h3 class="section-title mb-4 text-danger fw-bold">
+            <i class="bi bi-basket2-fill me-2"></i> Dịch vụ GâuGâu
+          </h3>
+          <hr class="w-75 mx-auto mb-5" />
+        </div>
+        <div class="row align-items-center mb-4">
+          <!-- Nội dung -->
+          <div class="col-md-4 text-md-start text-center">
+            <h5 class="text-danger fw-bold mb-2">Dịch Vụ</h5>
+            <h2 class="service-subtitle mb-1">GâuGâu Food</h2>
+            <p class="service-desc">
+              <strong>GâuGâu Food</strong> hiểu rằng mỗi bữa tiệc đều là một dịp
+              đặc biệt để gắn kết gia đình và bạn bè. Vì thế, chúng tôi mang đến
+              dịch vụ đặt cỗ tại nhà 24h, phục vụ nhanh chóng, chu đáo và linh
+              hoạt theo yêu cầu của bạn. Dù chỉ cần một mâm đơn giản cho buổi
+              sum họp ấm cúng hay một buổi tiệc hoành tráng cho hàng trăm khách,
+              đội ngũ <strong>GâuGâu Food</strong> luôn sẵn sàng chuẩn bị mọi
+              thứ — từ món ăn, bàn ghế đến khâu trang trí — giúp bạn tận hưởng
+              trọn vẹn niềm vui mà không phải bận tâm điều gì.
+            </p>
+          </div>
+          <div class="col-md-8">
+            <div class="row g-3">
+              <!-- Tiệc gia đình -->
+              <div class="col-md-4 col-12">
+                <div class="service-card">
+                  <img src="Img/Tiec_Gia_Dinh.jpg" alt="Tiệc gia đình" />
+                  <div class="service-overlay">TIỆC GIA ĐÌNH</div>
+                </div>
+              </div>
+              <!-- Mâm cỗ cúng -->
+              <div class="col-md-4 col-12">
+                <div class="service-card">
+                  <img src="Img/Mam_Gio.jpg" alt="Mâm cỗ cúng" />
+                  <div class="service-overlay">MÂM CỖ CÚNG</div>
+                </div>
+              </div>
+              <!-- Tiệc cưới hỏi -->
+              <div class="col-md-4 col-12">
+                <div class="service-card">
+                  <img src="Img/Tiec_Cuoi.jpg" alt="Tiệc cưới hỏi" />
+                  <div class="service-overlay">TIỆC CƯỚI HỎI</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-- ==== FEEDBACK KHÁCH HÀNG ==== -->
+    <section id="feedback" class="py-5 text-center">
+      <div class="container">
+        <h3 class="section-title mb-4 text-danger fw-bold">
+          <i class="bi bi-chat-dots-fill me-2"></i> PHẢN HỒI KHÁCH HÀNG
+        </h3>
+        <hr class="w-75 mx-auto mb-5" />
+        <div class="row justify-content-center">
+          <!-- Feedback 1 -->
+          <div class="col-md-3 col-sm-6 mb-4 feedback-item">
+            <img
+              src="Img/Khach_Hang_1.jpg"
+              alt="Khách hàng 1"
+              class="feedback-img mb-3"
+            />
+            <div class="stars text-warning mb-2">★★★★★</div>
+            <p class="feedback-text text-danger fst-italic small">
+              Món cỗ tại GâuGâu luôn giữ được hương vị truyền thống đậm đà, được
+              chế biến khéo léo và đảm bảo nóng sốt khi đến tay khách hàng. Sự
+              tươi ngon của nguyên liệu làm nên chất lượng tiệc hoàn hảo.
+            </p>
+            <p class="fw-semibold">Lê Minh Quân</p>
+          </div>
+          <!-- Feedback 2 -->
+          <div class="col-md-3 col-sm-6 mb-4 feedback-item">
+            <img
+              src="Img/Khach_Hang_2.jpg"
+              alt="Khách hàng 2"
+              class="feedback-img mb-3"
+            />
+            <div class="stars text-warning mb-2">★★★★★</div>
+            <p class="feedback-text text-danger fst-italic small">
+              Dịch vụ đặt tiệc cực kỳ chuyên nghiệp và chu đáo, từ khâu tư vấn
+              thực đơn đến bày biện. Chỉ cần gọi GâuGâu, gia chủ hoàn toàn thảnh
+              thơi tận hưởng niềm vui trọn vẹn bên khách quý.
+            </p>
+            <p class="fw-semibold">Nguyễn Anh Tú</p>
+          </div>
+          <!-- Feedback 3 -->
+          <div class="col-md-3 col-sm-6 mb-4 feedback-item">
+            <img
+              src="Img/Khach_Hang_3.jpg"
+              alt="Khách hàng 3"
+              class="feedback-img mb-3"
+            />
+            <div class="stars text-warning mb-2">★★★★★</div>
+            <p class="feedback-text text-danger fst-italic small">
+              Thực đơn cỗ vô cùng đa dạng, phù hợp với mọi sự kiện, từ giỗ chạp
+              truyền thống đến tiệc tân gia hiện đại. Mức giá hợp lý so với chất
+              lượng và sự tiện lợi tuyệt vời mà dịch vụ mang lại.
+            </p>
+            <p class="fw-semibold">Ngô Thế Tùng</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-- ==== FOOTER ==== -->
+    <footer id="footer" class="footer mt-5 text-white">
+      <div class="footer-top py-5">
+        <div class="container">
+          <div class="row gy-4">
+            <!-- Về chúng tôi -->
+            <div class="col-md-4">
+              <h5 class="mb-3 fw-bold text-warning">Về chúng tôi</h5>
+              <p>
+                Với thông điệp <strong>"Enjoy Happy Time"</strong> - GâuGâu mang
+                cỗ tiệc về, cả nhà vui vẻ chẳng hề bận tâm.
+              </p>
+              <div class="social-icons mt-3">
+                <a href="#" class="me-3 text-white"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="#" class="me-3 text-white"
+                  ><i class="bi bi-tiktok"></i
+                ></a>
+                <a href="#" class="me-3 text-white"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+                <a href="#" class="me-3 text-white"
+                  ><i class="bi bi-envelope"></i
+                ></a>
+              </div>
+            </div>
+            <!-- Liên hệ -->
+            <div class="col-md-4">
+              <h5 class="mb-3 fw-bold text-warning">Liên hệ</h5>
+              <p><strong>Công ty TNHH Tổ Chức Sự Kiện Đông Anh</strong></p>
+              <p>
+                <i class="bi bi-geo-alt-fill text-warning"></i> Tòa nhà Nhật
+                Tân, 151 Ngọc Chi, Vĩnh Ngọc, Đông Anh, Hà Nội
+              </p>
+              <p>
+                <i class="bi bi-telephone-fill text-warning"></i> 9999.999.999
+              </p>
+              <p>
+                <i class="bi bi-envelope-fill text-warning"></i>
+                gaugau4953@gmail.com
+              </p>
+              <p><i class="bi bi-globe text-warning"></i> www.gaugaufood.vn</p>
+            </div>
+            <!-- Chính sách -->
+            <div class="col-md-4">
+              <h5 class="mb-3 fw-bold text-warning">Chính sách</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#" class="text-white text-decoration-none"
+                    >Chính sách bảo mật</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none"
+                    >Điều khoản thỏa thuận</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none"
+                    >Quy chế hoạt động</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none"
+                    >Cơ chế giải quyết khiếu nại</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Bản quyền -->
+      <div class="footer-bottom text-center py-3">
+        <p class="mb-0">
+          Copyright © 2025
+          <span class="text-warning">GâuGâu Food - Đặt cỗ tại nhà </span>
+        </p>
+      </div>
+    </footer>
+    <button
+      id="backToTop"
+      class="btn btn-danger position-fixed bottom-0 end-0 m-4"
+      style="display: none; z-index: 999"
+    >
+      <i class="fa fa-arrow-up"></i>
+    </button>
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Home JS -->
+    <script src="js/home.js"></script>
+  </body>
+</html>
