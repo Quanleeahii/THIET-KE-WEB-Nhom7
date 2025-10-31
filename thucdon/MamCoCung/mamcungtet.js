@@ -61,13 +61,11 @@ sliderContainer.addEventListener("mouseleave", startAutoSlide);
 createDots();
 startAutoSlide();
 
-
-
 // ==================== HIỆU ỨNG SCROLL (REVEAL) ====================
 const revealElements = document.querySelectorAll(".reveal");
 function revealOnScroll() {
   const trigger = window.innerHeight * 0.85;
-  revealElements.forEach(el => {
+  revealElements.forEach((el) => {
     const top = el.getBoundingClientRect().top;
     if (top < trigger) el.classList.add("active");
   });
@@ -75,4 +73,4 @@ function revealOnScroll() {
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
 
-
+hjjkkej;
