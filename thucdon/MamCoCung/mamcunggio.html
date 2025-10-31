@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mâm Cỗ Truyền Thống</title>
+
+   
+    <!-- style css -->
+    <link rel="stylesheet" href="./mamcunggio/css/style.css" />
+     <meta
+      name="description"
+      content="GâuGâu Food chuyên đặt tiệc tại nhà, mâm cỗ cúng, tiệc cưới hỏi, tiệc gia đình tại Đông Anh. Dịch vụ nhanh chóng, chuyên nghiệp, hương vị truyền thống và hiện đại chuẩn Việt."
+    />
+    <meta name="author" content="GâuGâu Food Team" />
+    <meta name="robots" content="index, follow" />
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome (icon) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- Font Roboto -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+     <!-- ==== NAV ==== -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light fixed-top custom-navbar"
+    >
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand fw-bold" href="index.html">
+          GâuGâu <span class="text-danger">.</span> Food
+        </a>
+        <!-- Toggle menu -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link smoothScroll" href="#home">TRANG CHỦ</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link smoothScroll"
+                href="../gioithieu/gioithieu.html"
+                >GIỚI THIỆU</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dichVuDropdown"
+                role="button"
+              >
+                DỊCH VỤ
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dichVuDropdown">
+                <li><a class="dropdown-item" href="#mamco">MÂM CỖ CÚNG</a></li>
+                <li>
+                  <a class="dropdown-item" href="#giadinh">TIỆC GIA ĐÌNH</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#cuoihoi">TIỆC CƯỚI HỎI</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link smoothScroll"
+                href="../gioithieu/gioithieu.html"
+                >THỰC ĐƠN</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link smoothScroll" href="../lienhe/lienhe.html"
+                >LIÊN HỆ</a
+              >
+            </li>
+          </ul>
+          <!-- Contact number / In4 -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Gọi Ngay! <i class="fa fa-phone text-danger"></i> 9999.999.999
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="../lienhe" class="btn btn-danger ms-3">ĐẶT TIỆC</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- /______________________________________________________________________________________________________/ -->
+
+    <main>
+      <!-- MENU ROW  -->
+      <section id="menu-row" class="menu-section container">
+        <h2 class="section-title">Danh sách thực đơn</h2>
+
+        <div class="menu-row">
+          <!-- Thực Đơn 1 -->
+          <div class="menu-card reveal">
+            <div class="ribbon">
+              <span>Thực Đơn 1</span>
+              <p>1.710.000 đ</p>
+            </div>
+
+            <div class="images">
+              <img src="./mamcunggio/img/1.jfif" alt="Món 1" />
+              <img src="./mamcunggio/img/2.jfif" alt="Món 2" />
+              <img src="./mamcunggio/img/3.jfif" alt="Món 3" />
+              <img src="./mamcunggio/img/4.jfif" alt="Món 4" />
+              <img src="./mamcunggio/img/5.jfif" alt="Món 5" />
+              <img src="./mamcunggio/img/6.jfif" alt="Món 6" />
+            </div>
+
+            <ul class="dish-list">
+              <li>
+                Súp gà song nấm <span>200.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Nộm đu đủ bò khô <span>250.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Gà hấp lá chanh (nửa con) <span>370.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Cá lăng chiên hoàng bào <span>460.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Giò bò đặc biệt<span>300.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Xôi Hoàng Phố<span>130.000đ</span><input type="checkbox" />
+              </li>
+            </ul>
+          </div>
+
+          <!-- Thực Đơn 2 -->
+          <div class="menu-card reveal">
+            <div class="ribbon">
+              <span>Thực Đơn 2</span>
+              <p>1.640.000 đ</p>
+            </div>
+
+            <div class="images">
+              <img src="./mamcunggio/img/7.jfif" alt="Món A" />
+              <img src="./mamcunggio/img/8.jfif" alt="Món B" />
+              <img src="./mamcunggio/img/9.jfif" alt="Món C" />
+              <img src="./mamcunggio/img/10.jfif" alt="Món D" />
+              <img src="./mamcunggio/img/11.jfif" alt="Món E" />
+              <img src="./mamcunggio/img/12.jfif" alt="Món F" />
+            </div>
+
+            <ul class="dish-list">
+              <li>
+                Súp gà ngô nấm<span>200.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Nộm sứa ngũ sắc<span>160.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Gà ta hấp lá chanh (nửa con) <span>360.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Bò sốt tiêu đen & bánh mỳ<span>410.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Cá diêu hồng chiên cốm<span>380.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Xôi Hoàng Phố ruốc hành <span>130.000đ</span
+                ><input type="checkbox" />
+              </li>
+            </ul>
+          </div>
+
+          <!-- Thực Đơn 3 -->
+          <div class="menu-card reveal">
+            <div class="ribbon">
+              <span>Thực Đơn 3</span>
+              <p>1.990.000 đ</p>
+            </div>
+
+            <div class="images">
+              <img src="./mamcunggio/img/1.jfif" alt="Món X" />
+              <img src="./mamcunggio/img/14.jfif" alt="Món Y" />
+              <img src="./mamcunggio/img/15.jfif" alt="Món Z" />
+              <img src="./mamcunggio/img/16.jfif" alt="Món W" />
+              <img src="./mamcunggio/img/17.jfif" alt="Món V" />
+              <img src="./mamcunggio/img/18.jfif" alt="Món U" />
+            </div>
+
+            <ul class="dish-list">
+              <li>
+                Súp gà song nấm <span>200.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Nộm ngũ sắc bò khô<span>200.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Gà hấp lá chanh <span>370.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Cá Diêu Hồng chiên Hoàng Bào<span>400.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Bò sốt tiêu xanh & bánh bao<span>420.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Giò bò ước lễ<span>300.000đ</span><input type="checkbox" />
+              </li>
+            </ul>
+          </div>
+          <!-- Thực Đơn 4 -->
+          <div class="menu-card reveal">
+            <div class="ribbon">
+              <span>Thực Đơn 4</span>
+              <p>1.660.000 đ</p>
+            </div>
+            <div class="images">
+              <img src="./mamcunggio/img/8.jfif" alt="Món A" />
+              <img src="./mamcunggio/img/20.jfif" alt="Món B" />
+              <img src="./mamcunggio/img/21.jfif" alt="Món C" />
+              <img src="./mamcunggio/img/22.jfif" alt="Món D" />
+              <img src="./mamcunggio/img/23.jfif" alt="Món E" />
+              <img src="./mamcunggio/img/24.jfif" alt="Món F" />
+            </div>
+
+            <ul class="dish-list">
+              <li>
+                Nộm sứa ngũ sắc <span>160.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Ngô Mỹ chiên bơ<span>140.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Gà ta hấp lá chanh<span>360.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Tôm Sú chiên an lạc (6 con)<span>500.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Bò xào măng trúc <span>370.000đ</span><input type="checkbox" />
+              </li>
+              <li>Cơm Tấm <span>130.000đ</span><input type="checkbox" /></li>
+            </ul>
+          </div>
+          <!-- Thực đơn 5 -->
+          <div class="menu-card reveal">
+            <div class="ribbon">
+              <span>Thực Đơn 5</span>
+              <p>1.880.000 đ</p>
+            </div>
+
+            <div class="images">
+              <img src="./mamcunggio/img/25.jfif" alt="Món A" />
+              <img src="./mamcunggio/img/26.jfif" alt="Món B" />
+              <img src="./mamcunggio/img/15.jfif" alt="Món C" />
+              <img src="./mamcunggio/img/28.jfif" alt="Món D" />
+              <img src="./mamcunggio/img/29.jfif" alt="Món E" />
+              <img src="./mamcunggio/img/30.jfif" alt="Món F" />
+            </div>
+
+            <ul class="dish-list">
+              <li>
+                Súp gà nấm hương <span>210.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Nộm đu đủ bò khô <span>250.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Gà hấp lá chanh <span>370.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Tôm sú chiên Hoàng Bào (6 con) <span>500.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>Bò lúc lắc<span>370.000đ</span><input type="checkbox" /></li>
+              <li>
+                Xôi vò hạt sen <span>180.000đ</span><input type="checkbox" />
+              </li>
+            </ul>
+          </div>
+          <!-- Thực đơn 6 -->
+          <div class="menu-card reveal">
+            <div class="ribbon">
+              <span>Thực Đơn 6</span>
+              <p>1.480.000 đ</p>
+            </div>
+
+            <div class="images">
+              <img src="./mamcunggio/img/7.jfif" alt="Món A" />
+              <img src="./mamcunggio/img/32.jfif" alt="Món B" />
+              <img src="./mamcunggio/img/14.jfif" alt="Món C" />
+              <img src="./mamcunggio/img/34.jfif" alt="Món D" />
+              <img src="./mamcunggio/img/35.jfif" alt="Món E" />
+              <img src="./mamcunggio/img/36.jfif" alt="Món F" />
+            </div>
+
+            <ul class="dish-list">
+              <li>
+                Súp gà ngô nấm<span>200.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Gà cánh tiên (1 con)<span>500.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Nộm ngũ sắc bò khô <span>200.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Nem hải sản (6 cái)<span>270.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>Giò lụa <span>140.000đ</span><input type="checkbox" /></li>
+              <li>Xôi gấc<span>170.000đ</span><input type="checkbox" /></li>
+            </ul>
+          </div>
+          <!-- thực đơn 7 -->
+          <div class="menu-card reveal">
+            <div class="ribbon">
+              <span>Thực Đơn 7</span>
+              <p>1.390.000 đ</p>
+            </div>
+
+            <div class="images">
+              <img src="./mamcunggio/img/1.jfif" alt="Món A" />
+              <img src="./mamcunggio/img/38.jfif" alt="Món B" />
+              <img src="./mamcunggio/img/39.jfif" alt="Món C" />
+              <img src="./mamcunggio/img/40.jfif" alt="Món D" />
+              <img src="./mamcunggio/img/41.jfif" alt="Món E" />
+              <img src="./mamcunggio/img/6.jfif" alt="Món F" />
+            </div>
+
+            <ul class="dish-list">
+              <li>
+                Súp gà song nấm<span>200.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Nem cua bể (6 cái) <span>290.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Cá lăng chiên hoàng bào <span>460.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Củ quả luộc thập cẩm muối vừng <span>140.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Canh mọc nấm tươi <span>170.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Xôi Hoàng Phố <span>130.000đ</span><input type="checkbox" />
+              </li>
+            </ul>
+          </div>
+          <!-- Thực đơn 8 -->
+          <div class="menu-card reveal">
+            <div class="ribbon">
+              <span>Thực Đơn 8</span>
+              <p>1.690.000 đ</p>
+            </div>
+
+            <div class="images">
+              <img src="./mamcunggio/img/25.jfif" alt="Món A" />
+              <img src="./mamcunggio/img/2.jfif" alt="Món B" />
+              <img src="./mamcunggio/img/45.jfif" alt="Món C" />
+              <img src="./mamcunggio/img/46.jfif" alt="Món D" />
+              <img src="./mamcunggio/img/47.jfif" alt="Món E" />
+              <img src="./mamcunggio/img/48.jfif" alt="Món F" />
+            </div>
+
+            <ul class="dish-list">
+              <li>
+                Súp gà nấm hương <span>210.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Nem hải sản Phú Quốc (6 cái)<span>290.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Bê xào sả ớt<span>450.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Cá Diêu Hồng hấp xì dầu <span>430.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Ngọn Su Su xào tỏi<span>140.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Canh Ngao chua <span>170.000đ</span><input type="checkbox" />
+              </li>
+            </ul>
+          </div>
+          <!-- Thực đơn 9 -->
+          <div class="menu-card reveal">
+            <div class="ribbon">
+              <span>Thực Đơn 9</span>
+              <p>1.700.000 đ</p>
+            </div>
+
+            <div class="images">
+              <img src="./mamcunggio/img/1.jfif" alt="Món A" />
+              <img src="./mamcunggio/img/26.jfif" alt="Món B" />
+              <img src="./mamcunggio/img/51.jfif" alt="Món C" />
+              <img src="./mamcunggio/img/52.jfif" alt="Món D" />
+              <img src="./mamcunggio/img/53.jfif" alt="Món E" />
+              <img src="./mamcunggio/img/54.jfif" alt="Món F" />
+            </div>
+
+            <ul class="dish-list">
+              <li>
+                Súp gà song nấm <span>200.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Nộm đu đủ bò khô<span>250.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Tôm sú chiên hoàng bào <span>500.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Bò sốt tiêu đen & bánh mỳ <span>410.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Cải chíp sốt nấm <span>150.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Canh măng sườn <span>190.000đ</span><input type="checkbox" />
+              </li>
+            </ul>
+          </div>
+          <!-- Thực đơn 10 -->
+          <div class="menu-card reveal">
+            <div class="ribbon">
+              <span>Thực Đơn 10</span>
+              <p>1.730.000 đ</p>
+            </div>
+
+            <div class="images">
+              <img src="./mamcunggio/img/7.jfif" alt="Món A" />
+              <img src="./mamcunggio/img/8.jfif" alt="Món B" />
+              <img src="./mamcunggio/img/15.jfif" alt="Món C" />
+              <img src="./mamcunggio/img/58.jfif" alt="Món D" />
+              <img src="./mamcunggio/img/59.jfif" alt="Món E" />
+              <img src="./mamcunggio/img/60.jfif" alt="Món F" />
+            </div>
+
+            <ul class="dish-list">
+              <li>
+                Súp gà ngô nấm <span>200.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Nộm sứa ngũ sắc <span>160.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Gà ta hấp lá chanh <span>360.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Cá diêu hồng chiên cốm <span>380.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Tôm sú chiên An Lạc<span>500.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Xôi Hoàng Phố ruốc hành <span>130.000đ</span
+                ><input type="checkbox" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDER  -->
+      <section id="thuc-don" class="thuc-don">
+        <h2 class="title">🍽️ Hình ảnh <strong>Thực đơn</strong></h2>
+
+        <div class="slider-container reveal">
+          <div class="slider" id="menuSlider">
+            <div class="slide">
+              <img
+                src="./mamcunggio/img/21.jfif"
+                alt="Gà luộc"
+              />
+              <p class="caption">Gà luộc nguyên con</p>
+            </div>
+            <div class="slide">
+              <img
+                src="./mamcunggio/img/36.jfif"
+                alt="Xôi gấc"
+              />
+              <p class="caption">Xôi gấc</p>
+            </div>
+            <div class="slide">
+              <img
+                src="./mamcunggio/img/59.jfif"
+                alt="Bánh chưng"
+              />
+              <p class="caption">Tôm chiên siêu ngol</p>
+            </div>
+            <div class="slide">
+              <img
+                src="./mamcunggio/img/60.jfif"
+                alt="Giò chả"
+              />
+              <p class="caption">Xôi hoàng phố ruốc hành</p>
+            </div>
+          </div>
+
+          <button class="btn prev" aria-label="Previous" id="prevBtn">
+            &#10094;
+          </button>
+          <button class="btn next" aria-label="Next" id="nextBtn">
+            &#10095;
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="footer mt-5 text-white">
+      <div class="footer-top py-5">
+        <div class="container-fluid px-5">
+          <div class="row gy-4 justify-content-between">
+            <!-- Về chúng tôi -->
+            <div class="col-md-4">
+              <h5 class="mb-3 fw-bold text-warning">Về chúng tôi</h5>
+              <p>
+                Với thông điệp <strong>"Enjoy Happy Time"</strong> - GâuGâu mang
+                cỗ tiệc về, cả nhà vui vẻ chẳng hề bận tâm.
+              </p>
+              <div class="social-icons mt-3">
+                <a href="#" class="me-3 text-white"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="#" class="me-3 text-white"
+                  ><i class="bi bi-tiktok"></i
+                ></a>
+                <a href="#" class="me-3 text-white"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+                <a href="#" class="me-3 text-white"
+                  ><i class="bi bi-envelope"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- Liên hệ -->
+            <div class="col-md-4">
+              <h5 class="mb-3 fw-bold text-warning">Liên hệ</h5>
+              <p><strong>Công ty TNHH Tổ Chức Sự Kiện Đông Anh</strong></p>
+              <p>
+                <i class="bi bi-geo-alt-fill text-warning"></i>
+                Tòa nhà Nhật Tân, 151 Ngọc Chi, Vĩnh Ngọc, Đông Anh, Hà Nội
+              </p>
+              <p>
+                <i class="bi bi-telephone-fill text-warning"></i> 9999.999.999
+              </p>
+              <p>
+                <i class="bi bi-envelope-fill text-warning"></i>
+                gaugau4953@gmail.com
+              </p>
+              <p><i class="bi bi-globe text-warning"></i> www.gaugaufood.vn</p>
+            </div>
+
+            <!-- Chính sách -->
+            <div class="col-md-3">
+              <h5 class="mb-3 fw-bold text-warning">Chính sách</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#" class="text-white text-decoration-none"
+                    >Chính sách bảo mật</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none"
+                    >Điều khoản thỏa thuận</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none"
+                    >Quy chế hoạt động</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none"
+                    >Cơ chế giải quyết khiếu nại</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Bản quyền -->
+      <div class="footer-bottom text-center py-3">
+        <p class="mb-0">
+          Copyright © 2025
+          <span class="text-warning">GâuGâu Food - Đặt cỗ tại nhà</span>
+        </p>
+      </div>
+    </footer>
+    <!-- JS -->
+    <script src="./mamcunggio.js"></script>
+  </body>
+</html>
