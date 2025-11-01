@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.querySelector(".custom-navbar");
-  const fadeEls = document.querySelectorAll(
-    "#about, #stats, .service-section, #feedback, .footer"
-  );
+  const fadeEls = document.querySelectorAll(".fade-section");
   const backToTop = document.getElementById("backToTop");
 
   // Đổi màu Navbar khi cuộn
@@ -52,4 +50,28 @@ document.addEventListener("DOMContentLoaded", () => {
       window.scrollTo({ top: 0, behavior: "smooth" })
     );
   }
+
+  // Lắng nghe sự kiện cuộn
+  const onScroll = () => {
+    handleNavbarScroll();
+    showOnScroll();
+    handleBackToTop();
+  };
+
+  // Xử lý dropdown khi click trên mobile
+  window.addEventListener("scroll", onScroll, { passive: true });
+  showOnScroll();
+  const dropdownLinks = document.querySelectorAll(".nav-item.dropdown > a");
+  dropdownLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      const parent = this.parentElement;
+      if (window.innerWidth <= 991) {
+        e.preventDefault();
+        document.querySelectorAll(".nav-item.dropdown").forEach((item) => {
+          if (item !== parent) item.classList.remove("show");
+        });
+        parent.classList.toggle("show");
+      }
+    });
+  });
 });
