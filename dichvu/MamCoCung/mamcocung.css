@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: #fff;
+  color: #000000;
+  overflow-x: hidden;
+}
+
+/* ========================= NAVBAR ========================= */
+.custom-navbar {
+  background: #fff;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+  padding: 12px 0;
+}
+.custom-navbar .navbar-brand {
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: #000000 !important;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+.custom-navbar .navbar-brand span {
+  color: #e63946;
+  font-weight: 900;
+}
+.custom-navbar .navbar-nav {
+  gap: 20px;
+}
+.custom-navbar .nav-link {
+  color: #000000 !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: all 0.3s ease;
+  padding: 8px 0;
+}
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #e63946;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+.custom-navbar .nav-link:hover::after,
+.custom-navbar .nav-link.active::after {
+  width: 100%;
+}
+.custom-navbar .nav-link:hover {
+  color: #e63946 !important;
+}
+.custom-navbar .btn-danger {
+  background-color: #e63946;
+  border: none;
+  border-radius: 30px;
+  padding: 8px 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+.custom-navbar .btn-danger:hover {
+  background-color: #c82333;
+  box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
+  transform: translateY(-2px);
+}
+.navbar.scrolled {
+  background: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  transition: all 0.3s ease;
+}
+
+/* ===== SLIDE ===== */
+.hero {
+  padding-top: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #fff3e6, #ffe5d0);
+}
+
+.hero-text {
+  flex: 1;
+  animation: fadeInLeft 1s ease;
+}
+
+.hero-text h1 {
+  color: #c86b27;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: right;
+}
+
+.hero-image img {
+  width: 90%;
+  border-radius: 25px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  display: inline-block;
+  background: #c86b27;
+  color: #fff;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #a8521e;
+  transform: translateY(-3px);
+}
+
+/* ===== GIỚI THIỆU ===== */
+.highlights {
+  background: #fff7f0;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.highlights h2 {
+  font-size: 2.2rem;
+  color: #c86b27;
+  margin-bottom: 50px;
+}
+
+.highlight-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.highlight-card {
+  background: #fff;
+  border-radius: 20px;
+  width: 300px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.highlight-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-card img {
+  width: 120px;              /* Tăng kích thước ảnh */
+  height: 120px;             /* Cố định chiều cao cho cân đối */
+  object-fit: cover;         /* Giữ tỉ lệ ảnh, không bị méo */
+  border-radius: 10px;       /* Bo nhẹ các góc cho mềm mại */
+  margin-bottom: 25px;       /* Tăng khoảng cách ảnh và tiêu đề */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-card img:hover {
+  transform: scale(1.08);    /* Hiệu ứng phóng nhẹ khi hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+.highlight-card h3 {
+  color: #a8521e;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+/* ===== MÂM TIỆC ===== */
+.mam-section {
+  text-align: center;
+  padding: 80px 10%;
+  background: #fff;
+}
+
+.mam-section h2 {
+  font-size: 2.3rem;
+  color: #c86b27;
+  margin-bottom: 10px;
+}
+
+.mam-section p {
+  color: #666;
+  margin-bottom: 50px;
+  font-size: 1rem;
+}
+
+.mam-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.mam-card {
+  background: #fffaf6;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.4s;
+}
+
+.mam-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.mam-card img {
+  width: 100%;
+  height: 250px;           /* Chiều cao cố định cho ảnh */
+  object-fit: cover;       /* Cắt ảnh cho đều khung, không méo */
+  border-bottom: 3px solid #f5d1b1; /* viền nhẹ bên dưới ảnh */
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.mam-card img:hover {
+  transform: scale(1.05);  /* Phóng nhẹ khi hover */
+  filter: brightness(1.05);
+}
+
+
+.mam-content {
+  padding: 25px;
+}
+
+.mam-content h3 {
+  color: #a8521e;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.mam-content p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+/* ========================= FOOTER ========================= */
+.footer {
+  background: #111 url("../../trangchu/img/Footer.jpg") repeat;
+  background-size: contain;
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.footer h5 {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.footer a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer a:hover {
+  color: #ffc107;
+}
+
+.footer .social-icons a {
+  font-size: 1.3rem;
+  transition: 0.3s ease;
+}
+.footer .social-icons a:hover {
+  color: #ffc107;
+  transform: translateY(-2px);
+}
+.footer .container-fluid {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.footer .col-md-4,
+.footer .col-md-3 {
+  text-align: left;
+}
+.footer-bottom {
+  background-color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  text-align: center;
+  padding: 12px 0;
+}
+
+/* Hiệu ứng */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
