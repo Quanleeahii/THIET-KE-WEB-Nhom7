@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mâm Cỗ Truyền Thống</title>
+
+    <!-- reset css -->
+    <link rel="stylesheet" href="./mam6nguoi/css/reset.css" />
+    <!-- style css -->
+    <link rel="stylesheet" href="./mam6nguoi/css/style.css" />
+    <link rel="icon" href="../../trangchu/img/favicon.png" type="image/png" />
+     <meta
+      name="description"
+      content="GâuGâu Food chuyên đặt tiệc tại nhà, mâm cỗ cúng, tiệc cưới hỏi, tiệc gia đình tại Đông Anh. Dịch vụ nhanh chóng, chuyên nghiệp, hương vị truyền thống và hiện đại chuẩn Việt."
+    />
+    <meta name="author" content="GâuGâu Food Team" />
+    <meta name="robots" content="index, follow" />
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome (icon) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- Font Roboto -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+  </head>
+
+  <body>
+    <!-- ==== NAV ==== -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light fixed-top custom-navbar"
+    >
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand fw-bold" href="index.html">
+          GâuGâu <span class="text-danger">.</span> Food
+        </a>
+        <!-- Toggle menu -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link smoothScroll" href="../../trangchu/index.html">TRANG CHỦ</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link smoothScroll"
+                href="../../gioithieu/gioithieu.html"
+                >GIỚI THIỆU</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dichVuDropdown"
+                role="button"
+              >
+                DỊCH VỤ
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dichVuDropdown">
+                <li><a class="dropdown-item" href="#mamco">MÂM CỖ CÚNG</a></li>
+                <li>
+                  <a class="dropdown-item" href="#giadinh">TIỆC GIA ĐÌNH</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#cuoihoi">TIỆC CƯỚI HỎI</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link smoothScroll"
+                href="../../gioithieu/gioithieu.html"
+                >THỰC ĐƠN</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link smoothScroll" href="../../lienhe/lienhe.html"
+                >LIÊN HỆ</a
+              >
+            </li>
+          </ul>
+          <!-- Contact number / In4 -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Gọi Ngay! <i class="fa fa-phone text-danger"></i> 9999.999.999
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="../lienhe" class="btn btn-danger ms-3">ĐẶT TIỆC</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- /____________________________________________________________________________________________________/ -->
+    <main>
+      <!-- MENU ROW  -->
+      <section id="menu-row" class="menu-section container">
+        <h2 class="section-title">Danh sách thực đơn</h2>
+
+        <div class="menu-row">
+          <!-- Thực Đơn 1 -->
+          <div class="menu-card reveal">
+            <div class="ribbon">
+              <span>Thực Đơn 1</span>
+              <p>830.000đ</p>
+            </div>
+
+            <div class="images">
+              <img src="./mam6nguoi/img/1.jfif" alt="Món 1" />
+              <img src="./mam6nguoi/img/2.jfif" alt="Món 2" />
+              <img src="./mam6nguoi/img/3.jfif" alt="Món 3" />
+              <img src="./mam6nguoi/img/4.jfif" alt="Món 4" />
+              <img src="./mam6nguoi/img/5.jfif" alt="Món 5" />
+              <img src="./mam6nguoi/img/6.jfif" alt="Món 6" />
+            </div>
+
+            <ul class="dish-list">
+              <li>
+                Nộm su hào thịt xá xíu<span>95.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Gà ta chiên mắm <span>180.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Cá Diêu Hồng hấp xì dầu <span>160.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Bò hầm lagu + Bánh mì <span>190.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Nem ốc Hồ Tây <span>120.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Canh mọc thập cẩm <span>85.000đ</span><input type="checkbox" />
+              </li>
+            </ul>
+          </div>
+
+          <!-- Thực Đơn 2 -->
+          <div class="menu-card reveal">
+            <div class="ribbon">
+              <span>Thực Đơn 2</span>
+              <p>825.000đ</p>
+            </div>
+
+            <div class="images">
+              <img src="./mam6nguoi/img/7.jfif" alt="Món A" />
+              <img src="./mam6nguoi/img/8.jfif" alt="Món B" />
+              <img src="./mam6nguoi/img/9.jfif" alt="Món C" />
+              <img src="./mam6nguoi/img/10.jfif" alt="Món D" />
+              <img src="./mam6nguoi/img/11.jfif" alt="Món E" />
+              <img src="./mam6nguoi/img/12.jfif" alt="Món F" />
+            </div>
+
+            <ul class="dish-list">
+              <li>
+                Nộm ngó sen tôm thịt <span>250.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Gà hấp muối sả<span>100.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Cá chép om dưa <span>190.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Bò xào hành cần<span>165.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Nem rán Hà Nội<span>170.000đ</span><input type="checkbox" />
+              </li>
+              <li>Canh măng hầm móng giò <span>110.000đ</span><input type="checkbox" /></li>
+            </ul>
+          </div>
+
+          <!-- Thực Đơn 3 -->
+          <div class="menu-card reveal">
+            <div class="ribbon">
+              <span>Thực Đơn 3</span>
+              <p>835.000đ</p>
+            </div>
+
+            <div class="images">
+              <img src="./mam6nguoi/img/13.jfif" alt="Món X" />
+              <img src="./mam6nguoi/img/14.jfif" alt="Món Y" />
+              <img src="./mam6nguoi/img/15.jfif" alt="Món Z" />
+              <img src="./mam6nguoi/img/16.jfif" alt="Món W" />
+              <img src="./mam6nguoi/img/17.jfif" alt="Món V" />
+              <img src="./mam6nguoi/img/18.jfif" alt="Món U" />
+            </div>
+
+            <ul class="dish-list">
+              <li>
+                Gỏi hải sản Thái Lan <span>115.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+               Tôm sú chiên xù <span>200.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+               Mực hấp hành gừng <span>180.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Cá chẽm sốt chanh dây <span>160.000đ</span><input type="checkbox" />
+              </li>
+              <li>Cải thìa xào nấm hương<span>90.000đ</span><input type="checkbox" /></li>
+              <li>
+               Súp cua măng tây<span>90.000đ</span><input type="checkbox" />
+              </li>
+            </ul>
+          </div>
+          <!-- Thực Đơn 4 -->
+          <div class="menu-card reveal">
+            <div class="ribbon">
+              <span>Thực Đơn 4</span>
+              <p>845.000đ</p>
+            </div>
+
+            <div class="images">
+              <img src="./mam6nguoi/img/19.jfif" alt="Món A" />
+              <img src="./mam6nguoi/img/20.jfif" alt="Món B" />
+              <img src="./mam6nguoi/img/21.jfif" alt="Món C" />
+              <img src="./mam6nguoi/img/22.jfif" alt="Món D" />
+              <img src="./mam6nguoi/img/23.jfif" alt="Món E" />
+              <img src="./mam6nguoi/img/24.jfif" alt="Món F" />
+            </div>
+
+            <ul class="dish-list">
+              <li>
+              Gỏi bò bóp thấu + bánh phồng<span>110.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Gà rô ti nước dừa <span>190.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+              Cá nướng nghệ<span>160.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Bê xào lăn + bánh mì<span>180.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+              Nem lụi Huế <span>120.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+               Canh chua cá lóc <span>85.000đ</span><input type="checkbox" />
+              </li>
+            </ul>
+          </div>
+          <!-- Thực đơn 5 -->
+          <div class="menu-card reveal">
+            <div class="ribbon">
+              <span>Thực Đơn 5</span>
+              <p>790.000đ</p>
+            </div>
+
+            <div class="images">
+              <img src="./mam6nguoi/img/25.jfif" alt="Món A" />
+              <img src="./mam6nguoi/img/26.jfif" alt="Món B" />
+              <img src="./mam6nguoi/img/27.jfif" alt="Món C" />
+              <img src="./mam6nguoi/img/28.jfif" alt="Món D" />
+              <img src="./mam6nguoi/img/29.jfif" alt="Món E" />
+              <img src="./mam6nguoi/img/30.jfif" alt="Món F" />
+            </div>
+
+            <ul class="dish-list">
+              <li>
+                Gỏi bò rau răm <span>100.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+               Gà quay mật ong<span>190.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Cá lóc hấp bầu <span>160.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+              Sườn nấu lagu + bánh mì <span>190.000đ</span><input type="checkbox" />
+              </li>
+              <li>Rau củ luộc chấm kho quẹt <span>80.000đ</span><input type="checkbox" /></li>
+              <li>Canh rau ngót thịt bằm <span>70.000đ</span><input type="checkbox" /></li>
+            </ul>
+          </div>
+          <!-- Thực đơn 6 -->
+          <div class="menu-card reveal">
+            <div class="ribbon">
+              <span>Thực Đơn 6</span>
+              <p>740.000đ</p>
+            </div>
+
+            <div class="images">
+              <img src="./mam6nguoi/img/31.jfif" alt="Món A" />
+              <img src="./mam6nguoi/img/32.jfif" alt="Món B" />
+              <img src="./mam6nguoi/img/33.jfif" alt="Món C" />
+              <img src="./mam6nguoi/img/34.jfif" alt="Món D" />
+              <img src="./mam6nguoi/img/35.jfif" alt="Món E" />
+              <img src="./mam6nguoi/img/36.jfif" alt="Món F" />
+            </div>
+
+            <ul class="dish-list">
+              <li>
+                Nộm gà xé phay <span>100.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Gà rang gừng<span>180.000đ</span><input type="checkbox" />
+              </li>
+              <li>Cá rô đồng kho tộ <span>150.000đ</span><input type="checkbox" /></li>
+              <li>
+              Thịt ba chỉ hấp mắm tép<span>160.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+               Dưa muối xào tóp mỡ <span>70.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>Canh cua rau đay <span>80.000đ</span><input type="checkbox" /></li>
+            </ul>
+          </div>
+          <!-- thực đơn 7 -->
+          <div class="menu-card reveal">
+            <div class="ribbon">
+              <span>Thực Đơn 7</span>
+              <p>890.000đ</p>
+            </div>
+
+            <div class="images">
+              <img src="./mam6nguoi/img/37.jfif" alt="Món A" />
+              <img src="./mam6nguoi/img/38.jfif" alt="Món B" />
+              <img src="./mam6nguoi/img/39.jfif" alt="Món C" />
+              <img src="./mam6nguoi/img/40.jfif" alt="Món D" />
+              <img src="./mam6nguoi/img/42.jfif" alt="Món E" />
+              <img src="./mam6nguoi/img/42.jfif" alt="Món F" />
+            </div>
+
+            <ul class="dish-list">
+              <li>
+                Khai vị 3 món: Chả giò + Khoai môn lệ phố + Tôm chiên bột<span>150.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+               Súp cua tuyết trắng <span>0.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+               Gà quay chảo sốt mật ong + bánh bao <span>200.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Bò né khổ qua + bánh đa <span>190.000đ</span><input type="checkbox" />
+              </li>
+              <li>Lẩu hải sản chua cay + bún<span>180.000đ</span><input type="checkbox" /></li>
+              <li>Tráng miệng bánh flan <span>80.000đ</span><input type="checkbox" /></li>
+            </ul>
+          </div>
+          <!-- Thực đơn 8 -->
+          <div class="menu-card reveal">
+            <div class="ribbon">
+              <span>Thực Đơn 8</span>
+              <p>950.000đ</p>
+            </div>
+
+            <div class="images">
+              <img src="./mam6nguoi/img/43.jfif" alt="Món A" />
+              <img src="./mam6nguoi/img/44.jfif" alt="Món B" />
+              <img src="./mam6nguoi/img/45.jfif" alt="Món C" />
+              <img src="./mam6nguoi/img/46.jfif" alt="Món D" />
+              <img src="./mam6nguoi/img/47.jfif" alt="Món E" />
+              <img src="./mam6nguoi/img/48.jfif" alt="Món F" />
+            </div>
+
+            <ul class="dish-list">
+              <li>
+                Nộm bò tái chanh<span>110.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+               Nai né thiên lý + bánh đa<span>210.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+               Heo rừng hấp sả<span>200.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+               Cá lăng nướng riềng mẻ <span>170.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>Rau rừng xào tỏi<span>80.000đ</span><input type="checkbox" /></li>
+              <li>
+               Lẩu riêu cua bắp bò + bún <span>180.000đ</span><input type="checkbox" />
+              </li>
+            </ul>
+          </div>
+          <!-- Thực đơn 9 -->
+          <div class="menu-card reveal">
+            <div class="ribbon">
+              <span>Thực Đơn 9</span>
+              <p>915.000đ</p>
+            </div>
+
+            <div class="images">
+              <img src="./mam6nguoi/img/49.jfif" alt="Món A" />
+              <img src="./mam6nguoi/img/50.jfif" alt="Món B" />
+              <img src="./mam6nguoi/img/51.jfif" alt="Món C" />
+              <img src="./mam6nguoi/img/52.jfif" alt="Món D" />
+              <img src="./mam6nguoi/img/53.jfif" alt="Món E" />
+              <img src="./mam6nguoi/img/54.jfif" alt="Món F" />
+            </div>
+
+            <ul class="dish-list">
+              <li>
+                Salad rau củ trộn dầu giấm <span>95.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Gà nướng sốt BBQ <span>200.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Cá hồi áp chảo bơ tỏi <span>230.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Bò nấu vang đỏ + bánh mì<span>210.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Súp kem nấm <span>90.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Tráng miệng mousse chanh dây <span>90.000đ</span><input type="checkbox" />
+              </li>
+            </ul>
+          </div>
+          <!-- Thực đơn 10 -->
+          <div class="menu-card reveal">
+            <div class="ribbon">
+              <span>Thực Đơn 10</span>
+              <p>1220.000đ</p>
+            </div>
+
+            <div class="images">
+              <img src="./mam6nguoi/img/55.jfif" alt="Món A" />
+              <img src="./mam6nguoi/img/56.jfif" alt="Món B" />
+              <img src="./mam6nguoi/img/57.jfif" alt="Món C" />
+              <img src="./mam6nguoi/img/58.jfif" alt="Món D" />
+              <img src="./mam6nguoi/img/59.jfif" alt="Món E" />
+              <img src="./mam6nguoi/img/60.jfif" alt="Món F" />
+            </div>
+
+            <ul class="dish-list">
+              <li>
+                Khai vị 3 món: Chả mực + Chả giò hải sản + Tôm nướng muối ớt <span>230.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Súp bào ngư hải sản <span>150.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Gà bó xôi chiên <span>220.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Tôm càng hấp nước dừa <span>250.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+              Lẩu Thái hải sản chua cay + bún<span>270.000đ</span><input type="checkbox" />
+              </li>
+              <li>Tráng miệng trái cây thập cẩm<span>100.000đ</span><input type="checkbox" /></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDER  -->
+      <section id="thuc-don" class="thuc-don">
+        <h2 class="title">🍽️ Hình ảnh <strong>Thực đơn</strong></h2>
+
+        <div class="slider-container reveal">
+          <div class="slider" id="menuSlider">
+            <div class="slide">
+              <img src="./mam6nguoi/img/13.jfif" alt="Gỏi hải sản Thái Lan" />
+              <p class="caption">Gỏi hải sản Thái Lan</p>
+            </div>
+            <div class="slide">
+              <img src="./mam6nguoi/img/26.jfif" alt="  Gà quay mật ong" />
+              <p class="caption">  Gà quay mật ong</p>
+            </div>
+            <div class="slide">
+              <img src="./mam6nguoi/img/39.jfif" alt=" Gà quay chảo sốt mật ong + bánh bao" />
+              <p class="caption"> Gà quay chảo sốt mật ong + bánh bao</p>
+            </div>
+            <div class="slide">
+              <img src="./mam6nguoi/img/58.jfif" alt="Tôm" />
+              <p class="caption">Tôm càng hấp nước dừa</p>
+            </div>
+          </div>
+
+          <button class="btn prev" aria-label="Previous" id="prevBtn">
+            &#10094;
+          </button>
+          <button class="btn next" aria-label="Next" id="nextBtn">
+            &#10095;
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="footer mt-5 text-white">
+      <div class="footer-top py-5">
+        <div class="container-fluid px-5">
+          <div class="row gy-4 justify-content-between">
+            <!-- Về chúng tôi -->
+            <div class="col-md-4">
+              <h5 class="mb-3 fw-bold text-warning">Về chúng tôi</h5>
+              <p>
+                Với thông điệp <strong>"Enjoy Happy Time"</strong> - GâuGâu mang
+                cỗ tiệc về, cả nhà vui vẻ chẳng hề bận tâm.
+              </p>
+              <div class="social-icons mt-3">
+                <a href="#" class="me-3 text-white"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="#" class="me-3 text-white"
+                  ><i class="bi bi-tiktok"></i
+                ></a>
+                <a href="#" class="me-3 text-white"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+                <a href="#" class="me-3 text-white"
+                  ><i class="bi bi-envelope"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- Liên hệ -->
+            <div class="col-md-4">
+              <h5 class="mb-3 fw-bold text-warning">Liên hệ</h5>
+              <p><strong>Công ty TNHH Tổ Chức Sự Kiện Đông Anh</strong></p>
+              <p>
+                <i class="bi bi-geo-alt-fill text-warning"></i>
+                Tòa nhà Nhật Tân, 151 Ngọc Chi, Vĩnh Ngọc, Đông Anh, Hà Nội
+              </p>
+              <p>
+                <i class="bi bi-telephone-fill text-warning"></i> 9999.999.999
+              </p>
+              <p>
+                <i class="bi bi-envelope-fill text-warning"></i>
+                gaugau4953@gmail.com
+              </p>
+              <p><i class="bi bi-globe text-warning"></i> www.gaugaufood.vn</p>
+            </div>
+
+            <!-- Chính sách -->
+            <div class="col-md-3">
+              <h5 class="mb-3 fw-bold text-warning">Chính sách</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#" class="text-white text-decoration-none"
+                    >Chính sách bảo mật</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none"
+                    >Điều khoản thỏa thuận</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none"
+                    >Quy chế hoạt động</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none"
+                    >Cơ chế giải quyết khiếu nại</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Bản quyền -->
+      <div class="footer-bottom text-center py-3">
+        <p class="mb-0">
+          Copyright © 2025
+          <span class="text-warning">GâuGâu Food - Đặt cỗ tại nhà</span>
+        </p>
+      </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS -->
+    <script src="./mam6nguoi.js"></script>
+  </body>
+</html>
