@@ -165,6 +165,52 @@ body {
   font-size: 0.95rem;
   margin-bottom: 15px;
 }
+/* === Footer === */
+.footer {
+  background: #111 url("../../trangchu/img/Footer.jpg") repeat;
+  background-size: contain;
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.footer h5 {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.footer a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer a:hover {
+  color: #ffc107;
+}
+
+.footer .social-icons a {
+  font-size: 1.3rem;
+  transition: 0.3s ease;
+}
+.footer .social-icons a:hover {
+  color: #ffc107;
+  transform: translateY(-2px);
+}
+.footer .container-fluid {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.footer .col-md-4,
+.footer .col-md-3 {
+  text-align: left;
+}
+.footer-bottom {
+  background-color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  text-align: center;
+  padding: 12px 0;
+}
 
 /* Hiệu ứng */
 @keyframes fadeInLeft {
@@ -177,3 +223,18 @@ body {
     transform: translateX(0);
   }
 }
+/* ===== PHÓNG TO ẢNH TRONG PHẦN VÌ SAO CHỌN GÂUGÂU FOOD ===== */
+.highlights .highlight-card img {
+  width: 150px !important;     /* To hơn rõ ràng */
+  height: 150px !important;    /* Cân đối */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlights .highlight-card img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
