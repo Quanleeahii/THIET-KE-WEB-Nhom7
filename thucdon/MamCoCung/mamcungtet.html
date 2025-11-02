@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Mâm Cỗ Truyền Thống</title>
 
-
     <!-- style css -->
     <link rel="stylesheet" href="./mamcungtet/css/style.css" />
-     <meta
+    <meta
       name="description"
       content="GâuGâu Food chuyên đặt tiệc tại nhà, mâm cỗ cúng, tiệc cưới hỏi, tiệc gia đình tại Đông Anh. Dịch vụ nhanh chóng, chuyên nghiệp, hương vị truyền thống và hiện đại chuẩn Việt."
     />
@@ -38,7 +37,7 @@
 
   <body>
     <!-- ==== NAV ==== -->
-   <nav
+    <nav
       class="navbar navbar-expand-lg navbar-light bg-light fixed-top custom-navbar"
     >
       <div class="container">
@@ -74,9 +73,11 @@
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
                 href="#"
                 id="dichVuDropdown"
                 role="button"
+                aria-expanded="false"
               >
                 DỊCH VỤ
               </a>
@@ -107,7 +108,8 @@
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" href="#">
-                Gọi Ngay! <i class="fa fa-phone text-danger"></i> 9999.999.999
+                Gọi Ngay!
+                <i class="fa-solid fa-phone text-danger"></i> 9999.999.999
               </a>
             </li>
             <li class="nav-item">
@@ -145,19 +147,18 @@
                 Gỏi ngó sen thịt tôm <span>250.000đ</span
                 ><input type="checkbox" />
               </li>
-              <li>Thịt kho hột vịt <span>300.000đ</span><input type="checkbox" /></li>
               <li>
-                Cá lóc kho tộ <span>250.000đ</span
+                Thịt kho hột vịt <span>300.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Cá lóc kho tộ <span>250.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Canh khổ qua dồn thịt <span>200.000đ</span
                 ><input type="checkbox" />
               </li>
-              <li>Canh khổ qua dồn thịt <span>200.000đ</span><input type="checkbox" /></li>
-              <li>
-               Dưa hành <span>50.000đ</span
-                ><input type="checkbox" />
-              </li>
-              <li>
-                Bánh tét <span>150.000đ</span><input type="checkbox" />
-              </li>
+              <li>Dưa hành <span>50.000đ</span><input type="checkbox" /></li>
+              <li>Bánh tét <span>150.000đ</span><input type="checkbox" /></li>
             </ul>
           </div>
 
@@ -178,16 +179,20 @@
             </div>
 
             <ul class="dish-list">
-              <li>Gỏi củ hũ dừa <span>250.000đ</span><input type="checkbox" /></li>
-              <li>Tôm chiên xù <span>300.000đ</span><input type="checkbox" /></li>
-              <li>Bò xào bông cải <span>250.000đ</span><input type="checkbox" /></li>
               <li>
-               Canh măng giò heo<span>250.000đ</span><input type="checkbox" />
+                Gỏi củ hũ dừa <span>250.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Tôm chiên xù <span>300.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Bò xào bông cải <span>250.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Canh măng giò heo<span>250.000đ</span><input type="checkbox" />
               </li>
               <li>Dưa món<span>50.000đ</span><input type="checkbox" /></li>
-              <li>
-                Bánh chưng <span>100.000đ</span><input type="checkbox" />
-              </li>
+              <li>Bánh chưng <span>100.000đ</span><input type="checkbox" /></li>
             </ul>
           </div>
 
@@ -208,20 +213,23 @@
             </div>
 
             <ul class="dish-list">
-              <li>Gỏi bưởi tôm thịt <span>300.000đ</span><input type="checkbox" /></li>
               <li>
-               Gà hấp hành <span>350.000đ</span><input type="checkbox" />
+                Gỏi bưởi tôm thịt <span>300.000đ</span><input type="checkbox" />
               </li>
-              <li>Cá điêu hồng chiên xù <span>300.000đ</span><input type="checkbox" /></li>
               <li>
-               Canh nấm hải sản <span>250.000đ</span
+                Gà hấp hành <span>350.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Cá điêu hồng chiên xù <span>300.000đ</span
                 ><input type="checkbox" />
               </li>
               <li>
-                Cơm trắng <span>50.000đ</span
-                ><input type="checkbox" />
+                Canh nấm hải sản <span>250.000đ</span><input type="checkbox" />
               </li>
-              <li>Chè trôi nước<span>100.000đ</span><input type="checkbox" /></li>
+              <li>Cơm trắng <span>50.000đ</span><input type="checkbox" /></li>
+              <li>
+                Chè trôi nước<span>100.000đ</span><input type="checkbox" />
+              </li>
             </ul>
           </div>
           <!-- Thực Đơn 4 -->
@@ -241,13 +249,23 @@
             </div>
 
             <ul class="dish-list">
-              <li>Gỏi thập cẩm <span>300.000đ</span><input type="checkbox" /></li>
-              <li>Thịt ba rọi kho nước dừa <span>300.000đ</span><input type="checkbox" /></li>
-              <li>Canh củ sen hầm giò <span>300.000đ</span><input type="checkbox" /></li>
               <li>
-               Cá thu sốt cà<span>250.000đ</span><input type="checkbox" />
+                Gỏi thập cẩm <span>300.000đ</span><input type="checkbox" />
               </li>
-              <li>Cơm chiên trứng <span>50.000đ</span><input type="checkbox" /></li>
+              <li>
+                Thịt ba rọi kho nước dừa <span>300.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Canh củ sen hầm giò <span>300.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Cá thu sốt cà<span>250.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Cơm chiên trứng <span>50.000đ</span><input type="checkbox" />
+              </li>
               <li>
                 Bánh ít lá gai <span>150.000đ</span><input type="checkbox" />
               </li>
@@ -270,16 +288,20 @@
             </div>
 
             <ul class="dish-list">
-              <li>Gỏi hải sản <span>300.000đ</span><input type="checkbox" /></li>
-              <li>Tôm nướng muối ớt <span>400.000đ</span><input type="checkbox" /></li>
-              <li>Bò kho bánh mì <span>350.000đ</span><input type="checkbox" /></li>
+              <li>
+                Gỏi hải sản <span>300.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Tôm nướng muối ớt <span>400.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Bò kho bánh mì <span>350.000đ</span><input type="checkbox" />
+              </li>
               <li>
                 Canh chua cá hú <span>250.000đ</span><input type="checkbox" />
               </li>
               <li>Cơm trắng <span>50.000đ</span><input type="checkbox" /></li>
-              <li>
-                Trái cây <span>150.000đ</span><input type="checkbox" />
-              </li>
+              <li>Trái cây <span>150.000đ</span><input type="checkbox" /></li>
             </ul>
           </div>
           <!-- Thực đơn 6 -->
@@ -299,16 +321,22 @@
             </div>
 
             <ul class="dish-list">
-              <li>Gỏi ngó sen <span>250.000đ</span><input type="checkbox" /></li>
-              <li>Cá chẽm hấp xì dầu<span>400.000đ</span><input type="checkbox" /></li>
+              <li>
+                Gỏi ngó sen <span>250.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Cá chẽm hấp xì dầu<span>400.000đ</span><input type="checkbox" />
+              </li>
               <li>Gà rô ti <span>350.000đ</span><input type="checkbox" /></li>
               <li>
-                Canh khổ qua dồn thịt <span>250.000đ</span><input type="checkbox" />
+                Canh khổ qua dồn thịt <span>250.000đ</span
+                ><input type="checkbox" />
               </li>
-              <li>Cơm chiên Dương Châu <span>150.000đ</span><input type="checkbox" /></li>
               <li>
-                Rau câu <span>100.000đ</span><input type="checkbox" />
+                Cơm chiên Dương Châu <span>150.000đ</span
+                ><input type="checkbox" />
               </li>
+              <li>Rau câu <span>100.000đ</span><input type="checkbox" /></li>
             </ul>
           </div>
           <!-- thực đơn 7 -->
@@ -328,16 +356,21 @@
             </div>
 
             <ul class="dish-list">
-              <li>Gỏi tôm thịt<span>250.000đ</span><input type="checkbox" /></li>
-              <li>Vịt quay Bắc Kinh <span>450.000đ</span><input type="checkbox" /></li>
-              <li>Cá diêu hồng chiên <span>350.000đ</span><input type="checkbox" /></li>
               <li>
-               Canh măng hầm giò <span>250.000đ</span><input type="checkbox" />
+                Gỏi tôm thịt<span>250.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Vịt quay Bắc Kinh <span>450.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Cá diêu hồng chiên <span>350.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Canh măng hầm giò <span>250.000đ</span><input type="checkbox" />
               </li>
               <li>Bánh chưng <span>150.000đ</span><input type="checkbox" /></li>
-              <li>
-               Trái cây <span>150.000đ</span><input type="checkbox" />
-              </li>
+              <li>Trái cây <span>150.000đ</span><input type="checkbox" /></li>
             </ul>
           </div>
           <!-- Thực đơn 8 -->
@@ -357,15 +390,22 @@
             </div>
 
             <ul class="dish-list">
-              <li>Gỏi xoài tôm khô <span>300.000đ</span><input type="checkbox" /></li>
-              <li>Bò né trứng ốp<span>400.000đ</span><input type="checkbox" /></li>
-              <li>Gà nướng muối ớt<span>400.000đ</span><input type="checkbox" /></li>
               <li>
-              Canh bí đỏ tôm khô <span>250.000đ</span><input type="checkbox" />
+                Gỏi xoài tôm khô <span>300.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Bò né trứng ốp<span>400.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Gà nướng muối ớt<span>400.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Canh bí đỏ tôm khô <span>250.000đ</span
+                ><input type="checkbox" />
               </li>
               <li>Cơm trắng<span>50.000đ</span><input type="checkbox" /></li>
               <li>
-               Rau câu dừa <span>100.000đ</span><input type="checkbox" />
+                Rau câu dừa <span>100.000đ</span><input type="checkbox" />
               </li>
             </ul>
           </div>
@@ -386,13 +426,21 @@
             </div>
 
             <ul class="dish-list">
-              <li>Gỏi tai heo <span>250.000đ</span><input type="checkbox" /></li>
-              <li>Tôm hấp bia <span>400.000đ</span><input type="checkbox" /></li>
-              <li>Bò cuốn lá lốt <span>400.000đ</span><input type="checkbox" /></li>
               <li>
-               Canh chua cá lóc <span>300.000đ</span><input type="checkbox" />
+                Gỏi tai heo <span>250.000đ</span><input type="checkbox" />
               </li>
-              <li>Cơm chiên tỏi <span>100.000đ</span><input type="checkbox" /></li>
+              <li>
+                Tôm hấp bia <span>400.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Bò cuốn lá lốt <span>400.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Canh chua cá lóc <span>300.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Cơm chiên tỏi <span>100.000đ</span><input type="checkbox" />
+              </li>
               <li>
                 Chè hạt sen <span>100.000đ</span><input type="checkbox" />
               </li>
@@ -415,16 +463,24 @@
             </div>
 
             <ul class="dish-list">
-              <li>Gỏi hải sản chua cay <span>350.000đ</span><input type="checkbox" /></li>
-              <li>Cá hồi sốt chanh dây <span>450.000đ</span><input type="checkbox" /></li>
-              <li>Gà hấp muối <span>400.000đ</span><input type="checkbox" /></li>
+              <li>
+                Gỏi hải sản chua cay <span>350.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Cá hồi sốt chanh dây <span>450.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Gà hấp muối <span>400.000đ</span><input type="checkbox" />
+              </li>
               <li>
                 Canh nấm hải sản <span>3000.000đ</span><input type="checkbox" />
               </li>
-              <li>Cơm chiên trứng<span>100.000đ</span><input type="checkbox" /></li>
               <li>
-                Trái cây <span>100.000đ</span><input type="checkbox" />
+                Cơm chiên trứng<span>100.000đ</span><input type="checkbox" />
               </li>
+              <li>Trái cây <span>100.000đ</span><input type="checkbox" /></li>
             </ul>
           </div>
         </div>
@@ -437,31 +493,19 @@
         <div class="slider-container reveal">
           <div class="slider" id="menuSlider">
             <div class="slide">
-              <img
-                src="./mamcungtet/img/19.jfif"
-                alt="Gỏi"
-              />
+              <img src="./mamcungtet/img/19.jfif" alt="Gỏi" />
               <p class="caption">Gỏi thập cẩm</p>
             </div>
             <div class="slide">
-              <img
-                src="./mamcungtet/img/58.jfif"
-                alt="Canh"
-              />
+              <img src="./mamcungtet/img/58.jfif" alt="Canh" />
               <p class="caption">Canh nấm hải sản</p>
             </div>
             <div class="slide">
-              <img
-                src="./mamcungtet/img/26.jfif"
-                alt="Tôm"
-              />
+              <img src="./mamcungtet/img/26.jfif" alt="Tôm" />
               <p class="caption">Tôm nướng muối ớt</p>
             </div>
             <div class="slide">
-              <img
-                src="./mamcungtet/img/39.jfif"
-                alt="Cá"
-              />
+              <img src="./mamcungtet/img/39.jfif" alt="Cá" />
               <p class="caption">Cá diêu hồng chiên</p>
             </div>
           </div>
@@ -477,7 +521,7 @@
     </main>
 
     <!-- FOOTER -->
-   <footer id="footer" class="footer mt-5 text-white">
+    <footer id="footer" class="footer mt-5 text-white">
       <div class="footer-top py-5">
         <div class="container-fluid px-5">
           <div class="row gy-4 justify-content-between">
@@ -559,6 +603,8 @@
         </p>
       </div>
     </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- JS -->
     <script src="./mamcungtet.js"></script>
   </body>

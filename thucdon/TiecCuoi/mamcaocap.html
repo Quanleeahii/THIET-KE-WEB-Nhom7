@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Mâm Cỗ Truyền Thống</title>
 
-    
     <!-- style css -->
     <link rel="stylesheet" href="./mamcaocap/css/style.css" />
-     <meta
+    <meta
       name="description"
       content="GâuGâu Food chuyên đặt tiệc tại nhà, mâm cỗ cúng, tiệc cưới hỏi, tiệc gia đình tại Đông Anh. Dịch vụ nhanh chóng, chuyên nghiệp, hương vị truyền thống và hiện đại chuẩn Việt."
     />
@@ -37,6 +36,7 @@
   </head>
 
   <body>
+    <!-- ==== NAV ==== -->
     <nav
       class="navbar navbar-expand-lg navbar-light bg-light fixed-top custom-navbar"
     >
@@ -73,9 +73,11 @@
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
                 href="#"
                 id="dichVuDropdown"
                 role="button"
+                aria-expanded="false"
               >
                 DỊCH VỤ
               </a>
@@ -106,7 +108,8 @@
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" href="#">
-                Gọi Ngay! <i class="fa fa-phone text-danger"></i> 9999.999.999
+                Gọi Ngay!
+                <i class="fa-solid fa-phone text-danger"></i> 9999.999.999
               </a>
             </li>
             <li class="nav-item">
@@ -643,15 +646,21 @@
               <p class="caption">Tôm sú nướng muối ớt</p>
             </div>
             <div class="slide">
-              <img src="./mamcaocap/img/28.jfif" alt="Bò nấu vang đỏ + bánh mì" />
+              <img
+                src="./mamcaocap/img/28.jfif"
+                alt="Bò nấu vang đỏ + bánh mì"
+              />
               <p class="caption">Bò nấu vang đỏ + bánh mì</p>
             </div>
             <div class="slide">
               <img src="./mamcaocap/img/38.jfif" alt=" Rau muống xào tỏi" />
-              <p class="caption"> Rau muống xào tỏi</p>
+              <p class="caption">Rau muống xào tỏi</p>
             </div>
             <div class="slide">
-              <img src="./mamcaocap/img/57.jfif" alt="Khai vị: Chả mực + Gỏi tôm xoài xanh" />
+              <img
+                src="./mamcaocap/img/57.jfif"
+                alt="Khai vị: Chả mực + Gỏi tôm xoài xanh"
+              />
               <p class="caption">Khai vị: Chả mực + Gỏi tôm xoài xanh</p>
             </div>
           </div>
@@ -749,7 +758,13 @@
         </p>
       </div>
     </footer>
-    <!-- JS -->
-    <script src="./mamcaocap.js"></script>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    >
+      </script
+          <!-- JS -->
+          <script src="./mamcaocap.js">
+    </script>
   </body>
 </html>
