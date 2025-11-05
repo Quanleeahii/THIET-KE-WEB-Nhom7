@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GâuGâu Food</title>
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <meta
+      name="description"
+      content="GâuGâu Food chuyên đặt tiệc tại nhà, mâm cỗ cúng, tiệc cưới hỏi, tiệc gia đình tại Đông Anh. Dịch vụ nhanh chóng, chuyên nghiệp, hương vị truyền thống và hiện đại chuẩn Việt."
+    />
+    <meta name="author" content="GâuGâu Food Team" />
+    <meta name="robots" content="index, follow" />
     <!-- Bootstrap 5 CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -14,6 +21,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <!-- Font Roboto -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
@@ -24,7 +32,7 @@
       rel="stylesheet"
     />
     <!-- Home CSS -->
-    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/trangchu.css" />
   </head>
   <body>
     <!------------------------------------------------------------------------------------------------------------------------------------------------------->
@@ -56,27 +64,56 @@
               <a class="nav-link smoothScroll" href="#home">TRANG CHỦ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link smoothScroll" href="#about">GIỚI THIỆU</a>
+              <a
+                class="nav-link smoothScroll"
+                href="../gioithieu/gioithieu.html"
+                >GIỚI THIỆU</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                id="dichVuDropdown"
+                role="button"
+                aria-expanded="false"
+              >
+                DỊCH VỤ
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dichVuDropdown">
+                <li><a class="dropdown-item" href="#mamco">MÂM CỖ CÚNG</a></li>
+                <li>
+                  <a class="dropdown-item" href="#giadinh">TIỆC GIA ĐÌNH</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#cuoihoi">TIỆC CƯỚI HỎI</a>
+                </li>
+              </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link smoothScroll" href="#team">DỊCH VỤ</a>
+              <a
+                class="nav-link smoothScroll"
+                href="../gioithieu/gioithieu.html"
+                >THỰC ĐƠN</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link smoothScroll" href="#menu">THỰC ĐƠN</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link smoothScroll" href="#contact">LIÊN HỆ</a>
+              <a class="nav-link smoothScroll" href="../lienhe/lienhe.html"
+                >LIÊN HỆ</a
+              >
             </li>
           </ul>
           <!-- Contact number / In4 -->
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" href="#">
-                Gọi Ngay! <i class="fa fa-phone text-danger"></i> 9999.999.999
+                Gọi Ngay!
+                <i class="fa-solid fa-phone text-danger"></i> 9999.999.999
               </a>
             </li>
             <li class="nav-item">
-              <a href="#footer" class="btn btn-danger ms-3">ĐẶT TIỆC</a>
+              <a href="../lienhe" class="btn btn-danger ms-3">ĐẶT TIỆC</a>
             </li>
           </ul>
         </div>
@@ -95,7 +132,7 @@
           <!-- Slide 1 -->
           <div
             class="carousel-item active"
-            style="background-image: url(Img/Dat_Tiec_Slide.jpg)"
+            style="background-image: url(img/Dat_Tiec_Slide.jpg)"
           >
             <div class="carousel-overlay"></div>
             <div class="carousel-caption text-start">
@@ -109,19 +146,23 @@
           <!-- Slide 2 -->
           <div
             class="carousel-item"
-            style="background-image: url(Img/Gioi_Thieu_Slide.jpg)"
+            style="background-image: url(img/Gioi_Thieu_Slide.jpg)"
           >
             <div class="carousel-overlay"></div>
             <div class="carousel-caption text-start">
               <h3>Khoảnh Khắc Trọn Vẹn</h3>
               <h1>Khám phá câu chuyện phía sau hương vị GâuGâu Food.</h1>
-              <a href="#menu" class="btn btn-outline-light">Giới thiệu</a>
+              <a
+                href="../gioithieu/gioithieu.html"
+                class="btn btn-outline-light"
+                >Giới thiệu</a
+              >
             </div>
           </div>
           <!-- Slide 3 -->
           <div
             class="carousel-item"
-            style="background-image: url(Img/Menu_Slide.jpg)"
+            style="background-image: url(img/Menu_Slide.jpg)"
           >
             <div class="carousel-overlay"></div>
             <div class="carousel-caption text-start">
@@ -152,7 +193,7 @@
     </section>
     <!------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!-- ==== GIỚI THIỆU ==== -->
-    <section id="about" class="py-5">
+    <section id="about" class="py-5 fade-section">
       <div class="container">
         <div class="text-center mb-5">
           <h3 class="section-title mb-4 text-danger fw-bold">
@@ -164,8 +205,8 @@
           <!-- Hình ảnh giới thiệu -->
           <div class="col-lg-6 mb-4 mb-lg-0">
             <img
-              src="Img/Nha_Hang.jpg"
-              alt="GâuGâuFood"
+              src="img/Nha_Hang.jpg"
+              alt="gaugaufood"
               class="img-fluid rounded shadow"
             />
           </div>
@@ -189,14 +230,16 @@
               tiệc là một hành trình chỉn chu, nơi chúng tôi đặt trọn tâm huyết
               để mang đến hương vị trọn vẹn và trải nghiệm đáng nhớ nhất.
             </p>
-            <a href="#menu" class="btn btn-outline-danger">TÌM HIỂU THÊM</a>
+            <a href="../gioithieu/gioithieu.html" class="btn btn-outline-danger"
+              >TÌM HIỂU THÊM</a
+            >
           </div>
         </div>
       </div>
     </section>
     <!------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!-- ===== THỐNG KÊ ===== -->
-    <section id="stats" class="py-5 text-center text-white">
+    <section id="stats" class="py-5 text-center text-white fade-section">
       <div class="stats-overlay">
         <div class="container">
           <div class="row">
@@ -239,7 +282,7 @@
     </section>
     <!------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!-- ==== DỊCH VỤ ==== -->
-    <section id="service" class="service-section py-5">
+    <section id="service" class="service-section py-5 fade-section">
       <div class="container">
         <div class="text-center mb-5">
           <h3 class="section-title mb-4 text-danger fw-bold">
@@ -268,21 +311,21 @@
               <!-- Tiệc gia đình -->
               <div class="col-md-4 col-12">
                 <div class="service-card">
-                  <img src="Img/Tiec_Gia_Dinh.jpg" alt="Tiệc gia đình" />
+                  <img src="img/Tiec_Gia_Dinh.jpg" alt="Tiecgiadinh" />
                   <div class="service-overlay">TIỆC GIA ĐÌNH</div>
                 </div>
               </div>
               <!-- Mâm cỗ cúng -->
               <div class="col-md-4 col-12">
                 <div class="service-card">
-                  <img src="Img/Mam_Gio.jpg" alt="Mâm cỗ cúng" />
+                  <img src="img/Mam_Cung.jpg" alt="Mamcocung" />
                   <div class="service-overlay">MÂM CỖ CÚNG</div>
                 </div>
               </div>
               <!-- Tiệc cưới hỏi -->
               <div class="col-md-4 col-12">
                 <div class="service-card">
-                  <img src="Img/Tiec_Cuoi.jpg" alt="Tiệc cưới hỏi" />
+                  <img src="img/Tiec_Cuoi.jpg" alt="Tieccuoihoi" />
                   <div class="service-overlay">TIỆC CƯỚI HỎI</div>
                 </div>
               </div>
@@ -293,7 +336,7 @@
     </section>
     <!------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!-- ==== FEEDBACK KHÁCH HÀNG ==== -->
-    <section id="feedback" class="py-5 text-center">
+    <section id="feedback" class="py-5 text-center fade-section">
       <div class="container">
         <h3 class="section-title mb-4 text-danger fw-bold">
           <i class="bi bi-chat-dots-fill me-2"></i> PHẢN HỒI KHÁCH HÀNG
@@ -303,8 +346,8 @@
           <!-- Feedback 1 -->
           <div class="col-md-3 col-sm-6 mb-4 feedback-item">
             <img
-              src="Img/Khach_Hang_1.jpg"
-              alt="Khách hàng 1"
+              src="img/Khach_Hang_1.jpg"
+              alt="khachhang1"
               class="feedback-img mb-3"
             />
             <div class="stars text-warning mb-2">★★★★★</div>
@@ -318,8 +361,8 @@
           <!-- Feedback 2 -->
           <div class="col-md-3 col-sm-6 mb-4 feedback-item">
             <img
-              src="Img/Khach_Hang_2.jpg"
-              alt="Khách hàng 2"
+              src="img/Khach_Hang_2.jpg"
+              alt="khachhang2"
               class="feedback-img mb-3"
             />
             <div class="stars text-warning mb-2">★★★★★</div>
@@ -333,8 +376,8 @@
           <!-- Feedback 3 -->
           <div class="col-md-3 col-sm-6 mb-4 feedback-item">
             <img
-              src="Img/Khach_Hang_3.jpg"
-              alt="Khách hàng 3"
+              src="img/Khach_Hang_3.jpg"
+              alt="khachhang3"
               class="feedback-img mb-3"
             />
             <div class="stars text-warning mb-2">★★★★★</div>
@@ -350,10 +393,10 @@
     </section>
     <!------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!-- ==== FOOTER ==== -->
-    <footer id="footer" class="footer mt-5 text-white">
+    <footer id="footer" class="footer mt-5 text-white fade-section">
       <div class="footer-top py-5">
-        <div class="container">
-          <div class="row gy-4">
+        <div class="container-fluid px-5">
+          <div class="row gy-4 justify-content-between">
             <!-- Về chúng tôi -->
             <div class="col-md-4">
               <h5 class="mb-3 fw-bold text-warning">Về chúng tôi</h5>
@@ -376,13 +419,14 @@
                 ></a>
               </div>
             </div>
+
             <!-- Liên hệ -->
             <div class="col-md-4">
               <h5 class="mb-3 fw-bold text-warning">Liên hệ</h5>
               <p><strong>Công ty TNHH Tổ Chức Sự Kiện Đông Anh</strong></p>
               <p>
-                <i class="bi bi-geo-alt-fill text-warning"></i> Tòa nhà Nhật
-                Tân, 151 Ngọc Chi, Vĩnh Ngọc, Đông Anh, Hà Nội
+                <i class="bi bi-geo-alt-fill text-warning"></i>
+                Tòa nhà Nhật Tân, 151 Ngọc Chi, Vĩnh Ngọc, Đông Anh, Hà Nội
               </p>
               <p>
                 <i class="bi bi-telephone-fill text-warning"></i> 9999.999.999
@@ -393,8 +437,9 @@
               </p>
               <p><i class="bi bi-globe text-warning"></i> www.gaugaufood.vn</p>
             </div>
+
             <!-- Chính sách -->
-            <div class="col-md-4">
+            <div class="col-md-3">
               <h5 class="mb-3 fw-bold text-warning">Chính sách</h5>
               <ul class="list-unstyled">
                 <li>
@@ -426,7 +471,7 @@
       <div class="footer-bottom text-center py-3">
         <p class="mb-0">
           Copyright © 2025
-          <span class="text-warning">GâuGâu Food - Đặt cỗ tại nhà </span>
+          <span class="text-warning">GâuGâu Food - Đặt cỗ tại nhà</span>
         </p>
       </div>
     </footer>
@@ -441,6 +486,6 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Home JS -->
-    <script src="js/home.js"></script>
+    <script src="js/trangchu.js"></script>
   </body>
 </html>
