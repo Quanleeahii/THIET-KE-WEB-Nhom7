@@ -78,6 +78,7 @@ body {
   transform: translateY(-2px);
 }
 .custom-navbar.scrolled {
+  background-color: rgba(255, 246, 246, 0.95) !important;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   padding: 8px 0;
 }
@@ -106,7 +107,19 @@ body {
   display: none;
 }
 
-/* ========== SECTION TITLE ========== */
+/* ========================= POPUP ĐẶT TIỆC========================= */
+.dat-tiec-modal-content {
+  background-color: #c0392b;
+  color: #fff;
+}
+.dat-tiec-modal-content .btn-close {
+  filter: invert(1);
+}
+.dat-tiec-modal-content .btn-light {
+  color: #c0392b !important;
+}
+
+/* ========================= SECTION TITLE ========================= */
 .section-title {
   text-align: left;
   font-size: 2.2rem;
@@ -257,7 +270,7 @@ body {
 }
 
 /* buttons */
-.btn {
+.custom-slider-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -271,15 +284,15 @@ body {
   box-shadow: 0 6px 22px rgba(0, 0, 0, 0.12);
   transition: transform 0.18s ease, background 0.18s ease;
 }
-.btn:hover {
+.custom-slider-btn:hover {
   transform: translateY(-50%) scale(1.06);
   background: #c9a227;
   color: #fff;
 }
-.prev {
+.custom-prev {
   left: 1.6rem;
 }
-.next {
+.custom-next {
   right: 1.6rem;
 }
 
@@ -304,9 +317,9 @@ body {
   transform: scale(1.25);
 }
 
-/* --------- FOOTER --------- */
+/* ========================= FOOTER ========================= */
 .footer {
-  background: #111 url("../img/Footer.jpg") repeat;
+  background: #111 url("../../../../trangchu/img/Footer.jpg") repeat;
   background-size: contain;
   color: #fff;
   font-size: 15px;
@@ -350,17 +363,29 @@ body {
   text-align: center;
   padding: 12px 0;
 }
-/* Responsive */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
 
-  .social-icons {
-    margin-top: 10px;
+/* ========================= ANIMATION ========================= */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ========================= RESPONSIVE ========================= */
 @media (max-width: 991px) {
   .nav-item.dropdown:hover .dropdown-menu {
