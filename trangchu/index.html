@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GâuGâu Food</title>
+    <title>Trang Chủ - GâuGâu Food</title>
     <link rel="icon" href="img/favicon.png" type="image/png" />
     <meta
       name="description"
@@ -31,7 +31,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
       rel="stylesheet"
     />
-    <!-- Home CSS -->
+    <!-- Trang Chủ CSS -->
     <link rel="stylesheet" href="css/trangchu.css" />
   </head>
   <body>
@@ -64,9 +64,7 @@
               <a class="nav-link smoothScroll" href="#home">TRANG CHỦ</a>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link smoothScroll"
-                href="../gioithieu/gioithieu.html"
+              <a class="nav-link" href="../gioithieu/gioithieu.html"
                 >GIỚI THIỆU</a
               >
             </li>
@@ -82,43 +80,143 @@
                 DỊCH VỤ
               </a>
               <ul class="dropdown-menu" aria-labelledby="dichVuDropdown">
-                <li><a class="dropdown-item" href="#mamco">MÂM CỖ CÚNG</a></li>
                 <li>
-                  <a class="dropdown-item" href="#giadinh">TIỆC GIA ĐÌNH</a>
+                  <a
+                    class="dropdown-item"
+                    href="../dichvu/MamCoCung/mamcocung.html"
+                    >MÂM CỖ CÚNG</a
+                  >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#cuoihoi">TIỆC CƯỚI HỎI</a>
+                  <a
+                    class="dropdown-item"
+                    href="../dichvu/TiecGiaDinh/tiecgiadinh.html"
+                    >TIỆC GIA ĐÌNH</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../dichvu/TiecCuoi/tieccuoi.html"
+                    >TIỆC CƯỚI HỎI</a
+                  >
                 </li>
               </ul>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link smoothScroll"
-                href="../gioithieu/gioithieu.html"
+              <a class="nav-link" href="../thucdon/TiecGiaDinh/mamtuchon.html"
                 >THỰC ĐƠN</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link smoothScroll" href="../lienhe/lienhe.html"
-                >LIÊN HỆ</a
-              >
+              <a class="nav-link" href="../lienhe/lienhe.html">LIÊN HỆ</a>
             </li>
           </ul>
           <!-- Contact number / In4 -->
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="tel: 9999999999">
                 Gọi Ngay!
                 <i class="fa-solid fa-phone text-danger"></i> 9999.999.999
               </a>
             </li>
             <li class="nav-item">
-              <a href="../lienhe" class="btn btn-danger ms-3">ĐẶT TIỆC</a>
+              <button
+                class="btn btn-danger ms-3"
+                data-bs-toggle="modal"
+                data-bs-target="#datTiecModal"
+              >
+                ĐẶT TIỆC
+              </button>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-- ===== POPUP ĐẶT TIỆC  ===== -->
+    <div
+      class="modal fade"
+      id="datTiecModal"
+      tabindex="-1"
+      aria-labelledby="datTiecLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content dat-tiec-modal-content">
+          <div class="modal-header border-0">
+            <h5 class="modal-title w-100 text-center" id="datTiecLabel">
+              <i class="bi bi-clipboard-check"></i> Gửi yêu cầu đặt tiệc
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Đóng"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="modalName" class="form-label">Họ và tên *</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="modalName"
+                  placeholder="Nhập họ và tên"
+                  required
+                />
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="modalEmail" class="form-label">Email *</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="modalEmail"
+                    placeholder="abc@gmail.com"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="modalPhone" class="form-label"
+                    >Số điện thoại *</label
+                  >
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="modalPhone"
+                    placeholder="0912xxxxxx"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="modalMessage" class="form-label">Lời nhắn</label>
+                <textarea
+                  class="form-control"
+                  id="modalMessage"
+                  rows="3"
+                  placeholder="Yêu cầu hoặc thông tin thêm..."
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-light w-100 fw-bold">
+                GỬI YÊU CẦU
+              </button>
+            </form>
+            <div
+              id="formAlert"
+              class="alert alert-success d-none mt-3"
+              role="alert"
+            >
+              ✅ Yêu cầu của bạn đã được ghi nhận! Chúng tôi sẽ liên hệ sớm
+              nhất.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!-- ==== SLIDE ==== -->
     <section id="home" class="slider">
@@ -140,7 +238,14 @@
               <h1>
                 Không chỉ là món ăn, mà là niềm vui sum vầy cùng GâuGâu Food.
               </h1>
-              <a href="#team" class="btn btn-outline-light">Đặt tiệc ngay</a>
+              <a
+                href="#"
+                class="btn btn-outline-light"
+                data-bs-toggle="modal"
+                data-bs-target="#datTiecModal"
+              >
+                Đặt tiệc ngay
+              </a>
             </div>
           </div>
           <!-- Slide 2 -->
@@ -168,7 +273,11 @@
             <div class="carousel-caption text-start">
               <h3>Ẩm Thực Hoàn Hảo</h3>
               <h1>Từng món ăn – một niềm vui trọn vẹn cùng GâuGâu Food.</h1>
-              <a href="#contact" class="btn btn-outline-light">Khám phá Menu</a>
+              <a
+                href="../thucdon/TiecGiaDinh/mamtuchon.html"
+                class="btn btn-outline-light"
+                >Khám phá Menu</a
+              >
             </div>
           </div>
         </div>
@@ -485,7 +594,7 @@
     <!------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Home JS -->
+    <!-- Trang chủ JS -->
     <script src="js/trangchu.js"></script>
   </body>
 </html>
