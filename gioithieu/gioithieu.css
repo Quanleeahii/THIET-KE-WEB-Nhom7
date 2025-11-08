@@ -9,77 +9,11 @@ html {
 body {
   font-family: "Roboto", Arial, sans-serif;
   background-color: #fff;
-  color: #000000;
+  color: #000;
   overflow-x: hidden;
+  padding-top: 72px;
 }
 
-/* --- Variables & Base Reset --- */
-:root {
-    --primary-color: #A31F34; /* Đỏ đô/Màu rượu vang */
-    --secondary-color: #E2B24C; /* Vàng đồng/Màu nhấn */
-    --text-color: #333;
-    --light-text: #fff;
-    --bg-light: #F8F8F8; /* Nền nhẹ nhàng */
-    --bg-dark: #2c2c2c;
-}
-/* Phần ảnh đầu */
-.hero {
-  background: url("../gioithieu/imggioithieu/gioithieu.jpg") center/cover no-repeat;
-  color: white;
-  padding: 250px 0; 
-  text-align: center;
-}
-
-.hero h1 {
-  font-weight: 700;
-}
-
-/*Body*/
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--light-text);
-}
-a {
-    text-decoration: none;
-    color: var(--primary-color);
-    transition: color 0.3s, background-color 0.3s;
-}
-ul {
-    list-style: none;
-}
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-.section {
-    padding: 80px 0;
-}
-.section-title {
-    font-size: 2.2em;
-    font-weight: 700;
-    color: var(--primary-color);
-    text-align: center;
-    margin-bottom: 5px;
-}
-.section-subtitle {
-    text-align: center;
-    color: #666;
-    margin-bottom: 40px;
-    font-size: 1.1em;
-}
-.light-text {
-    color: var(--light-text);
-}
-.section-title-left { /* Để căn lề trái cho tiêu đề */
-    font-size: 2.2em;
-    font-weight: 700;
-    color: var(--primary-color);
-    text-align: left;
-    margin-bottom: 15px;
-}
 /* ========================= NAVBAR ========================= */
 .custom-navbar {
   background: #fff;
@@ -91,7 +25,7 @@ ul {
 .custom-navbar .navbar-brand {
   font-weight: 800;
   font-size: 1.6rem;
-  color: #000000 !important;
+  color: #000;
   letter-spacing: 0.5px;
   transition: color 0.3s ease;
 }
@@ -103,13 +37,13 @@ ul {
   gap: 20px;
 }
 .custom-navbar .nav-link {
-  color: #000000 !important;
+  color: #000;
   font-weight: 600;
   font-size: 0.95rem;
   letter-spacing: 0.5px;
   position: relative;
-  transition: all 0.3s ease;
   padding: 8px 0;
+  transition: color 0.3s ease;
 }
 .custom-navbar .nav-link::after {
   content: "";
@@ -119,315 +53,327 @@ ul {
   width: 0%;
   height: 2px;
   background-color: #e63946;
-  transition: width 0.3s ease;
   border-radius: 2px;
+  transition: width 0.3s ease;
 }
 .custom-navbar .nav-link:hover::after,
 .custom-navbar .nav-link.active::after {
   width: 100%;
 }
 .custom-navbar .nav-link:hover {
-  color: #e63946 !important;
+  color: #e63946;
 }
 .custom-navbar .btn-danger {
-  background-color: #e63946;
+  background-color: #c82333;
   border: none;
   border-radius: 30px;
   padding: 8px 22px;
   font-weight: 700;
   letter-spacing: 0.5px;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .custom-navbar .btn-danger:hover {
-  background-color: #c82333;
+  background-color: #e63946;
   box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
   transform: translateY(-2px);
 }
-.navbar.scrolled {
-  background: #fff;
+.custom-navbar.scrolled {
+  background-color: rgba(255, 246, 246, 0.95) !important;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   padding: 8px 0;
-  transition: all 0.3s ease;
-}
-.nav-item.dropdown:hover .dropdown-menu {
-  display: block;
 }
 .dropdown-menu {
   border: none;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
   transition: all 0.3s ease;
+}
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 .dropdown-item {
   font-weight: 500;
 }
 .dropdown-item:hover {
-  background-color: #dc3545;
+  background-color: #e63946;
   color: #fff;
 }
 .nav-item.dropdown .dropdown-toggle::after {
   display: none;
 }
-/* --- Page Hero --- */
-.page-hero {
-    background-color: var(--bg-light);
-    padding: 40px 0;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+
+/* ========================= POPUP ĐẶT TIỆC========================= */
+.dat-tiec-modal-content {
+  background-color: #c0392b;
+  color: #fff;
 }
-.page-hero h1 {
-    color: var(--primary-color);
-    font-size: 2em;
+.dat-tiec-modal-content .btn-close {
+  filter: invert(1);
+}
+.dat-tiec-modal-content .btn-light {
+  color: #c0392b !important;
 }
 
-/* --- NEW: About Us with Image (giới thiệu có ảnh) --- */
-.about-us-with-image {
-    background-color: var(--light-text);
-    padding: 80px 0;
+/* ========================= COLOR ========================= */
+:root {
+  --primary-color: #a31f34;
+  --secondary-color: #e2b24c;
+  --text-color: #333;
+  --light-text: #fff;
+  --bg-light: #f8f8f8;
+  --bg-dark: #2c2c2c;
+}
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.3s, background-color 0.3s;
+}
+ul {
+  list-style: none;
+}
+.gg-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.gg-section {
+  padding: 80px 0;
 }
 
-.image-text-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 1.2fr; /* Ảnh và chữ cân đối hơn */
-    gap: 60px;
-    align-items: center;
+/* ========================= HERO ========================= */
+.gg-hero {
+  background: url("../gioithieu/imggioithieu/gioithieu.jpg") center/cover
+    no-repeat;
+  color: #fff;
+  padding: 250px 0;
+  text-align: center;
 }
 
-.image-wrapper {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+/* ========================= GIỚI THIỆU ========================= */
+.gg-about {
+  background-color: var(--light-text);
+}
+.gg-image-text {
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+}
+.gg-image-wrapper {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+.gg-about-image {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.gg-about-image:hover {
+  transform: scale(1.05);
+}
+.gg-text-content {
+  font-size: 1.05em;
+  line-height: 1.8;
+  color: #333;
+}
+.gg-text-content p {
+  margin-bottom: 18px;
+  text-align: justify;
+}
+.gg-title-left {
+  font-size: 2.2em;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-align: left;
+  margin-bottom: 15px;
 }
 
-.about-image {
-    width: 100%;
-    height: 700px; /* Tăng chiều cao cho ảnh */
-    object-fit: cover; /* Ảnh tự cắt để luôn đầy khung và không méo */
-    transition: transform 0.5s ease;
+/* ========================= SỨ MỆNH ========================= */
+.gg-mission {
+  background-color: var(--bg-light);
+}
+.gg-content-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+.gg-intro-text {
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #555;
+}
+.gg-mission-points {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.gg-mission-item {
+  background-color: var(--light-text);
+  padding: 20px;
+  border-left: 5px solid var(--primary-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+.gg-mission-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.gg-mission-item i {
+  color: var(--secondary-color);
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  display: block;
 }
 
-.about-image:hover {
-    transform: scale(1.05); /* Hiệu ứng phóng nhẹ khi rê chuột */
+/* ========================= THỐNG KÊ ========================= */
+.gg-stats {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  padding: 45px 0; /* giảm bớt padding */
+}
+.gg-stats-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* thay vì space-around để bố cục gọn hơn */
+  flex-wrap: wrap;
+  text-align: center;
+}
+.gg-stat-item {
+  flex: 1 1 180px;
+  padding: 10px;
+  max-width: 220px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.gg-stat-item:hover {
+  transform: translateY(-4px);
+  opacity: 0.95;
+}
+.gg-counter {
+  display: block;
+  font-size: 2.6em;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+.gg-stat-item p {
+  font-size: 1em;
+  font-weight: 400;
+  opacity: 0.9;
 }
 
-.text-content {
-    font-size: 1.05em;
-    line-height: 1.8;
-    color: #333;
+/* ========================= ĐÁNH GIÁ ========================= */
+.gg-testimonials {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: var(--light-text);
+  padding: 100px 0;
+  overflow: hidden;
+}
+.gg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+.gg-testimonial-wrapper {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+.gg-title-light {
+  font-style: italic;
+  color: #e1cea5;
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+.gg-subtitle-light {
+  color: #ddd;
+  margin-bottom: 40px;
+  font-size: 1.1em;
+}
+.gg-carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  height: 250px;
+  align-items: center;
+}
+.gg-carousel-item {
+  min-width: 100%;
+  padding: 30px;
+  text-align: center;
+  background-color: rgba(114, 77, 77, 0.1);
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  max-width: 700px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease-in-out;
+}
+.gg-carousel-item.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+.gg-stars {
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+.gg-quote {
+  font-size: 1.4em;
+  font-style: italic;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.gg-author {
+  font-weight: 700;
+  font-size: 1.1em;
+  color: var(--secondary-color);
+}
+.gg-carousel-nav {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.gg-carousel-nav button {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: var(--light-text);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.gg-carousel-nav button:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.1);
 }
 
-.text-content p {
-    margin-bottom: 18px;
-    text-align: justify;
-}
-
-
-/* --- About Mission (Sứ mệnh) --- */
-.about-mission {
-    background-color: var(--bg-light); /* Nền hơi xám cho phần sứ mệnh */
-}
-.content-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 50px;
-    align-items: start;
-}
-.intro-text {
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #555;
-}
-
-/* Mission Points Grid (Chi tiết hơn) */
-.mission-points-grid {
-    display: grid;
-    grid-template-columns: 1fr; /* Tạm thời để 1 cột trên desktop */
-    gap: 20px;
-}
-.mission-item {
-    background-color: var(--light-text);
-    padding: 20px;
-    border-left: 5px solid var(--primary-color);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s;
-}
-.mission-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-.mission-item i {
-    color: var(--secondary-color);
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    display: block;
-}
-
-/* --- 3. Statistics/Counter Section --- */
-.stats-counter {
-    background-color: var(--primary-color);
-    color: var(--light-text);
-    padding: 60px 0;
-}
-.stats-grid {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    text-align: center;
-}
-.stat-item {
-    padding: 20px;
-    flex: 1 1 200px; /* Linh hoạt, chiếm ít nhất 200px */
-}
-.counter {
-    display: block;
-    font-size: 3.5em;
-    font-weight: 700;
-    color: var(--secondary-color);
-    margin-bottom: 5px;
-}
-.stat-item p {
-    font-size: 1.1em;
-    font-weight: 400;
-}
-
-/* --- NEW: Testimonials (Đánh giá khách hàng) --- */
-.testimonials {
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    color: var(--light-text);
-    padding: 100px 0; /* Tăng padding để có không gian */
-    overflow: hidden; /* Quan trọng cho carousel */
-}
-.testimonial-container h2{
-    font-style: italic;
-    color: #e1cea5;
-}
-.testimonials .overlay { /* Lớp phủ đen */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Đen trong suốt */
-    z-index: 1;
-}
-.testimonial-container {
-    position: relative;
-    z-index: 2; /* Đảm bảo nội dung nằm trên lớp phủ */
-    text-align: center;
-}
-.testimonial-carousel {
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    height: 250px; /* Chiều cao cố định cho carousel */
-    align-items: center;
-}
-.testimonial-item {
-    min-width: 100%; /* Mỗi item chiếm toàn bộ chiều rộng */
-    padding: 30px;
-    box-sizing: border-box;
-    text-align: center;
-    background-color: rgba(114, 77, 77, 0.1); /* Hơi trong suốt */
-    border-radius: 8px;
-    transform: translateX(0);
-    transition: transform 0.5s ease-in-out;
-    position: absolute; /* Quan trọng cho việc xếp chồng */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Căn giữa */
-    opacity: 0;
-    visibility: hidden;
-    height: auto;
-    max-width: 700px; /* Giới hạn chiều rộng đánh giá */
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-}
-.testimonial-item.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(-50%, -50%) translateX(0);
-}
-
-.testimonial-item .stars {
-    color: var(--secondary-color);
-    margin-bottom: 15px;
-    font-size: 1.2em;
-}
-.testimonial-item .quote {
-    font-size: 1.4em;
-    font-style: italic;
-    margin-bottom: 20px;
-    line-height: 1.5;
-}
-.testimonial-item .author {
-    font-weight: 700;
-    font-size: 1.1em;
-    color: var(--secondary-color);
-}
-.carousel-nav {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-.carousel-nav button {
-    background-color: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    color: var(--light-text);
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-}
-.carousel-nav button:hover {
-    background-color: var(--primary-color);
-    transform: scale(1.1);
-}
-
-/* --- 4. Team Section --- */
-.team-section {
-    background-color: var(--bg-light);
-}
-.team-grid {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 30px;
-    text-align: center;
-}
-.team-member {
-    flex: 1 1 300px;
-    background-color: var(--light-text);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-.member-photo {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-    border-radius: 5px;
-    object-fit: cover;
-    margin-bottom: 15px;
-}
-.team-member h3 {
-    color: var(--primary-color);
-}
-.position {
-    font-style: italic;
-    color: #666;
-}
-.experience {
-    font-weight: 700;
-    color: var(--secondary-color);
-    margin-top: 5px;
-}
-/* Footer*/
+/* ========================= FOOTER ========================= */
 .footer {
-  background: #111 url("../img/Footer.jpg") repeat;
+  margin-top: 0 !important;
+  background: #111 url("../trangchu/img/Footer.jpg") repeat;
   background-size: contain;
   color: #fff;
   font-size: 15px;
@@ -471,66 +417,172 @@ ul {
   text-align: center;
   padding: 12px 0;
 }
-/* General reset/setup */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-/* Section Styling */
-.team-section {
-    padding: 40px 20px;
+/* ========================= RESPONSIVE ========================= */
+@media (max-width: 991px) {
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: none !important;
+  }
+  .nav-item.dropdown.show .dropdown-menu {
+    display: block !important;
+  }
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    margin-top: 0;
+  }
+  .navbar-nav {
     text-align: center;
+    gap: 10px;
+  }
+  .navbar .btn-danger {
+    display: inline-block;
+    margin: 10px auto;
+    width: 80%;
+  }
+  .gg-image-text,
+  .gg-content-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .gg-about-image {
+    height: 450px;
+  }
+
+  .gg-text-content {
+    text-align: justify;
+    font-size: 1rem;
+  }
+
+  .gg-hero {
+    padding: 180px 0;
+  }
+
+  .gg-stats-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .gg-carousel {
+    height: auto;
+  }
+
+  .gg-carousel-item {
+    max-width: 90%;
+    padding: 20px;
+    font-size: 0.95rem;
+  }
+
+  .gg-quote {
+    font-size: 1.2em;
+  }
+
+  .gg-title-left {
+    font-size: 1.8em;
+  }
 }
 
-.section-title {
-    font-size: 2.5em;
-    font-weight: 300;
-    margin-bottom: 50px;
-    color: #333;
-}
+@media (max-width: 768px) {
+  .gg-hero {
+    padding: 150px 0;
+  }
 
-/* General reset/setup */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Section Styling */
-.team-section {
-    padding: 40px 20px;
+  .gg-title-left {
+    font-size: 1.6em;
     text-align: center;
-}
+  }
 
-.section-title {
+  .gg-text-content p {
+    font-size: 0.95em;
+  }
+
+  .gg-mission-item {
+    padding: 18px;
+  }
+
+  .gg-counter {
     font-size: 2.5em;
-    font-weight: 300;
-    margin-bottom: 50px;
-    color: #333;
-}
+  }
 
-/* General reset/setup */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f8f8f8; /* Màu nền nhẹ cho toàn trang */
-}
+  .gg-carousel-nav button {
+    width: 38px;
+    height: 38px;
+    font-size: 1em;
+  }
+  .carousel-caption {
+    top: 50%;
+    left: 5%;
+    max-width: 90%;
+    transform: translateY(-35%);
+  }
+  .carousel-caption h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+  .carousel-caption h3 {
+    font-size: 0.9rem;
+  }
+  .carousel-caption a.btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
 
-/* Section Styling */
-.team-section {
-    padding: 60px 20px;
+  .footer {
     text-align: center;
+  }
+  .footer .col-md-4 {
+    margin-bottom: 20px;
+  }
 }
 
-.section-title {
-    font-size: 2.5em;
-    font-weight: 300;
-    margin-bottom: 50px;
-    color: #333;
+@media (max-width: 576px) {
+  .gg-hero {
+    padding: 120px 0;
+  }
+
+  .gg-title-left {
+    font-size: 1.4em;
+  }
+
+  .gg-about-image {
+    height: 320px;
+  }
+
+  .gg-text-content {
+    font-size: 0.9em;
+    line-height: 1.6;
+  }
+
+  .gg-counter {
+    font-size: 2em;
+  }
+
+  .gg-quote {
+    font-size: 1em;
+  }
+
+  .gg-carousel-nav {
+    gap: 10px;
+  }
+  .carousel-caption {
+    top: 55%;
+    transform: translateY(-25%);
+  }
+  .carousel-caption h1 {
+    font-size: 1.4rem;
+  }
+  .carousel-caption h3 {
+    font-size: 0.8rem;
+  }
+  .carousel-caption a.btn {
+    padding: 6px 16px;
+    font-size: 0.8rem;
+  }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 28px;
+    height: 28px;
+  }
 }
