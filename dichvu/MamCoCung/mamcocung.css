@@ -9,9 +9,8 @@ html {
 body {
   font-family: "Roboto", Arial, sans-serif;
   background-color: #fff;
-  color: #000;
+  color: #000000;
   overflow-x: hidden;
-  padding-top: 72px;
 }
 
 /* ========================= NAVBAR ========================= */
@@ -25,7 +24,7 @@ body {
 .custom-navbar .navbar-brand {
   font-weight: 800;
   font-size: 1.6rem;
-  color: #000;
+  color: #000000 !important;
   letter-spacing: 0.5px;
   transition: color 0.3s ease;
 }
@@ -37,13 +36,13 @@ body {
   gap: 20px;
 }
 .custom-navbar .nav-link {
-  color: #000;
+  color: #000000 !important;
   font-weight: 600;
   font-size: 0.95rem;
   letter-spacing: 0.5px;
   position: relative;
+  transition: all 0.3s ease;
   padding: 8px 0;
-  transition: color 0.3s ease;
 }
 .custom-navbar .nav-link::after {
   content: "";
@@ -53,71 +52,37 @@ body {
   width: 0%;
   height: 2px;
   background-color: #e63946;
-  border-radius: 2px;
   transition: width 0.3s ease;
+  border-radius: 2px;
 }
 .custom-navbar .nav-link:hover::after,
 .custom-navbar .nav-link.active::after {
   width: 100%;
 }
 .custom-navbar .nav-link:hover {
-  color: #e63946;
+  color: #e63946 !important;
 }
 .custom-navbar .btn-danger {
-  background-color: #c82333;
+  background-color: #e63946;
   border: none;
   border-radius: 30px;
   padding: 8px 22px;
   font-weight: 700;
   letter-spacing: 0.5px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 .custom-navbar .btn-danger:hover {
-  background-color: #e63946;
+  background-color: #c82333;
   box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
   transform: translateY(-2px);
 }
-.custom-navbar.scrolled {
-  background-color: rgba(255, 246, 246, 0.95) !important;
+.navbar.scrolled {
+  background: #fff;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   padding: 8px 0;
-}
-.dropdown-menu {
-  border: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
   transition: all 0.3s ease;
 }
-.nav-item.dropdown:hover .dropdown-menu {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-.dropdown-item {
-  font-weight: 500;
-}
-.dropdown-item:hover {
-  background-color: #e63946;
-  color: #fff;
-}
-.nav-item.dropdown .dropdown-toggle::after {
-  display: none;
-}
 
-/* ========================= POPUP ĐẶT TIỆC========================= */
-.dat-tiec-modal-content {
-  background-color: #c0392b;
-  color: #fff;
-}
-.dat-tiec-modal-content .btn-close {
-  filter: invert(1);
-}
-.dat-tiec-modal-content .btn-light {
-  color: #c0392b !important;
-}
 /* ===== SLIDE ===== */
 .hero {
   padding-top: 120px;
@@ -351,53 +316,3 @@ body {
   }
 }
 
-/* ========================= RESPONSIVE ========================= */
-@media (max-width: 991px) {
-  .nav-item.dropdown:hover .dropdown-menu {
-    display: none !important;
-  }
-  .nav-item.dropdown.show .dropdown-menu {
-    display: block !important;
-  }
-  .dropdown-menu {
-    position: static;
-    width: 100%;
-    margin-top: 0;
-  }
-  .navbar-nav {
-    text-align: center;
-    gap: 10px;
-  }
-  .navbar .btn-danger {
-    display: inline-block;
-    margin: 10px auto;
-    width: 80%;
-  }
-}
-@media (max-width: 768px) {
-  .footer {
-    text-align: center;
-  }
-  .footer .col-md-4 {
-    margin-bottom: 20px;
-  }
-}
-/* Giúp 2 card Mâm cúng cao bằng nhau và ảnh đều */
-.card img {
-  height: 350px;          /* Cố định chiều cao ảnh */
-  object-fit: cover;      /* Cắt ảnh cho đều khung */
-}
-
-.card {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.card-body {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
