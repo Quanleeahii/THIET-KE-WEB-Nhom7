@@ -78,6 +78,7 @@ body {
   transform: translateY(-2px);
 }
 .custom-navbar.scrolled {
+  background-color: rgba(255, 246, 246, 0.95) !important;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   padding: 8px 0;
 }
@@ -105,6 +106,19 @@ body {
 .nav-item.dropdown .dropdown-toggle::after {
   display: none;
 }
+
+/* ========================= POPUP ĐẶT TIỆC========================= */
+.dat-tiec-modal-content {
+  background-color: #c0392b;
+  color: #fff;
+}
+.dat-tiec-modal-content .btn-close {
+  filter: invert(1);
+}
+.dat-tiec-modal-content .btn-light {
+  color: #c0392b !important;
+}
+
 /* ========================= SLIDER ========================= */
 .slider {
   position: relative;
