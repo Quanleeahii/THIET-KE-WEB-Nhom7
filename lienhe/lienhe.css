@@ -9,42 +9,54 @@ html {
 body {
   font-family: "Roboto", Arial, sans-serif;
   background-color: #fff;
-  color: #000;
+  color: #000000;
   overflow-x: hidden;
-  padding-top: 72px;
+  padding-top: 80px;
 }
 
-/* ========================= NAVBAR ========================= */
+/* -------------------------------
+   🔝 THANH NAVBAR TÙY CHỈNH
+--------------------------------*/
 .custom-navbar {
-  background: #fff;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  background: #fff; /* Nền trắng trong suốt nhẹ */
+  backdrop-filter: blur(10px); /* Làm mờ nền phía sau */
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08); /* Đổ bóng nhẹ dưới navbar */
   transition: all 0.3s ease-in-out;
-  padding: 12px 0;
+  padding: 12px 0; /* Khoảng cách trên dưới */
 }
+
+/* Logo thương hiệu (Brand) */
 .custom-navbar .navbar-brand {
   font-weight: 800;
   font-size: 1.6rem;
-  color: #000;
+  color: #000000 !important;
   letter-spacing: 0.5px;
   transition: color 0.3s ease;
 }
+
+/* Màu nhấn (phần chữ khác màu trong logo) */
 .custom-navbar .navbar-brand span {
-  color: #e63946;
+  color: #e63946; /* Màu đỏ chủ đạo */
   font-weight: 900;
 }
+
+/* Khoảng cách giữa các mục trong menu */
 .custom-navbar .navbar-nav {
   gap: 20px;
 }
+
+/* Liên kết trong navbar */
 .custom-navbar .nav-link {
-  color: #000;
+  color: #000000 !important;
   font-weight: 600;
   font-size: 0.95rem;
   letter-spacing: 0.5px;
   position: relative;
+  transition: all 0.3s ease;
   padding: 8px 0;
-  transition: color 0.3s ease;
 }
+
+/* Hiệu ứng gạch chân màu đỏ khi hover hoặc active */
 .custom-navbar .nav-link::after {
   content: "";
   position: absolute;
@@ -53,87 +65,105 @@ body {
   width: 0%;
   height: 2px;
   background-color: #e63946;
-  border-radius: 2px;
   transition: width 0.3s ease;
+  border-radius: 2px;
 }
+
+/* Khi hover hoặc đang ở trang hiện tại */
 .custom-navbar .nav-link:hover::after,
 .custom-navbar .nav-link.active::after {
   width: 100%;
 }
+
+/* Khi rê chuột vào thì đổi màu chữ sang đỏ */
 .custom-navbar .nav-link:hover {
-  color: #e63946;
+  color: #e63946 !important;
 }
+
+/* -------------------------------
+   🔴 NÚT "ĐẶT TIỆC" TRÊN NAVBAR
+--------------------------------*/
 .custom-navbar .btn-danger {
-  background-color: #c82333;
+  background-color: #e63946; /* Màu đỏ chính */
   border: none;
-  border-radius: 30px;
+  border-radius: 30px; /* Bo tròn nút */
   padding: 8px 22px;
   font-weight: 700;
   letter-spacing: 0.5px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
 }
+
+/* Hiệu ứng khi hover nút "ĐẶT TIỆC" */
 .custom-navbar .btn-danger:hover {
-  background-color: #e63946;
-  box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
-  transform: translateY(-2px);
+  background-color: #c82333; /* Đỏ đậm hơn */
+  box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3); /* Bóng nhẹ */
+  transform: translateY(-2px); /* Nổi nhẹ lên */
 }
-.custom-navbar.scrolled {
-  background-color: rgba(255, 246, 246, 0.95) !important;
+
+/* Khi navbar cuộn xuống (thêm class .scrolled trong JS) */
+.navbar.scrolled {
+  background: #fff;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   padding: 8px 0;
-}
-.dropdown-menu {
-  border: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
   transition: all 0.3s ease;
 }
 .nav-item.dropdown:hover .dropdown-menu {
   display: block;
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+}
+.dropdown-menu {
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 .dropdown-item {
   font-weight: 500;
 }
 .dropdown-item:hover {
-  background-color: #e63946;
+  background-color: #dc3545;
   color: #fff;
 }
 .nav-item.dropdown .dropdown-toggle::after {
   display: none;
 }
-
-/* ========================= NÚT "GỬI YÊU CẦU" ========================= */
+/* -------------------------------
+   📨 NÚT "GỬI YÊU CẦU" (giống ĐẶT TIỆC)
+--------------------------------*/
 .btn-warning {
-  background-color: #e63946 !important;
+  background-color: #e63946 !important; /* Màu đỏ tươi */
   border: none !important;
-  color: #fff !important;
+  color: #fff !important; /* Chữ trắng */
   font-weight: 700;
   padding: 10px 28px;
-  border-radius: 30px;
+  border-radius: 30px; /* Bo tròn giống Đặt Tiệc */
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
 }
+
 /* Hiệu ứng khi hover nút "GỬI YÊU CẦU" */
 .btn-warning:hover {
-  background-color: #c82333 !important;
+  background-color: #c82333 !important; /* Đỏ đậm hơn */
   color: #fff !important;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
 }
 
-/* ========================= PHẦN LIÊN HỆ ========================= */
+/* ==== PHẦN LIÊN HỆ ==== */
+/* Cho toàn bộ trang có nền hồng */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff0f0; /* nền hồng nhạt */
+}
 
-/*--- Section liên hệ ---*/
+/* Section liên hệ phủ toàn màn hình */
 .contact-section {
-  background-color: #fff;
-  width: 100vw;
-  min-height: 100vh;
-  padding: 100px 0;
+  background-color: #fff0f0; /* nền hồng */
+  width: 100vw; /* chiếm toàn chiều ngang */
+  min-height: 100vh; /* ít nhất phủ hết chiều cao màn hình */
+  padding: 100px 0; /* khoảng cách trên dưới */
   margin: 0;
   box-sizing: border-box;
 }
@@ -141,20 +171,31 @@ body {
   max-width: 1100px;
   margin: 0 auto;
 }
+
 .contact-header {
   text-align: center;
   margin-bottom: 40px;
 }
+
+.contact-header h2 {
+  color: #c0392b; /* đỏ */
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
 .contact-header p {
   color: #555;
   font-size: 1.1rem;
 }
+
 /* --- Hai cột --- */
 .contact-content {
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
 }
+
 .contact-info,
 .contact-form {
   flex: 1 1 45%;
@@ -163,18 +204,20 @@ body {
   border-radius: 15px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
+
 .contact-info h3,
 .contact-form h3 {
-  text-align: center;
   color: #c0392b;
   margin-bottom: 15px;
 }
+
 /* --- Thông tin --- */
 .contact-info p {
   margin: 10px 0;
   color: #333;
   line-height: 1.5;
 }
+
 /* --- Form --- */
 .contact-form label {
   display: block;
@@ -182,6 +225,7 @@ body {
   color: #444;
   font-weight: 500;
 }
+
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -192,6 +236,7 @@ body {
   font-size: 15px;
   transition: 0.2s;
 }
+
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: #c0392b;
@@ -205,7 +250,7 @@ body {
   width: 100%;
   margin-top: 25px;
   padding: 12px;
-  background: #e63946;
+  background: #c0392b;
   color: #fff;
   font-size: 16px;
   font-weight: bold;
@@ -214,9 +259,11 @@ body {
   cursor: pointer;
   transition: 0.3s;
 }
+
 .contact-form button:hover {
   background: #a93226;
 }
+
 /* --- Thông báo gửi --- */
 .success-message {
   display: none;
@@ -225,56 +272,19 @@ body {
   color: green;
   font-weight: bold;
 }
-.contact-header h2 {
-  color: #c0392b;
-  font-size: 70px;
-  font-family: "Great Vibes", sans-serif;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-/* ========================= POPUP ĐẶT TIỆC (Định kiểu từ CSS) ========================= */
-.dat-tiec-modal-content {
-  background-color: #c0392b;
-  color: #fff;
-}
-.dat-tiec-modal-content .btn-close {
-  filter: invert(1);
-}
-.dat-tiec-modal-content .btn-light {
-  color: #c0392b !important;
-}
-.custom-toast {
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50px);
-  background: #28a745;
-  color: white;
-  padding: 12px 25px;
-  border-radius: 8px;
-  font-weight: 500;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition: all 0.4s ease;
-}
-.custom-toast.show {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
-.custom-toast i {
-  font-size: 1.2rem;
-}
-.custom-toast.error {
-  background: #e74c3c;
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+  }
 }
 
-/* ========================= FOOTER ========================= */
+/* -------------------------------
+   ⚫ PHẦN CHÂN TRANG (FOOTER)
+--------------------------------*/
 .footer {
-  background: #111 url("../trangchu/img/Footer.jpg") repeat;
+  background: #111 url("../img/Footer.jpg") repeat;
   background-size: contain;
   color: #fff;
   font-size: 15px;
@@ -286,6 +296,7 @@ body {
   margin-bottom: 1rem;
   font-weight: 700;
 }
+
 .footer a {
   color: #ddd;
   text-decoration: none;
@@ -294,6 +305,7 @@ body {
 .footer a:hover {
   color: #ffc107;
 }
+
 .footer .social-icons a {
   font-size: 1.3rem;
   transition: 0.3s ease;
@@ -316,38 +328,7 @@ body {
   text-align: center;
   padding: 12px 0;
 }
-
-/* ========================= RESPONSIVE ========================= */
-@media (max-width: 991px) {
-  .nav-item.dropdown:hover .dropdown-menu {
-    display: none !important;
-  }
-  .nav-item.dropdown.show .dropdown-menu {
-    display: block !important;
-  }
-  .dropdown-menu {
-    position: static;
-    width: 100%;
-    margin-top: 0;
-  }
-  .navbar-nav {
-    text-align: center;
-    gap: 10px;
-  }
-  .navbar .btn-danger {
-    display: inline-block;
-    margin: 10px auto;
-    width: 80%;
-  }
-}
-@media (max-width: 768px) {
-  .contact-content {
-    flex-direction: column;
-  }
-  .footer {
-    text-align: center;
-  }
-  .footer .col-md-4 {
-    margin-bottom: 20px;
-  }
+.contact-header h2 {
+  font-size: 70px;
+  font-family: "Great Vibes", sans-serif;
 }
