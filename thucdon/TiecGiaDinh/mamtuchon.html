@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mâm Tự Chọn - GâuGâu Food</title>
-    <link rel="icon" href="../../trangchu/img/favicon.png" type="image/png" />
+    <title>Thực đơn tự chọn | Trang An</title>
+    <link rel="stylesheet" href="./mamtuchon/css/reset.css" />
+
+    <link rel="stylesheet" href="./mamtuchon/css/style.css" />
     <meta
       name="description"
       content="GâuGâu Food chuyên đặt tiệc tại nhà, mâm cỗ cúng, tiệc cưới hỏi, tiệc gia đình tại Đông Anh. Dịch vụ nhanh chóng, chuyên nghiệp, hương vị truyền thống và hiện đại chuẩn Việt."
@@ -31,18 +33,15 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
       rel="stylesheet"
     />
-    <!-- Style css -->
-    <link rel="stylesheet" href="./mamtuchon/css/style.css" />
   </head>
   <body>
-    <!------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!-- ==== NAV ==== -->
     <nav
       class="navbar navbar-expand-lg navbar-light bg-light fixed-top custom-navbar"
     >
       <div class="container">
         <!-- Logo -->
-        <a class="navbar-brand fw-bold" href="">
+        <a class="navbar-brand fw-bold" href="index.html">
           GâuGâu <span class="text-danger">.</span> Food
         </a>
         <!-- Toggle menu -->
@@ -61,173 +60,74 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="../../trangchu/index.html">TRANG CHỦ</a>
+              <a class="nav-link smoothScroll" href="#home">TRANG CHỦ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../../gioithieu/gioithieu.html"
+              <a
+                class="nav-link smoothScroll"
+                href="../gioithieu/gioithieu.html"
                 >GIỚI THIỆU</a
               >
             </li>
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
                 href="#"
                 id="dichVuDropdown"
                 role="button"
-                aria-expanded="false"
               >
                 DỊCH VỤ
               </a>
               <ul class="dropdown-menu" aria-labelledby="dichVuDropdown">
+                <li><a class="dropdown-item" href="#mamco">MÂM CỖ CÚNG</a></li>
                 <li>
-                  <a
-                    class="dropdown-item"
-                    href="../../dichvu/MamCoCung/mamcocung.html"
-                    >MÂM CỖ CÚNG</a
-                  >
+                  <a class="dropdown-item" href="#giadinh">TIỆC GIA ĐÌNH</a>
                 </li>
                 <li>
-                  <a
-                    class="dropdown-item"
-                    href="../../dichvu/TiecGiaDinh/tiecgiadinh.html"
-                    >TIỆC GIA ĐÌNH</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="../../dichvu/TiecCuoi/tieccuoi.html"
-                    >TIỆC CƯỚI HỎI</a
-                  >
+                  <a class="dropdown-item" href="#cuoihoi">TIỆC CƯỚI HỎI</a>
                 </li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">THỰC ĐƠN</a>
+              <a
+                class="nav-link smoothScroll"
+                href="../gioithieu/gioithieu.html"
+                >THỰC ĐƠN</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../../lienhe/lienhe.html">LIÊN HỆ</a>
+              <a class="nav-link smoothScroll" href="../lienhe/lienhe.html"
+                >LIÊN HỆ</a
+              >
             </li>
           </ul>
           <!-- Contact number / In4 -->
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="tel: 9999999999">
-                Gọi Ngay!
-                <i class="fa-solid fa-phone text-danger"></i> 9999.999.999
+              <a class="nav-link" href="#">
+                Gọi Ngay! <i class="fa fa-phone text-danger"></i> 9999.999.999
               </a>
             </li>
             <li class="nav-item">
-              <button
-                class="btn btn-danger ms-3"
-                data-bs-toggle="modal"
-                data-bs-target="#datTiecModal"
-              >
-                ĐẶT TIỆC
-              </button>
+              <a href="../lienhe" class="btn btn-danger ms-3">ĐẶT TIỆC</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <!------------------------------------------------------------------------------------------------------------------------------------------------------->
-    <!-- ===== POPUP ĐẶT TIỆC  ===== -->
-    <div
-      class="modal fade"
-      id="datTiecModal"
-      tabindex="-1"
-      aria-labelledby="datTiecLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content dat-tiec-modal-content">
-          <div class="modal-header border-0">
-            <h5 class="modal-title w-100 text-center" id="datTiecLabel">
-              <i class="bi bi-clipboard-check"></i> Gửi yêu cầu đặt tiệc
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Đóng"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="mb-3">
-                <label for="modalName" class="form-label">Họ và tên *</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="modalName"
-                  placeholder="Nhập họ và tên"
-                  required
-                />
-              </div>
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label for="modalEmail" class="form-label">Email *</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="modalEmail"
-                    placeholder="abc@gmail.com"
-                    required
-                  />
-                </div>
-                <div class="col-md-6 mb-3">
-                  <label for="modalPhone" class="form-label"
-                    >Số điện thoại *</label
-                  >
-                  <input
-                    type="tel"
-                    class="form-control"
-                    id="modalPhone"
-                    placeholder="0912xxxxxx"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="modalMessage" class="form-label">Lời nhắn</label>
-                <textarea
-                  class="form-control"
-                  id="modalMessage"
-                  rows="3"
-                  placeholder="Yêu cầu hoặc thông tin thêm..."
-                ></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-light w-100 fw-bold">
-                GỬI YÊU CẦU
-              </button>
-            </form>
-            <div
-              id="formAlert"
-              class="alert alert-success d-none mt-3"
-              role="alert"
-            >
-              ✅ Yêu cầu của bạn đã được ghi nhận! Chúng tôi sẽ liên hệ sớm
-              nhất.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-- ______________________________________________________________________________________________________ -->
     <main class="menu-container">
       <section class="menu-left">
         <h2 class="menu-title">CÁC MÓN SÚP</h2>
         <div class="menu-header-block">
-          <div class="menu-col check">Chọn</div>
-          <div class="menu-col name">Tên món ăn</div>
-          <div class="menu-col price">Giá (VNĐ / Mâm 6)</div>
+          <div class="col check">Chọn</div>
+          <div class="col name">Tên món ăn</div>
+          <div class="col price">Giá (VNĐ / Mâm 6)</div>
         </div>
 
         <div class="menu-table">
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -235,11 +135,11 @@
                 data-name="Súp gà phúc và nấm hương"
               />
             </div>
-            <div class="menu-col name">Súp gà phúc và nấm hương</div>
-            <div class="menu-col price">92,000</div>
+            <div class="col name">Súp gà phúc và nấm hương</div>
+            <div class="col price">92,000</div>
           </div>
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -247,12 +147,12 @@
                 data-name="Súp nấm tuyết yến sào gà xé"
               />
             </div>
-            <div class="menu-col name">Súp nấm tuyết yến sào gà xé</div>
-            <div class="menu-col price">95,000</div>
+            <div class="col name">Súp nấm tuyết yến sào gà xé</div>
+            <div class="col price">95,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -260,12 +160,12 @@
                 data-name="Súp hải sản lòng đỏ trứng muối"
               />
             </div>
-            <div class="menu-col name">Súp hải sản lòng đỏ trứng muối</div>
-            <div class="menu-col price">105,000</div>
+            <div class="col name">Súp hải sản lòng đỏ trứng muối</div>
+            <div class="col price">105,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -273,12 +173,12 @@
                 data-name="Súp bóng cá vi cá tôm tươi"
               />
             </div>
-            <div class="menu-col name">Súp bóng cá vi cá tôm tươi</div>
-            <div class="menu-col price">125,000</div>
+            <div class="col name">Súp bóng cá vi cá tôm tươi</div>
+            <div class="col price">125,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -286,12 +186,12 @@
                 data-name="Súp bào ngư hải sâm"
               />
             </div>
-            <div class="menu-col name">Súp bào ngư hải sâm</div>
-            <div class="menu-col price">155,000</div>
+            <div class="col name">Súp bào ngư hải sâm</div>
+            <div class="col price">155,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -299,12 +199,12 @@
                 data-name="Súp gà xé song nấm"
               />
             </div>
-            <div class="menu-col name">Súp gà xé song nấm</div>
-            <div class="menu-col price">92,000</div>
+            <div class="col name">Súp gà xé song nấm</div>
+            <div class="col price">92,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -312,12 +212,12 @@
                 data-name="Súp gà ngô kem"
               />
             </div>
-            <div class="menu-col name">Súp gà ngô kem</div>
-            <div class="menu-col price">92,000</div>
+            <div class="col name">Súp gà ngô kem</div>
+            <div class="col price">92,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -325,12 +225,12 @@
                 data-name="Súp cua bể măng tây"
               />
             </div>
-            <div class="menu-col name">Súp cua bể măng tây</div>
-            <div class="menu-col price">115,000</div>
+            <div class="col name">Súp cua bể măng tây</div>
+            <div class="col price">115,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -338,12 +238,12 @@
                 data-name="Súp gà ngô nấm"
               />
             </div>
-            <div class="menu-col name">Súp gà ngô nấm</div>
-            <div class="menu-col price">92,000</div>
+            <div class="col name">Súp gà ngô nấm</div>
+            <div class="col price">92,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -351,12 +251,12 @@
                 data-name="Súp bào ngư vi cá mập"
               />
             </div>
-            <div class="menu-col name">Súp bào ngư vi cá mập</div>
-            <div class="menu-col price">688,000</div>
+            <div class="col name">Súp bào ngư vi cá mập</div>
+            <div class="col price">688,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -364,12 +264,12 @@
                 data-name="Súp bào ngư gà xé"
               />
             </div>
-            <div class="menu-col name">Súp bào ngư gà xé</div>
-            <div class="menu-col price">277,000</div>
+            <div class="col name">Súp bào ngư gà xé</div>
+            <div class="col price">277,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -377,21 +277,21 @@
                 data-name="Súp cá hồi nấm tươi"
               />
             </div>
-            <div class="menu-col name">Súp cá hồi nấm tươi</div>
-            <div class="menu-col price">277,000</div>
+            <div class="col name">Súp cá hồi nấm tươi</div>
+            <div class="col price">277,000</div>
           </div>
         </div>
         <h2 class="menu-title">CÁC MÓN NỘM</h2>
 
         <div class="menu-header-block">
-          <div class="menu-col check">Chọn</div>
-          <div class="menu-col name">Tên món ăn</div>
-          <div class="menu-col price">Giá (VNĐ / Mâm 6)</div>
+          <div class="col check">Chọn</div>
+          <div class="col name">Tên món ăn</div>
+          <div class="col price">Giá (VNĐ / Mâm 6)</div>
         </div>
 
         <div class="menu-table">
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -399,12 +299,12 @@
                 data-name="Nộm đu đủ đùi gà quay"
               />
             </div>
-            <div class="menu-col name">Nộm đu đủ đùi gà quay</div>
-            <div class="menu-col price">98,000</div>
+            <div class="col name">Nộm đu đủ đùi gà quay</div>
+            <div class="col price">98,000</div>
           </div>
         </div>
         <div class="menu-row">
-          <div class="menu-col check">
+          <div class="col check">
             <input
               type="checkbox"
               class="menu-item"
@@ -412,11 +312,11 @@
               data-name="Nộm thập cẩm gà quay"
             />
           </div>
-          <div class="menu-col name">Nộm thập cẩm gà quay</div>
-          <div class="menu-col price">98,000</div>
+          <div class="col name">Nộm thập cẩm gà quay</div>
+          <div class="col price">98,000</div>
         </div>
         <div class="menu-row">
-          <div class="menu-col check">
+          <div class="col check">
             <input
               type="checkbox"
               class="menu-item"
@@ -424,11 +324,11 @@
               data-name="Nộm gà xé phay"
             />
           </div>
-          <div class="menu-col name">Nộm gà xé phay</div>
-          <div class="menu-col price">98,000</div>
+          <div class="col name">Nộm gà xé phay</div>
+          <div class="col price">98,000</div>
         </div>
         <div class="menu-row">
-          <div class="menu-col check">
+          <div class="col check">
             <input
               type="checkbox"
               class="menu-item"
@@ -436,11 +336,11 @@
               data-name="Nộm rau câu đùi gà bỏ lò"
             />
           </div>
-          <div class="menu-col name">Nộm rau câu đùi gà bỏ lò</div>
-          <div class="menu-col price">165,000</div>
+          <div class="col name">Nộm rau câu đùi gà bỏ lò</div>
+          <div class="col price">165,000</div>
         </div>
         <div class="menu-row">
-          <div class="menu-col check">
+          <div class="col check">
             <input
               type="checkbox"
               class="menu-item"
@@ -448,11 +348,11 @@
               data-name="Nộm su hào thịt xá xíu"
             />
           </div>
-          <div class="menu-col name">Nộm su hào thịt xá xíu</div>
-          <div class="menu-col price">98,000</div>
+          <div class="col name">Nộm su hào thịt xá xíu</div>
+          <div class="col price">98,000</div>
         </div>
         <div class="menu-row">
-          <div class="menu-col check">
+          <div class="col check">
             <input
               type="checkbox"
               class="menu-item"
@@ -460,11 +360,11 @@
               data-name="Nộm ngũ sắc bò khô"
             />
           </div>
-          <div class="menu-col name">Nộm ngũ sắc bò khô</div>
-          <div class="menu-col price">98,000</div>
+          <div class="col name">Nộm ngũ sắc bò khô</div>
+          <div class="col price">98,000</div>
         </div>
         <div class="menu-row">
-          <div class="menu-col check">
+          <div class="col check">
             <input
               type="checkbox"
               class="menu-item"
@@ -472,11 +372,11 @@
               data-name="Nộm bốn mùa"
             />
           </div>
-          <div class="menu-col name">Nộm bốn mùa</div>
-          <div class="menu-col price">105,000</div>
+          <div class="col name">Nộm bốn mùa</div>
+          <div class="col price">105,000</div>
         </div>
         <div class="menu-row">
-          <div class="menu-col check">
+          <div class="col check">
             <input
               type="checkbox"
               class="menu-item"
@@ -484,11 +384,11 @@
               data-name="Nộm hoa chuối tai heo"
             />
           </div>
-          <div class="menu-col name">Nộm hoa chuối tai heo</div>
-          <div class="menu-col price">98,000</div>
+          <div class="col name">Nộm hoa chuối tai heo</div>
+          <div class="col price">98,000</div>
         </div>
         <div class="menu-row">
-          <div class="menu-col check">
+          <div class="col check">
             <input
               type="checkbox"
               class="menu-item"
@@ -496,11 +396,11 @@
               data-name="Nộm gà hoa chuối"
             />
           </div>
-          <div class="menu-col name">Nộm gà hoa chuối</div>
-          <div class="menu-col price">98,000</div>
+          <div class="col name">Nộm gà hoa chuối</div>
+          <div class="col price">98,000</div>
         </div>
         <div class="menu-row">
-          <div class="menu-col check">
+          <div class="col check">
             <input
               type="checkbox"
               class="menu-item"
@@ -508,11 +408,11 @@
               data-name="Nộm Bạch Tuyết"
             />
           </div>
-          <div class="menu-col name">Nộm Bạch Tuyết</div>
-          <div class="menu-col price">98,000</div>
+          <div class="col name">Nộm Bạch Tuyết</div>
+          <div class="col price">98,000</div>
         </div>
         <div class="menu-row">
-          <div class="menu-col check">
+          <div class="col check">
             <input
               type="checkbox"
               class="menu-item"
@@ -520,11 +420,11 @@
               data-name="Nộm xoài xanh tai heo"
             />
           </div>
-          <div class="menu-col name">Nộm xoài xanh tai heo</div>
-          <div class="menu-col price">98,000</div>
+          <div class="col name">Nộm xoài xanh tai heo</div>
+          <div class="col price">98,000</div>
         </div>
         <div class="menu-row">
-          <div class="menu-col check">
+          <div class="col check">
             <input
               type="checkbox"
               class="menu-item"
@@ -532,11 +432,11 @@
               data-name="Nộm sứa ngũ sắc"
             />
           </div>
-          <div class="menu-col name">Nộm sứa ngũ sắc</div>
-          <div class="menu-col price">92,000</div>
+          <div class="col name">Nộm sứa ngũ sắc</div>
+          <div class="col price">92,000</div>
         </div>
         <div class="menu-row">
-          <div class="menu-col check">
+          <div class="col check">
             <input
               type="checkbox"
               class="menu-item"
@@ -544,11 +444,11 @@
               data-name="Nộm sứa dừa tươi"
             />
           </div>
-          <div class="menu-col name">Nộm sứa dừa tươi</div>
-          <div class="menu-col price">108,000</div>
+          <div class="col name">Nộm sứa dừa tươi</div>
+          <div class="col price">108,000</div>
         </div>
         <div class="menu-row">
-          <div class="menu-col check">
+          <div class="col check">
             <input
               type="checkbox"
               class="menu-item"
@@ -556,11 +456,11 @@
               data-name="Nộm bò bóp thấu"
             />
           </div>
-          <div class="menu-col name">Nộm bò bóp thấu</div>
-          <div class="menu-col price">128,000</div>
+          <div class="col name">Nộm bò bóp thấu</div>
+          <div class="col price">128,000</div>
         </div>
         <div class="menu-row">
-          <div class="menu-col check">
+          <div class="col check">
             <input
               type="checkbox"
               class="menu-item"
@@ -568,11 +468,11 @@
               data-name="Nộm củ đậu với bò nướng ngũ vị"
             />
           </div>
-          <div class="menu-col name">Nộm củ đậu với bò nướng ngũ vị</div>
-          <div class="menu-col price">128,000</div>
+          <div class="col name">Nộm củ đậu với bò nướng ngũ vị</div>
+          <div class="col price">128,000</div>
         </div>
         <div class="menu-row">
-          <div class="menu-col check">
+          <div class="col check">
             <input
               type="checkbox"
               class="menu-item"
@@ -580,11 +480,11 @@
               data-name="Nộm rau tiến vua tôm thịt xá xíu"
             />
           </div>
-          <div class="menu-col name">Nộm rau tiến vua tôm thịt xá xíu</div>
-          <div class="menu-col price">165,000</div>
+          <div class="col name">Nộm rau tiến vua tôm thịt xá xíu</div>
+          <div class="col price">165,000</div>
         </div>
         <div class="menu-row">
-          <div class="menu-col check">
+          <div class="col check">
             <input
               type="checkbox"
               class="menu-item"
@@ -592,11 +492,11 @@
               data-name="Nộm cổ hũ dừa tôm thịt"
             />
           </div>
-          <div class="menu-col name">Nộm cổ hũ dừa tôm thịt</div>
-          <div class="menu-col price">120,000</div>
+          <div class="col name">Nộm cổ hũ dừa tôm thịt</div>
+          <div class="col price">120,000</div>
         </div>
         <div class="menu-row">
-          <div class="menu-col check">
+          <div class="col check">
             <input
               type="checkbox"
               class="menu-item"
@@ -604,11 +504,11 @@
               data-name="Nộm hải sản kiểu Thái"
             />
           </div>
-          <div class="menu-col name">Nộm hải sản kiểu Thái</div>
-          <div class="menu-col price">120,000</div>
+          <div class="col name">Nộm hải sản kiểu Thái</div>
+          <div class="col price">120,000</div>
         </div>
         <div class="menu-row">
-          <div class="menu-col check">
+          <div class="col check">
             <input
               type="checkbox"
               class="menu-item"
@@ -616,11 +516,11 @@
               data-name="Nộm xoài xanh tôm thịt"
             />
           </div>
-          <div class="menu-col name">Nộm xoài xanh tôm thịt</div>
-          <div class="menu-col price">98,000</div>
+          <div class="col name">Nộm xoài xanh tôm thịt</div>
+          <div class="col price">98,000</div>
         </div>
         <div class="menu-row">
-          <div class="menu-col check">
+          <div class="col check">
             <input
               type="checkbox"
               class="menu-item"
@@ -628,11 +528,11 @@
               data-name="Nộm đu đủ bò khô"
             />
           </div>
-          <div class="menu-col name">Nộm đu đủ bò khô</div>
-          <div class="menu-col price">98,000</div>
+          <div class="col name">Nộm đu đủ bò khô</div>
+          <div class="col price">98,000</div>
         </div>
         <div class="menu-row">
-          <div class="menu-col check">
+          <div class="col check">
             <input
               type="checkbox"
               class="menu-item"
@@ -640,11 +540,11 @@
               data-name="Nộm cung đình"
             />
           </div>
-          <div class="menu-col name">Nộm cung đình</div>
-          <div class="menu-col price">115,000</div>
+          <div class="col name">Nộm cung đình</div>
+          <div class="col price">115,000</div>
         </div>
         <div class="menu-row">
-          <div class="menu-col check">
+          <div class="col check">
             <input
               type="checkbox"
               class="menu-item"
@@ -652,20 +552,20 @@
               data-name="Nộm ngó sen tôm thịt"
             />
           </div>
-          <div class="menu-col name">Nộm ngó sen tôm thịt</div>
-          <div class="menu-col price">115,000</div>
+          <div class="col name">Nộm ngó sen tôm thịt</div>
+          <div class="col price">115,000</div>
         </div>
 
         <h2 class="menu-title">CÁC MÓN CHIÊN+ NEM</h2>
         <div class="menu-header-block">
-          <div class="menu-col check">Chọn</div>
-          <div class="menu-col name">Tên món ăn</div>
-          <div class="menu-col price">Giá (VNĐ / Mâm 6)</div>
+          <div class="col check">Chọn</div>
+          <div class="col name">Tên món ăn</div>
+          <div class="col price">Giá (VNĐ / Mâm 6)</div>
         </div>
 
         <div class="menu-table">
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -673,11 +573,11 @@
                 data-name="Khoai tây chiên bơ tỏi"
               />
             </div>
-            <div class="menu-col name">Khoai tây chiên bơ tỏi</div>
-            <div class="menu-col price">58,000</div>
+            <div class="col name">Khoai tây chiên bơ tỏi</div>
+            <div class="col price">58,000</div>
           </div>
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -685,11 +585,11 @@
                 data-name="khoai lang chiên vừng"
               />
             </div>
-            <div class="menu-col name">khoai lang chiên vừng</div>
-            <div class="menu-col price">58,000</div>
+            <div class="col name">khoai lang chiên vừng</div>
+            <div class="col price">58,000</div>
           </div>
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -697,11 +597,11 @@
                 data-name="Khoai lang kén"
               />
             </div>
-            <div class="menu-col name">Khoai lang kén</div>
-            <div class="menu-col price">58,000</div>
+            <div class="col name">Khoai lang kén</div>
+            <div class="col price">58,000</div>
           </div>
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -709,11 +609,11 @@
                 data-name="Phồng tôm rán"
               />
             </div>
-            <div class="menu-col name">Phồng tôm rán</div>
-            <div class="menu-col price">35,000</div>
+            <div class="col name">Phồng tôm rán</div>
+            <div class="col price">35,000</div>
           </div>
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -721,11 +621,11 @@
                 data-name="Khoai môn lệ phố"
               />
             </div>
-            <div class="menu-col name">Khoai môn lệ phố</div>
-            <div class="menu-col price">58,000</div>
+            <div class="col name">Khoai môn lệ phố</div>
+            <div class="col price">58,000</div>
           </div>
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -733,11 +633,11 @@
                 data-name="Ngô Mỹ chiên bơ"
               />
             </div>
-            <div class="menu-col name">Ngô Mỹ chiên bơ</div>
-            <div class="menu-col price">58,000</div>
+            <div class="col name">Ngô Mỹ chiên bơ</div>
+            <div class="col price">58,000</div>
           </div>
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -745,11 +645,11 @@
                 data-name="Nem Hà Nội truyền thống"
               />
             </div>
-            <div class="menu-col name">Nem Hà Nội truyền thống</div>
-            <div class="menu-col price">95,000</div>
+            <div class="col name">Nem Hà Nội truyền thống</div>
+            <div class="col price">95,000</div>
           </div>
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -757,11 +657,11 @@
                 data-name="Nem hải sản Phú Quốc"
               />
             </div>
-            <div class="menu-col name">Nem hải sản Phú Quốc</div>
-            <div class="menu-col price">120,000</div>
+            <div class="col name">Nem hải sản Phú Quốc</div>
+            <div class="col price">120,000</div>
           </div>
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -769,11 +669,11 @@
                 data-name="Nem cá Hồi đặc biệt"
               />
             </div>
-            <div class="menu-col name">Nem cá Hồi đặc biệt</div>
-            <div class="menu-col price">195,000</div>
+            <div class="col name">Nem cá Hồi đặc biệt</div>
+            <div class="col price">195,000</div>
           </div>
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -781,11 +681,11 @@
                 data-name="Nem ốc Hồ Tây"
               />
             </div>
-            <div class="menu-col name">Nem ốc Hồ Tây</div>
-            <div class="menu-col price">145,000</div>
+            <div class="col name">Nem ốc Hồ Tây</div>
+            <div class="col price">145,000</div>
           </div>
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -793,11 +693,11 @@
                 data-name="Nem gà nấm hương"
               />
             </div>
-            <div class="menu-col name">Nem gà nấm hương</div>
-            <div class="menu-col price">115,000</div>
+            <div class="col name">Nem gà nấm hương</div>
+            <div class="col price">115,000</div>
           </div>
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -805,11 +705,11 @@
                 data-name="Nem cua bể Phú Quốc"
               />
             </div>
-            <div class="menu-col name">Nem cua bể Phú Quốc</div>
-            <div class="menu-col price">165,000</div>
+            <div class="col name">Nem cua bể Phú Quốc</div>
+            <div class="col price">165,000</div>
           </div>
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -817,20 +717,20 @@
                 data-name="Bánh tôm Hồ Tây"
               />
             </div>
-            <div class="menu-col name">Bánh tôm Hồ Tây</div>
-            <div class="menu-col price">135,000</div>
+            <div class="col name">Bánh tôm Hồ Tây</div>
+            <div class="col price">135,000</div>
           </div>
         </div>
         <h2 class="menu-title">CÁC MÓN GÀ + VỊT</h2>
 
         <div class="menu-header-block">
-          <div class="menu-col check">Chọn</div>
-          <div class="menu-col name">Tên món ăn</div>
-          <div class="menu-col price">Giá (VNĐ / Mâm 6)</div>
+          <div class="col check">Chọn</div>
+          <div class="col name">Tên món ăn</div>
+          <div class="col price">Giá (VNĐ / Mâm 6)</div>
         </div>
         <div class="menu-table">
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -838,12 +738,12 @@
                 data-name="Gà ta hấp lá chanh"
               />
             </div>
-            <div class="menu-col name">Gà ta hấp lá chanh</div>
-            <div class="menu-col price">253,000</div>
+            <div class="col name">Gà ta hấp lá chanh</div>
+            <div class="col price">253,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -851,12 +751,12 @@
                 data-name="Gà ta ủ muối xả"
               />
             </div>
-            <div class="menu-col name">Gà ta ủ muối xả</div>
-            <div class="menu-col price">270,000</div>
+            <div class="col name">Gà ta ủ muối xả</div>
+            <div class="col price">270,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -864,12 +764,12 @@
                 data-name="Gà ta quay mật ong"
               />
             </div>
-            <div class="menu-col name">Gà ta quay mật ong</div>
-            <div class="menu-col price">270,000</div>
+            <div class="col name">Gà ta quay mật ong</div>
+            <div class="col price">270,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -877,12 +777,12 @@
                 data-name="Gà ta nướng Hong Kong"
               />
             </div>
-            <div class="menu-col name">Gà ta nướng Hong Kong</div>
-            <div class="menu-col price">270,000</div>
+            <div class="col name">Gà ta nướng Hong Kong</div>
+            <div class="col price">270,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -890,12 +790,12 @@
                 data-name="Gà ta rang muối xả"
               />
             </div>
-            <div class="menu-col name">Gà ta rang muối xả</div>
-            <div class="menu-col price">253,000</div>
+            <div class="col name">Gà ta rang muối xả</div>
+            <div class="col price">253,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -903,12 +803,12 @@
                 data-name="Gà rút xương cuộn sốt nấm"
               />
             </div>
-            <div class="menu-col name">Gà rút xương cuộn sốt nấm</div>
-            <div class="menu-col price">305,000</div>
+            <div class="col name">Gà rút xương cuộn sốt nấm</div>
+            <div class="col price">305,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -916,12 +816,12 @@
                 data-name="Gà rút xương quay giòn sốt cam"
               />
             </div>
-            <div class="menu-col name">Gà rút xương quay giòn sốt cam</div>
-            <div class="menu-col price">305,000</div>
+            <div class="col name">Gà rút xương quay giòn sốt cam</div>
+            <div class="col price">305,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -929,12 +829,12 @@
                 data-name="Gà quay lá móc mật"
               />
             </div>
-            <div class="menu-col name">Gà quay lá móc mật</div>
-            <div class="menu-col price">270,000</div>
+            <div class="col name">Gà quay lá móc mật</div>
+            <div class="col price">270,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -942,12 +842,12 @@
                 data-name="Gà Đông Tảo hấp lá chanh"
               />
             </div>
-            <div class="menu-col name">Gà Đông Tảo hấp lá chanh</div>
-            <div class="menu-col price">402,000</div>
+            <div class="col name">Gà Đông Tảo hấp lá chanh</div>
+            <div class="col price">402,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -955,12 +855,12 @@
                 data-name="Gà rán sốt cam"
               />
             </div>
-            <div class="menu-col name">Gà rán sốt cam</div>
-            <div class="menu-col price">240,000</div>
+            <div class="col name">Gà rán sốt cam</div>
+            <div class="col price">240,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -968,12 +868,12 @@
                 data-name="Gà trống ta hấp lá chanh"
               />
             </div>
-            <div class="menu-col name">Gà trống ta hấp lá chanh</div>
-            <div class="menu-col price">270,000</div>
+            <div class="col name">Gà trống ta hấp lá chanh</div>
+            <div class="col price">270,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -981,12 +881,12 @@
                 data-name="Gà trống ta ủ muối sả"
               />
             </div>
-            <div class="menu-col name">Gà trống ta ủ muối sả</div>
-            <div class="menu-col price">305,000</div>
+            <div class="col name">Gà trống ta ủ muối sả</div>
+            <div class="col price">305,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -994,12 +894,12 @@
                 data-name="Gà trống ta nướng Hồng Kong"
               />
             </div>
-            <div class="menu-col name">Gà trống ta nướng Hồng Kong</div>
-            <div class="menu-col price">270,000</div>
+            <div class="col name">Gà trống ta nướng Hồng Kong</div>
+            <div class="col price">270,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1007,12 +907,12 @@
                 data-name="Gà trống ta quay mật ong"
               />
             </div>
-            <div class="menu-col name">Gà trống ta quay mật ong</div>
-            <div class="menu-col price">270,000</div>
+            <div class="col name">Gà trống ta quay mật ong</div>
+            <div class="col price">270,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1020,12 +920,12 @@
                 data-name="Vịt quay Bắc Kinh (1/2 con)"
               />
             </div>
-            <div class="menu-col name">Vịt quay Bắc Kinh (1/2 con)</div>
-            <div class="menu-col price">235,000</div>
+            <div class="col name">Vịt quay Bắc Kinh (1/2 con)</div>
+            <div class="col price">235,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1033,12 +933,12 @@
                 data-name="Vịt rang riềng (1/2 con)"
               />
             </div>
-            <div class="menu-col name">Vịt rang riềng (1/2 con)</div>
-            <div class="menu-col price">239,000</div>
+            <div class="col name">Vịt rang riềng (1/2 con)</div>
+            <div class="col price">239,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1046,12 +946,12 @@
                 data-name="Vịt luộc (1/2 con)"
               />
             </div>
-            <div class="menu-col name">Vịt luộc (1/2 con)</div>
-            <div class="menu-col price">165,000</div>
+            <div class="col name">Vịt luộc (1/2 con)</div>
+            <div class="col price">165,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1059,12 +959,12 @@
                 data-name="Vịt chiên lá móc mật (1/2 con)"
               />
             </div>
-            <div class="menu-col name">Vịt chiên lá móc mật (1/2 con)</div>
-            <div class="menu-col price">165,000</div>
+            <div class="col name">Vịt chiên lá móc mật (1/2 con)</div>
+            <div class="col price">165,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1072,12 +972,12 @@
                 data-name="Vịt om sấu (1 con)"
               />
             </div>
-            <div class="menu-col name">Vịt om sấu (1 con)</div>
-            <div class="menu-col price">385,000</div>
+            <div class="col name">Vịt om sấu (1 con)</div>
+            <div class="col price">385,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1085,12 +985,12 @@
                 data-name="Gà ta hấp gừng"
               />
             </div>
-            <div class="menu-col name">Gà ta hấp gừng</div>
-            <div class="menu-col price">253,000</div>
+            <div class="col name">Gà ta hấp gừng</div>
+            <div class="col price">253,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1098,12 +998,12 @@
                 data-name="Gà cánh tiên (1 con)"
               />
             </div>
-            <div class="menu-col name">Gà cánh tiên (1 con)</div>
-            <div class="menu-col price">520,000</div>
+            <div class="col name">Gà cánh tiên (1 con)</div>
+            <div class="col price">520,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1111,12 +1011,12 @@
                 data-name="Gà ta nướng Tây Bắc"
               />
             </div>
-            <div class="menu-col name">Gà ta nướng Tây Bắc</div>
-            <div class="menu-col price">275,000</div>
+            <div class="col name">Gà ta nướng Tây Bắc</div>
+            <div class="col price">275,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1124,12 +1024,12 @@
                 data-name="Gà ta chiên mắm"
               />
             </div>
-            <div class="menu-col name">Gà ta chiên mắm</div>
-            <div class="menu-col price">265,000</div>
+            <div class="col name">Gà ta chiên mắm</div>
+            <div class="col price">265,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1137,20 +1037,20 @@
                 data-name="Cánh gà chiên mắm"
               />
             </div>
-            <div class="menu-col name">Cánh gà chiên mắm</div>
-            <div class="menu-col price">220,000</div>
+            <div class="col name">Cánh gà chiên mắm</div>
+            <div class="col price">220,000</div>
           </div>
         </div>
         <h2 class="menu-title">CÁC MÓN BÒ + BÊ + DÊ</h2>
 
         <div class="menu-header-block">
-          <div class="menu-col check">Chọn</div>
-          <div class="menu-col name">Tên món ăn</div>
-          <div class="menu-col price">Giá (VNĐ / Mâm 6)</div>
+          <div class="col check">Chọn</div>
+          <div class="col name">Tên món ăn</div>
+          <div class="col price">Giá (VNĐ / Mâm 6)</div>
         </div>
         <div class="menu-table">
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1158,12 +1058,12 @@
                 data-name="Bò sốt tiêu đen + bánh mỳ"
               />
             </div>
-            <div class="menu-col name">Bò sốt tiêu đen + bánh mỳ</div>
-            <div class="menu-col price">230,000</div>
+            <div class="col name">Bò sốt tiêu đen + bánh mỳ</div>
+            <div class="col price">230,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1171,12 +1071,12 @@
                 data-name="Bò lúc lắc + khoai tây chiên"
               />
             </div>
-            <div class="menu-col name">Bò lúc lắc + khoai tây chiên</div>
-            <div class="menu-col price">230,000</div>
+            <div class="col name">Bò lúc lắc + khoai tây chiên</div>
+            <div class="col price">230,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1184,12 +1084,12 @@
                 data-name="Bò hầm Lagu + bánh mỳ"
               />
             </div>
-            <div class="menu-col name">Bò hầm Lagu + bánh mỳ</div>
-            <div class="menu-col price">230,000</div>
+            <div class="col name">Bò hầm Lagu + bánh mỳ</div>
+            <div class="col price">230,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1197,12 +1097,12 @@
                 data-name="Bò Mỹ chiên Thái Lan"
               />
             </div>
-            <div class="menu-col name">Bò Mỹ chiên Thái Lan</div>
-            <div class="menu-col price">196,000</div>
+            <div class="col name">Bò Mỹ chiên Thái Lan</div>
+            <div class="col price">196,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1210,14 +1110,12 @@
                 data-name="Bò nướng nấm kim châm / Bò nướng ngũ vị"
               />
             </div>
-            <div class="menu-col name">
-              Bò nướng nấm kim châm / Bò nướng ngũ vị
-            </div>
-            <div class="menu-col price">235,000</div>
+            <div class="col name">Bò nướng nấm kim châm / Bò nướng ngũ vị</div>
+            <div class="col price">235,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1225,12 +1123,12 @@
                 data-name="Bò cuộn măng tây nướng"
               />
             </div>
-            <div class="menu-col name">Bò cuộn măng tây nướng</div>
-            <div class="menu-col price">235,000</div>
+            <div class="col name">Bò cuộn măng tây nướng</div>
+            <div class="col price">235,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1238,12 +1136,12 @@
                 data-name="Bò xào măng chúc"
               />
             </div>
-            <div class="menu-col name">Bò xào măng chúc</div>
-            <div class="menu-col price">207,000</div>
+            <div class="col name">Bò xào măng chúc</div>
+            <div class="col price">207,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1251,12 +1149,12 @@
                 data-name="Bò xào cần tỏi tây"
               />
             </div>
-            <div class="menu-col name">Bò xào cần tỏi tây</div>
-            <div class="menu-col price">235,000</div>
+            <div class="col name">Bò xào cần tỏi tây</div>
+            <div class="col price">235,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1264,12 +1162,12 @@
                 data-name="Bò hầm vang đỏ + bánh mỳ"
               />
             </div>
-            <div class="menu-col name">Bò hầm vang đỏ + bánh mỳ</div>
-            <div class="menu-col price">253,000</div>
+            <div class="col name">Bò hầm vang đỏ + bánh mỳ</div>
+            <div class="col price">253,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1277,12 +1175,12 @@
                 data-name="Bò xào nấm tươi"
               />
             </div>
-            <div class="menu-col name">Bò xào nấm tươi</div>
-            <div class="menu-col price">228,000</div>
+            <div class="col name">Bò xào nấm tươi</div>
+            <div class="col price">228,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1290,12 +1188,12 @@
                 data-name="Bê nướng tương gừng"
               />
             </div>
-            <div class="menu-col name">Bê nướng tương gừng</div>
-            <div class="menu-col price">230,000</div>
+            <div class="col name">Bê nướng tương gừng</div>
+            <div class="col price">230,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1303,12 +1201,12 @@
                 data-name="Bê xào xả ớt"
               />
             </div>
-            <div class="menu-col name">Bê xào xả ớt</div>
-            <div class="menu-col price">260,000</div>
+            <div class="col name">Bê xào xả ớt</div>
+            <div class="col price">260,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1316,12 +1214,12 @@
                 data-name="Bê non hấp rượu gừng"
               />
             </div>
-            <div class="menu-col name">Bê non hấp rượu gừng</div>
-            <div class="menu-col price">250,000</div>
+            <div class="col name">Bê non hấp rượu gừng</div>
+            <div class="col price">250,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1329,12 +1227,12 @@
                 data-name="Bê tái chanh"
               />
             </div>
-            <div class="menu-col name">Bê tái chanh</div>
-            <div class="menu-col price">230,000</div>
+            <div class="col name">Bê tái chanh</div>
+            <div class="col price">230,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1342,12 +1240,12 @@
                 data-name="Bê hấp mắm gừng"
               />
             </div>
-            <div class="menu-col name">Bê hấp mắm gừng</div>
-            <div class="menu-col price">253,000</div>
+            <div class="col name">Bê hấp mắm gừng</div>
+            <div class="col price">253,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1355,12 +1253,12 @@
                 data-name="Dê tái chanh"
               />
             </div>
-            <div class="menu-col name">Dê tái chanh</div>
-            <div class="menu-col price">290,000</div>
+            <div class="col name">Dê tái chanh</div>
+            <div class="col price">290,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1368,12 +1266,12 @@
                 data-name="Dê xào lăn"
               />
             </div>
-            <div class="menu-col name">Dê xào lăn</div>
-            <div class="menu-col price">300,000</div>
+            <div class="col name">Dê xào lăn</div>
+            <div class="col price">300,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1381,12 +1279,12 @@
                 data-name="Dê nướng tảng"
               />
             </div>
-            <div class="menu-col name">Dê nướng tảng</div>
-            <div class="menu-col price">360,000</div>
+            <div class="col name">Dê nướng tảng</div>
+            <div class="col price">360,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1394,12 +1292,12 @@
                 data-name="Dê hấp gừng"
               />
             </div>
-            <div class="menu-col name">Dê hấp gừng</div>
-            <div class="menu-col price">360,000</div>
+            <div class="col name">Dê hấp gừng</div>
+            <div class="col price">360,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1407,12 +1305,12 @@
                 data-name="Lẩu dê thuốc bắc"
               />
             </div>
-            <div class="menu-col name">Lẩu dê thuốc bắc</div>
-            <div class="menu-col price">750,000</div>
+            <div class="col name">Lẩu dê thuốc bắc</div>
+            <div class="col price">750,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1420,12 +1318,12 @@
                 data-name="Bò sốt tiêu xanh + bánh bao"
               />
             </div>
-            <div class="menu-col name">Bò sốt tiêu xanh + bánh bao</div>
-            <div class="menu-col price">230,000</div>
+            <div class="col name">Bò sốt tiêu xanh + bánh bao</div>
+            <div class="col price">230,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1433,12 +1331,12 @@
                 data-name="Thăn bò chiên kiểu Thái"
               />
             </div>
-            <div class="menu-col name">Thăn bò chiên kiểu Thái</div>
-            <div class="menu-col price">230,000</div>
+            <div class="col name">Thăn bò chiên kiểu Thái</div>
+            <div class="col price">230,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1446,12 +1344,12 @@
                 data-name="Bò xào măng trúc"
               />
             </div>
-            <div class="menu-col name">Bò xào măng trúc</div>
-            <div class="menu-col price">230,000</div>
+            <div class="col name">Bò xào măng trúc</div>
+            <div class="col price">230,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1459,12 +1357,12 @@
                 data-name="Bê hấp tương gừng"
               />
             </div>
-            <div class="menu-col name">Bê hấp tương gừng</div>
-            <div class="menu-col price">250,000</div>
+            <div class="col name">Bê hấp tương gừng</div>
+            <div class="col price">250,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1472,12 +1370,12 @@
                 data-name="Bê xào sả ớt"
               />
             </div>
-            <div class="menu-col name">Bê xào sả ớt</div>
-            <div class="menu-col price">230,000</div>
+            <div class="col name">Bê xào sả ớt</div>
+            <div class="col price">230,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1485,12 +1383,12 @@
                 data-name="Bê xào măng trúc"
               />
             </div>
-            <div class="menu-col name">Bê xào măng trúc</div>
-            <div class="menu-col price">230,000</div>
+            <div class="col name">Bê xào măng trúc</div>
+            <div class="col price">230,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1498,12 +1396,12 @@
                 data-name="Bê chao tỏi"
               />
             </div>
-            <div class="menu-col name">Bê chao tỏi</div>
-            <div class="menu-col price">250,000</div>
+            <div class="col name">Bê chao tỏi</div>
+            <div class="col price">250,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1511,20 +1409,20 @@
                 data-name="Dê chao tỏi"
               />
             </div>
-            <div class="menu-col name">Dê chao tỏi</div>
-            <div class="menu-col price">320,000</div>
+            <div class="col name">Dê chao tỏi</div>
+            <div class="col price">320,000</div>
           </div>
         </div>
         <h2 class="menu-title">CÁC MÓN CÁ</h2>
 
         <div class="menu-header-block">
-          <div class="menu-col check">Chọn</div>
-          <div class="menu-col name">Tên món ăn</div>
-          <div class="menu-col price">Giá (VNĐ / Mâm 6)</div>
+          <div class="col check">Chọn</div>
+          <div class="col name">Tên món ăn</div>
+          <div class="col price">Giá (VNĐ / Mâm 6)</div>
         </div>
         <div class="menu-table">
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1532,12 +1430,12 @@
                 data-name="Cá giòn xào cần mỹ"
               />
             </div>
-            <div class="menu-col name">Cá giòn xào cần mỹ</div>
-            <div class="menu-col price">245,000</div>
+            <div class="col name">Cá giòn xào cần mỹ</div>
+            <div class="col price">245,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1545,12 +1443,12 @@
                 data-name="Cá Giòn xào song nấm"
               />
             </div>
-            <div class="menu-col name">Cá Giòn xào song nấm</div>
-            <div class="menu-col price">245,000</div>
+            <div class="col name">Cá Giòn xào song nấm</div>
+            <div class="col price">245,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1558,12 +1456,12 @@
                 data-name="Cá giòn hấp nấm hương thơm"
               />
             </div>
-            <div class="menu-col name">Cá giòn hấp nấm hương thơm</div>
-            <div class="menu-col price">250,000</div>
+            <div class="col name">Cá giòn hấp nấm hương thơm</div>
+            <div class="col price">250,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1571,12 +1469,12 @@
                 data-name="Cá Diêu Hồng chiên cốm Tràng An"
               />
             </div>
-            <div class="menu-col name">Cá Diêu Hồng chiên cốm Tràng An</div>
-            <div class="menu-col price">253,000</div>
+            <div class="col name">Cá Diêu Hồng chiên cốm Tràng An</div>
+            <div class="col price">253,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1584,12 +1482,12 @@
                 data-name="Cá Diêu Hồng chiên xù"
               />
             </div>
-            <div class="menu-col name">Cá Diêu Hồng chiên xù</div>
-            <div class="menu-col price">253,000</div>
+            <div class="col name">Cá Diêu Hồng chiên xù</div>
+            <div class="col price">253,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1597,12 +1495,12 @@
                 data-name="Cá Diêu Hồng chiên xù sốt dâu tây"
               />
             </div>
-            <div class="menu-col name">Cá Diêu Hồng chiên xù sốt dâu tây</div>
-            <div class="menu-col price">235,000</div>
+            <div class="col name">Cá Diêu Hồng chiên xù sốt dâu tây</div>
+            <div class="col price">235,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1610,12 +1508,12 @@
                 data-name="Cá Diêu Hồng hấp xì dầu nấm"
               />
             </div>
-            <div class="menu-col name">Cá Diêu Hồng hấp xì dầu nấm</div>
-            <div class="menu-col price">265,000</div>
+            <div class="col name">Cá Diêu Hồng hấp xì dầu nấm</div>
+            <div class="col price">265,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1623,12 +1521,12 @@
                 data-name="Cá Diêu Hồng hấp Tứ Xuyên"
               />
             </div>
-            <div class="menu-col name">Cá Diêu Hồng hấp Tứ Xuyên</div>
-            <div class="menu-col price">265,000</div>
+            <div class="col name">Cá Diêu Hồng hấp Tứ Xuyên</div>
+            <div class="col price">265,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1636,12 +1534,12 @@
                 data-name="Cá Diêu Hồng hấp Hồng Kong"
               />
             </div>
-            <div class="menu-col name">Cá Diêu Hồng hấp Hồng Kong</div>
-            <div class="menu-col price">265,000</div>
+            <div class="col name">Cá Diêu Hồng hấp Hồng Kong</div>
+            <div class="col price">265,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1649,12 +1547,12 @@
                 data-name="Cá Quả chiên xù sốt dâu tây"
               />
             </div>
-            <div class="menu-col name">Cá Quả chiên xù sốt dâu tây</div>
-            <div class="menu-col price">285,000</div>
+            <div class="col name">Cá Quả chiên xù sốt dâu tây</div>
+            <div class="col price">285,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1662,12 +1560,12 @@
                 data-name="Cá Quả chiên cốm Tràng An"
               />
             </div>
-            <div class="menu-col name">Cá Quả chiên cốm Tràng An</div>
-            <div class="menu-col price">245,000</div>
+            <div class="col name">Cá Quả chiên cốm Tràng An</div>
+            <div class="col price">245,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1675,12 +1573,12 @@
                 data-name="Cá Quả nướng dân tộc"
               />
             </div>
-            <div class="menu-col name">Cá Quả nướng dân tộc</div>
-            <div class="menu-col price">240,000</div>
+            <div class="col name">Cá Quả nướng dân tộc</div>
+            <div class="col price">240,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1688,12 +1586,12 @@
                 data-name="Cá Quả nướng muối ớt"
               />
             </div>
-            <div class="menu-col name">Cá Quả nướng muối ớt</div>
-            <div class="menu-col price">240,000</div>
+            <div class="col name">Cá Quả nướng muối ớt</div>
+            <div class="col price">240,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1701,12 +1599,12 @@
                 data-name="Cá Quả hấp xì dầu nấm"
               />
             </div>
-            <div class="menu-col name">Cá Quả hấp xì dầu nấm</div>
-            <div class="menu-col price">235,000</div>
+            <div class="col name">Cá Quả hấp xì dầu nấm</div>
+            <div class="col price">235,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1714,12 +1612,12 @@
                 data-name="Cá Quả hấp Hong kong"
               />
             </div>
-            <div class="menu-col name">Cá Quả hấp Hong kong</div>
-            <div class="menu-col price">235,000</div>
+            <div class="col name">Cá Quả hấp Hong kong</div>
+            <div class="col price">235,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1727,20 +1625,20 @@
                 data-name="Cá Quả nướng bọc thép"
               />
             </div>
-            <div class="menu-col name">Cá Quả nướng bọc thép</div>
-            <div class="menu-col price">235,000</div>
+            <div class="col name">Cá Quả nướng bọc thép</div>
+            <div class="col price">235,000</div>
           </div>
         </div>
         <h2 class="menu-title">CÁC LOẠI LẨU</h2>
 
         <div class="menu-header-block">
-          <div class="menu-col check">Chọn</div>
-          <div class="menu-col name">Tên món ăn</div>
-          <div class="menu-col price">Giá (VNĐ / Mâm 6)</div>
+          <div class="col check">Chọn</div>
+          <div class="col name">Tên món ăn</div>
+          <div class="col price">Giá (VNĐ / Mâm 6)</div>
         </div>
         <div class="menu-table">
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1748,12 +1646,12 @@
                 data-name="Lẩu Gà thuốc bắc (nguyên con)"
               />
             </div>
-            <div class="menu-col name">Lẩu Gà thuốc bắc (nguyên con)</div>
-            <div class="menu-col price">650.000</div>
+            <div class="col name">Lẩu Gà thuốc bắc (nguyên con)</div>
+            <div class="col price">650.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1761,12 +1659,12 @@
                 data-name="Lẩu Gà rượu nếp"
               />
             </div>
-            <div class="menu-col name">Lẩu Gà rượu nếp</div>
-            <div class="menu-col price">540.000</div>
+            <div class="col name">Lẩu Gà rượu nếp</div>
+            <div class="col price">540.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1774,12 +1672,12 @@
                 data-name="Lẩu riêu cua bắp bò"
               />
             </div>
-            <div class="menu-col name">Lẩu riêu cua bắp bò</div>
-            <div class="menu-col price">550.000</div>
+            <div class="col name">Lẩu riêu cua bắp bò</div>
+            <div class="col price">550.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1787,12 +1685,12 @@
                 data-name="Lẩu riêu cua bắp bò sườn sụn"
               />
             </div>
-            <div class="menu-col name">Lẩu riêu cua bắp bò sườn sụn</div>
-            <div class="menu-col price">550.000</div>
+            <div class="col name">Lẩu riêu cua bắp bò sườn sụn</div>
+            <div class="col price">550.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1800,12 +1698,12 @@
                 data-name="Lẩu thập cẩm"
               />
             </div>
-            <div class="menu-col name">Lẩu thập cẩm</div>
-            <div class="menu-col price">620.000</div>
+            <div class="col name">Lẩu thập cẩm</div>
+            <div class="col price">620.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1813,12 +1711,12 @@
                 data-name="Lẩu ếch nấu măng cay"
               />
             </div>
-            <div class="menu-col name">Lẩu ếch nấu măng cay</div>
-            <div class="menu-col price">450.000</div>
+            <div class="col name">Lẩu ếch nấu măng cay</div>
+            <div class="col price">450.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1826,12 +1724,12 @@
                 data-name="Lẩu cá Trắm giòn"
               />
             </div>
-            <div class="menu-col name">Lẩu cá Trắm giòn</div>
-            <div class="menu-col price">625.000</div>
+            <div class="col name">Lẩu cá Trắm giòn</div>
+            <div class="col price">625.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1839,12 +1737,12 @@
                 data-name="Lẩu Hải sản kiểu Thái"
               />
             </div>
-            <div class="menu-col name">Lẩu Hải sản kiểu Thái</div>
-            <div class="menu-col price">1.100.000</div>
+            <div class="col name">Lẩu Hải sản kiểu Thái</div>
+            <div class="col price">1.100.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1852,12 +1750,12 @@
                 data-name="Lẩu cá Hồi kim chi Hàn Quốc"
               />
             </div>
-            <div class="menu-col name">Lẩu cá Hồi kim chi Hàn Quốc</div>
-            <div class="menu-col price">950.000</div>
+            <div class="col name">Lẩu cá Hồi kim chi Hàn Quốc</div>
+            <div class="col price">950.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1865,12 +1763,12 @@
                 data-name="Lẩu cá Tầm nấu măng cay"
               />
             </div>
-            <div class="menu-col name">Lẩu cá Tầm nấu măng cay</div>
-            <div class="menu-col price">650.000</div>
+            <div class="col name">Lẩu cá Tầm nấu măng cay</div>
+            <div class="col price">650.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1878,12 +1776,12 @@
                 data-name="Lẩu Cá Lăng măng cay"
               />
             </div>
-            <div class="menu-col name">Lẩu Cá Lăng măng cay</div>
-            <div class="menu-col price">550.000</div>
+            <div class="col name">Lẩu Cá Lăng măng cay</div>
+            <div class="col price">550.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1891,12 +1789,12 @@
                 data-name="Lẩu cá Lăng om chuối đậu"
               />
             </div>
-            <div class="menu-col name">Lẩu cá Lăng om chuối đậu</div>
-            <div class="menu-col price">490.000</div>
+            <div class="col name">Lẩu cá Lăng om chuối đậu</div>
+            <div class="col price">490.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1904,12 +1802,12 @@
                 data-name="Lẩu cá Tầm kiểu Thái"
               />
             </div>
-            <div class="menu-col name">Lẩu cá Tầm kiểu Thái</div>
-            <div class="menu-col price">620.000</div>
+            <div class="col name">Lẩu cá Tầm kiểu Thái</div>
+            <div class="col price">620.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1917,12 +1815,12 @@
                 data-name="Lẩu vịt om sấu"
               />
             </div>
-            <div class="menu-col name">Lẩu vịt om sấu</div>
-            <div class="menu-col price">390.000</div>
+            <div class="col name">Lẩu vịt om sấu</div>
+            <div class="col price">390.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1930,12 +1828,12 @@
                 data-name="Lẩu Gà nấm (1 con)"
               />
             </div>
-            <div class="menu-col name">Lẩu Gà nấm (1 con)</div>
-            <div class="menu-col price">650.000</div>
+            <div class="col name">Lẩu Gà nấm (1 con)</div>
+            <div class="col price">650.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1943,21 +1841,21 @@
                 data-name="Lẩu Ba Ba om chuối đậu"
               />
             </div>
-            <div class="menu-col name">Lẩu Ba Ba om chuối đậu</div>
-            <div class="menu-col price">850.000</div>
+            <div class="col name">Lẩu Ba Ba om chuối đậu</div>
+            <div class="col price">850.000</div>
           </div>
         </div>
 
         <h2 class="menu-title">HẢI SẢN + TÔM + MỰC + CUA + GHẸ</h2>
 
         <div class="menu-header-block">
-          <div class="menu-col check">Chọn</div>
-          <div class="menu-col name">Tên món ăn</div>
-          <div class="menu-col price">Giá (VNĐ / Mâm 6)</div>
+          <div class="col check">Chọn</div>
+          <div class="col name">Tên món ăn</div>
+          <div class="col price">Giá (VNĐ / Mâm 6)</div>
         </div>
         <div class="menu-table">
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1965,12 +1863,12 @@
                 data-name="Hàu sữa nướng mỡ hành/ nướng phômai"
               />
             </div>
-            <div class="menu-col name">Hàu sữa nướng mỡ hành/ nướng phômai</div>
-            <div class="menu-col price">185.000</div>
+            <div class="col name">Hàu sữa nướng mỡ hành/ nướng phômai</div>
+            <div class="col price">185.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1978,12 +1876,12 @@
                 data-name="Tu hài nướng mỡ hành"
               />
             </div>
-            <div class="menu-col name">Tu hài nướng mỡ hành</div>
-            <div class="menu-col price">360.000</div>
+            <div class="col name">Tu hài nướng mỡ hành</div>
+            <div class="col price">360.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -1991,12 +1889,12 @@
                 data-name="Tu hài bỏ lò pho mai"
               />
             </div>
-            <div class="menu-col name">Tu hài bỏ lò pho mai</div>
-            <div class="menu-col price">365.000</div>
+            <div class="col name">Tu hài bỏ lò pho mai</div>
+            <div class="col price">365.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2004,12 +1902,12 @@
                 data-name="Sò huyết nướng"
               />
             </div>
-            <div class="menu-col name">Sò huyết nướng</div>
-            <div class="menu-col price">375.000</div>
+            <div class="col name">Sò huyết nướng</div>
+            <div class="col price">375.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2017,12 +1915,12 @@
                 data-name="Cua bấy chiên trứng muối"
               />
             </div>
-            <div class="menu-col name">Cua bấy chiên trứng muối</div>
-            <div class="menu-col price">370.000</div>
+            <div class="col name">Cua bấy chiên trứng muối</div>
+            <div class="col price">370.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2030,12 +1928,12 @@
                 data-name="Cua bấy rang muối"
               />
             </div>
-            <div class="menu-col name">Cua bấy rang muối</div>
-            <div class="menu-col price">370.000</div>
+            <div class="col name">Cua bấy rang muối</div>
+            <div class="col price">370.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2043,12 +1941,12 @@
                 data-name="Ốc Móng Tay xào bơ cay"
               />
             </div>
-            <div class="menu-col name">Ốc Móng Tay xào bơ cay</div>
-            <div class="menu-col price">235.000</div>
+            <div class="col name">Ốc Móng Tay xào bơ cay</div>
+            <div class="col price">235.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2056,12 +1954,12 @@
                 data-name="Cua Cà Mau hấp gừng sả"
               />
             </div>
-            <div class="menu-col name">Cua Cà Mau hấp gừng sả</div>
-            <div class="menu-col price">1.050.000</div>
+            <div class="col name">Cua Cà Mau hấp gừng sả</div>
+            <div class="col price">1.050.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2069,12 +1967,12 @@
                 data-name="Cua Cà Mau rang me"
               />
             </div>
-            <div class="menu-col name">Cua Cà Mau rang me</div>
-            <div class="menu-col price">1.100.000</div>
+            <div class="col name">Cua Cà Mau rang me</div>
+            <div class="col price">1.100.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2082,12 +1980,12 @@
                 data-name="Lẩu cua Cà Mau"
               />
             </div>
-            <div class="menu-col name">Lẩu cua Cà Mau</div>
-            <div class="menu-col price">1.350.000</div>
+            <div class="col name">Lẩu cua Cà Mau</div>
+            <div class="col price">1.350.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2095,12 +1993,12 @@
                 data-name="Ghẹ hấp"
               />
             </div>
-            <div class="menu-col name">Ghẹ hấp</div>
-            <div class="menu-col price">1.000.000</div>
+            <div class="col name">Ghẹ hấp</div>
+            <div class="col price">1.000.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2108,12 +2006,12 @@
                 data-name="Ghẹ rang muối"
               />
             </div>
-            <div class="menu-col name">Ghẹ rang muối</div>
-            <div class="menu-col price">1.000.000</div>
+            <div class="col name">Ghẹ rang muối</div>
+            <div class="col price">1.000.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2121,12 +2019,12 @@
                 data-name="Lẩu ghẹ"
               />
             </div>
-            <div class="menu-col name">Lẩu ghẹ</div>
-            <div class="menu-col price">1.100.000</div>
+            <div class="col name">Lẩu ghẹ</div>
+            <div class="col price">1.100.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2134,12 +2032,12 @@
                 data-name="Tôm he nướng than hồng"
               />
             </div>
-            <div class="menu-col name">Tôm he nướng than hồng</div>
-            <div class="menu-col price">330.000</div>
+            <div class="col name">Tôm he nướng than hồng</div>
+            <div class="col price">330.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2147,12 +2045,12 @@
                 data-name="Tôm Sú sốt Mayzone"
               />
             </div>
-            <div class="menu-col name">Tôm Sú sốt Mayzone</div>
-            <div class="menu-col price">350.000</div>
+            <div class="col name">Tôm Sú sốt Mayzone</div>
+            <div class="col price">350.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2160,12 +2058,12 @@
                 data-name="Tôm Sú chiên trứng muối"
               />
             </div>
-            <div class="menu-col name">Tôm Sú chiên trứng muối</div>
-            <div class="menu-col price">322.000</div>
+            <div class="col name">Tôm Sú chiên trứng muối</div>
+            <div class="col price">322.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2173,12 +2071,12 @@
                 data-name="Tôm Sú chiên cốm Tràng An"
               />
             </div>
-            <div class="menu-col name">Tôm Sú chiên cốm Tràng An</div>
-            <div class="menu-col price">322.000</div>
+            <div class="col name">Tôm Sú chiên cốm Tràng An</div>
+            <div class="col price">322.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2186,12 +2084,12 @@
                 data-name="Tôm Sú chiên hoàng bào"
               />
             </div>
-            <div class="menu-col name">Tôm Sú chiên hoàng bào</div>
-            <div class="menu-col price">322.000</div>
+            <div class="col name">Tôm Sú chiên hoàng bào</div>
+            <div class="col price">322.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2199,12 +2097,12 @@
                 data-name="Tôm Sú chiên muối ớt"
               />
             </div>
-            <div class="menu-col name">Tôm Sú chiên muối ớt</div>
-            <div class="menu-col price">322.000</div>
+            <div class="col name">Tôm Sú chiên muối ớt</div>
+            <div class="col price">322.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2212,12 +2110,12 @@
                 data-name="Tôm Sú sốt chanh leo"
               />
             </div>
-            <div class="menu-col name">Tôm Sú sốt chanh leo</div>
-            <div class="menu-col price">342.000</div>
+            <div class="col name">Tôm Sú sốt chanh leo</div>
+            <div class="col price">342.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2225,12 +2123,12 @@
                 data-name="Tôm Sú rang muối xả"
               />
             </div>
-            <div class="menu-col name">Tôm Sú rang muối xả</div>
-            <div class="menu-col price">322.000</div>
+            <div class="col name">Tôm Sú rang muối xả</div>
+            <div class="col price">322.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2238,12 +2136,12 @@
                 data-name="Tôm Sú hấp trái dừa"
               />
             </div>
-            <div class="menu-col name">Tôm Sú hấp trái dừa</div>
-            <div class="menu-col price">375.000</div>
+            <div class="col name">Tôm Sú hấp trái dừa</div>
+            <div class="col price">375.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2251,12 +2149,12 @@
                 data-name="Tôm Sú hấp bia"
               />
             </div>
-            <div class="menu-col name">Tôm Sú hấp bia</div>
-            <div class="menu-col price">355.000</div>
+            <div class="col name">Tôm Sú hấp bia</div>
+            <div class="col price">355.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2264,12 +2162,12 @@
                 data-name="Tôm Sú hấp nước cốt dừa"
               />
             </div>
-            <div class="menu-col name">Tôm Sú hấp nước cốt dừa</div>
-            <div class="menu-col price">366.000</div>
+            <div class="col name">Tôm Sú hấp nước cốt dừa</div>
+            <div class="col price">366.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2277,12 +2175,12 @@
                 data-name="Tôm Sú sốt me chua"
               />
             </div>
-            <div class="menu-col name">Tôm Sú sốt me chua</div>
-            <div class="menu-col price">342.000</div>
+            <div class="col name">Tôm Sú sốt me chua</div>
+            <div class="col price">342.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2290,12 +2188,12 @@
                 data-name="Mực chiên kim ngân"
               />
             </div>
-            <div class="menu-col name">Mực chiên kim ngân</div>
-            <div class="menu-col price">196.000</div>
+            <div class="col name">Mực chiên kim ngân</div>
+            <div class="col price">196.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2303,12 +2201,12 @@
                 data-name="Mực chiên bơ tỏi"
               />
             </div>
-            <div class="menu-col name">Mực chiên bơ tỏi</div>
-            <div class="menu-col price">195.000</div>
+            <div class="col name">Mực chiên bơ tỏi</div>
+            <div class="col price">195.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2316,12 +2214,12 @@
                 data-name="Mực trứng chiên bơ tỏi"
               />
             </div>
-            <div class="menu-col name">Mực trứng chiên bơ tỏi</div>
-            <div class="menu-col price">220.000</div>
+            <div class="col name">Mực trứng chiên bơ tỏi</div>
+            <div class="col price">220.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2329,12 +2227,12 @@
                 data-name="Mực trứng chiên lá lốt"
               />
             </div>
-            <div class="menu-col name">Mực trứng chiên lá lốt</div>
-            <div class="menu-col price">220.000</div>
+            <div class="col name">Mực trứng chiên lá lốt</div>
+            <div class="col price">220.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2342,12 +2240,12 @@
                 data-name="Mực trứng hấp gừng hành"
               />
             </div>
-            <div class="menu-col name">Mực trứng hấp gừng hành</div>
-            <div class="menu-col price">265.000</div>
+            <div class="col name">Mực trứng hấp gừng hành</div>
+            <div class="col price">265.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2355,12 +2253,12 @@
                 data-name="Mực cay xào bắp non"
               />
             </div>
-            <div class="menu-col name">Mực cay xào bắp non</div>
-            <div class="menu-col price">220.000</div>
+            <div class="col name">Mực cay xào bắp non</div>
+            <div class="col price">220.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2368,12 +2266,12 @@
                 data-name="Mực ống xào cần tỏi tây"
               />
             </div>
-            <div class="menu-col name">Mực ống xào cần tỏi tây</div>
-            <div class="menu-col price">220.000</div>
+            <div class="col name">Mực ống xào cần tỏi tây</div>
+            <div class="col price">220.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2381,12 +2279,12 @@
                 data-name="Mực xào kiểu Thái"
               />
             </div>
-            <div class="menu-col name">Mực xào kiểu Thái</div>
-            <div class="menu-col price">220.000</div>
+            <div class="col name">Mực xào kiểu Thái</div>
+            <div class="col price">220.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2394,12 +2292,12 @@
                 data-name="Mực một nắng chiên bơ tỏi"
               />
             </div>
-            <div class="menu-col name">Mực một nắng chiên bơ tỏi</div>
-            <div class="menu-col price">250.000</div>
+            <div class="col name">Mực một nắng chiên bơ tỏi</div>
+            <div class="col price">250.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2407,12 +2305,12 @@
                 data-name="Mực một nắng nướng muối ớt"
               />
             </div>
-            <div class="menu-col name">Mực một nắng nướng muối ớt</div>
-            <div class="menu-col price">250.000</div>
+            <div class="col name">Mực một nắng nướng muối ớt</div>
+            <div class="col price">250.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2420,12 +2318,12 @@
                 data-name="Chả mực Hạ Long"
               />
             </div>
-            <div class="menu-col name">Chả mực Hạ Long</div>
-            <div class="menu-col price">250.000</div>
+            <div class="col name">Chả mực Hạ Long</div>
+            <div class="col price">250.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2433,12 +2331,12 @@
                 data-name="Chả ốc bọc bạc"
               />
             </div>
-            <div class="menu-col name">Chả ốc bọc bạc</div>
-            <div class="menu-col price">253.000</div>
+            <div class="col name">Chả ốc bọc bạc</div>
+            <div class="col price">253.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2446,12 +2344,12 @@
                 data-name="Ốc om chuối đậu"
               />
             </div>
-            <div class="menu-col name">Ốc om chuối đậu</div>
-            <div class="menu-col price">280.000</div>
+            <div class="col name">Ốc om chuối đậu</div>
+            <div class="col price">280.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2459,12 +2357,12 @@
                 data-name="Chả ốc Hồ Tây"
               />
             </div>
-            <div class="menu-col name">Chả ốc Hồ Tây</div>
-            <div class="menu-col price">253.000</div>
+            <div class="col name">Chả ốc Hồ Tây</div>
+            <div class="col price">253.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2472,12 +2370,12 @@
                 data-name="Cua bể Făng xi"
               />
             </div>
-            <div class="menu-col name">Cua bể Făng xi</div>
-            <div class="menu-col price">330.000</div>
+            <div class="col name">Cua bể Făng xi</div>
+            <div class="col price">330.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2485,12 +2383,12 @@
                 data-name="Ghẹ Făng xi"
               />
             </div>
-            <div class="menu-col name">Ghẹ Făng xi</div>
-            <div class="menu-col price">330.000</div>
+            <div class="col name">Ghẹ Făng xi</div>
+            <div class="col price">330.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2498,12 +2396,12 @@
                 data-name="Tôm Sú chiên an lạc"
               />
             </div>
-            <div class="menu-col name">Tôm Sú chiên an lạc</div>
-            <div class="menu-col price">322.000</div>
+            <div class="col name">Tôm Sú chiên an lạc</div>
+            <div class="col price">322.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2511,12 +2409,12 @@
                 data-name="Tôm Sú chiên xù"
               />
             </div>
-            <div class="menu-col name">Tôm Sú chiên xù</div>
-            <div class="menu-col price">322.000</div>
+            <div class="col name">Tôm Sú chiên xù</div>
+            <div class="col price">322.000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2524,20 +2422,20 @@
                 data-name="Tôm Sú chao dầu"
               />
             </div>
-            <div class="menu-col name">Tôm Sú chao dầu</div>
-            <div class="menu-col price">322.000</div>
+            <div class="col name">Tôm Sú chao dầu</div>
+            <div class="col price">322.000</div>
           </div>
         </div>
         <h2 class="menu-title">CÁC MÓN CHIM CÂU</h2>
 
         <div class="menu-header-block">
-          <div class="menu-col check">Chọn</div>
-          <div class="menu-col name">Tên món ăn</div>
-          <div class="menu-col price">Giá (VNĐ / Mâm 6)</div>
+          <div class="col check">Chọn</div>
+          <div class="col name">Tên món ăn</div>
+          <div class="col price">Giá (VNĐ / Mâm 6)</div>
         </div>
         <div class="menu-table">
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2545,12 +2443,12 @@
                 data-name="Chim câu quay ngũ vị"
               />
             </div>
-            <div class="menu-col name">Chim câu quay ngũ vị</div>
-            <div class="menu-col price">282,000</div>
+            <div class="col name">Chim câu quay ngũ vị</div>
+            <div class="col price">282,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2558,12 +2456,12 @@
                 data-name="Chim câu quay lá móc mật"
               />
             </div>
-            <div class="menu-col name">Chim câu quay lá móc mật</div>
-            <div class="menu-col price">282,000</div>
+            <div class="col name">Chim câu quay lá móc mật</div>
+            <div class="col price">282,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2571,12 +2469,12 @@
                 data-name="Chim câu hầm hạt sen thảo mộc"
               />
             </div>
-            <div class="menu-col name">Chim câu hầm hạt sen thảo mộc</div>
-            <div class="menu-col price">330,000</div>
+            <div class="col name">Chim câu hầm hạt sen thảo mộc</div>
+            <div class="col price">330,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2584,12 +2482,12 @@
                 data-name="Chim câu hầm cốm Tràng An"
               />
             </div>
-            <div class="menu-col name">Chim câu hầm cốm Tràng An</div>
-            <div class="menu-col price">330,000</div>
+            <div class="col name">Chim câu hầm cốm Tràng An</div>
+            <div class="col price">330,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2597,12 +2495,12 @@
                 data-name="Chim câu xào hành răm"
               />
             </div>
-            <div class="menu-col name">Chim câu xào hành răm</div>
-            <div class="menu-col price">320,000</div>
+            <div class="col name">Chim câu xào hành răm</div>
+            <div class="col price">320,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2610,20 +2508,20 @@
                 data-name="Chim cút quay"
               />
             </div>
-            <div class="menu-col name">Chim cút quay</div>
-            <div class="menu-col price">260,000</div>
+            <div class="col name">Chim cút quay</div>
+            <div class="col price">260,000</div>
           </div>
         </div>
         <h2 class="menu-title">CÁC MÓN ẾCH</h2>
 
         <div class="menu-header-block">
-          <div class="menu-col check">Chọn</div>
-          <div class="menu-col name">Tên món ăn</div>
-          <div class="menu-col price">Giá (VNĐ / Mâm 6)</div>
+          <div class="col check">Chọn</div>
+          <div class="col name">Tên món ăn</div>
+          <div class="col price">Giá (VNĐ / Mâm 6)</div>
         </div>
         <div class="menu-table">
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2631,12 +2529,12 @@
                 data-name="Ếch chiên vừng"
               />
             </div>
-            <div class="menu-col name">Ếch chiên vừng</div>
-            <div class="menu-col price">200,000</div>
+            <div class="col name">Ếch chiên vừng</div>
+            <div class="col price">200,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2644,12 +2542,12 @@
                 data-name="Ếch rang muối"
               />
             </div>
-            <div class="menu-col name">Ếch rang muối</div>
-            <div class="menu-col price">200,000</div>
+            <div class="col name">Ếch rang muối</div>
+            <div class="col price">200,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2657,12 +2555,12 @@
                 data-name="Ếch chiên bơ tỏi"
               />
             </div>
-            <div class="menu-col name">Ếch chiên bơ tỏi</div>
-            <div class="menu-col price">253,000</div>
+            <div class="col name">Ếch chiên bơ tỏi</div>
+            <div class="col price">253,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2670,12 +2568,12 @@
                 data-name="Ếch xào măng cay"
               />
             </div>
-            <div class="menu-col name">Ếch xào măng cay</div>
-            <div class="menu-col price">253,000</div>
+            <div class="col name">Ếch xào măng cay</div>
+            <div class="col price">253,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2683,12 +2581,12 @@
                 data-name="Ếch om măng cay"
               />
             </div>
-            <div class="menu-col name">Ếch om măng cay</div>
-            <div class="menu-col price">253,000</div>
+            <div class="col name">Ếch om măng cay</div>
+            <div class="col price">253,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2696,20 +2594,20 @@
                 data-name="Ếch chiên lá lốt"
               />
             </div>
-            <div class="menu-col name">Ếch chiên lá lốt</div>
-            <div class="menu-col price">253,000</div>
+            <div class="col name">Ếch chiên lá lốt</div>
+            <div class="col price">253,000</div>
           </div>
         </div>
         <h2 class="menu-title">CÁC MÓN LỢN + GIÒ CHẢ</h2>
 
         <div class="menu-header-block">
-          <div class="menu-col check">Chọn</div>
-          <div class="menu-col name">Tên món ăn</div>
-          <div class="menu-col price">Giá (VNĐ / Mâm 6)</div>
+          <div class="col check">Chọn</div>
+          <div class="col name">Tên món ăn</div>
+          <div class="col price">Giá (VNĐ / Mâm 6)</div>
         </div>
         <div class="menu-table">
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2717,12 +2615,12 @@
                 data-name="Chân giò chiên mắm"
               />
             </div>
-            <div class="menu-col name">Chân giò chiên mắm</div>
-            <div class="menu-col price">265,000</div>
+            <div class="col name">Chân giò chiên mắm</div>
+            <div class="col price">265,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2730,12 +2628,12 @@
                 data-name="Đùi lợn hầm kiểu Đức + bánh mỳ"
               />
             </div>
-            <div class="menu-col name">Đùi lợn hầm kiểu Đức + bánh mỳ</div>
-            <div class="menu-col price">275,000</div>
+            <div class="col name">Đùi lợn hầm kiểu Đức + bánh mỳ</div>
+            <div class="col price">275,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2743,12 +2641,12 @@
                 data-name="Đùi lợn hầm sen nấm + bánh mỳ"
               />
             </div>
-            <div class="menu-col name">Đùi lợn hầm sen nấm + bánh mỳ</div>
-            <div class="menu-col price">265,000</div>
+            <div class="col name">Đùi lợn hầm sen nấm + bánh mỳ</div>
+            <div class="col price">265,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2756,12 +2654,12 @@
                 data-name="Thăn lợn chiên kiểu Thái"
               />
             </div>
-            <div class="menu-col name">Thăn lợn chiên kiểu Thái</div>
-            <div class="menu-col price">220,000</div>
+            <div class="col name">Thăn lợn chiên kiểu Thái</div>
+            <div class="col price">220,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2769,12 +2667,12 @@
                 data-name="Sườn nướng sốt BBQ"
               />
             </div>
-            <div class="menu-col name">Sườn nướng sốt BBQ</div>
-            <div class="menu-col price">265,000</div>
+            <div class="col name">Sườn nướng sốt BBQ</div>
+            <div class="col price">265,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2782,12 +2680,12 @@
                 data-name="Sườn chiên tỏi thơm"
               />
             </div>
-            <div class="menu-col name">Sườn chiên tỏi thơm</div>
-            <div class="menu-col price">265,000</div>
+            <div class="col name">Sườn chiên tỏi thơm</div>
+            <div class="col price">265,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2795,12 +2693,12 @@
                 data-name="Sườn xào chua ngọt"
               />
             </div>
-            <div class="menu-col name">Sườn xào chua ngọt</div>
-            <div class="menu-col price">265,000</div>
+            <div class="col name">Sườn xào chua ngọt</div>
+            <div class="col price">265,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2808,12 +2706,12 @@
                 data-name="Thịt thăn xào hành nấm"
               />
             </div>
-            <div class="menu-col name">Thịt thăn xào hành nấm</div>
-            <div class="menu-col price">172,000</div>
+            <div class="col name">Thịt thăn xào hành nấm</div>
+            <div class="col price">172,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2821,12 +2719,12 @@
                 data-name="Heo chiên lá móc mật"
               />
             </div>
-            <div class="menu-col name">Heo chiên lá móc mật</div>
-            <div class="menu-col price">230,000</div>
+            <div class="col name">Heo chiên lá móc mật</div>
+            <div class="col price">230,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2834,12 +2732,12 @@
                 data-name="Lợn mán xào lăn"
               />
             </div>
-            <div class="menu-col name">Lợn mán xào lăn</div>
-            <div class="menu-col price">245,000</div>
+            <div class="col name">Lợn mán xào lăn</div>
+            <div class="col price">245,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2847,12 +2745,12 @@
                 data-name="Lợn mán hấp"
               />
             </div>
-            <div class="menu-col name">Lợn mán hấp</div>
-            <div class="menu-col price">260,000</div>
+            <div class="col name">Lợn mán hấp</div>
+            <div class="col price">260,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2860,12 +2758,12 @@
                 data-name="Lợn mán nướng riềng mẻ"
               />
             </div>
-            <div class="menu-col name">Lợn mán nướng riềng mẻ</div>
-            <div class="menu-col price">280,000</div>
+            <div class="col name">Lợn mán nướng riềng mẻ</div>
+            <div class="col price">280,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2873,12 +2771,12 @@
                 data-name="Lợn mán nướng lá móc mật"
               />
             </div>
-            <div class="menu-col name">Lợn mán nướng lá móc mật</div>
-            <div class="menu-col price">280,000</div>
+            <div class="col name">Lợn mán nướng lá móc mật</div>
+            <div class="col price">280,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2886,12 +2784,12 @@
                 data-name="Lợn mán xào sả ớt"
               />
             </div>
-            <div class="menu-col name">Lợn mán xào sả ớt</div>
-            <div class="menu-col price">250,000</div>
+            <div class="col name">Lợn mán xào sả ớt</div>
+            <div class="col price">250,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2899,12 +2797,12 @@
                 data-name="Lợn mán nấu giả cầy"
               />
             </div>
-            <div class="menu-col name">Lợn mán nấu giả cầy</div>
-            <div class="menu-col price">260,000</div>
+            <div class="col name">Lợn mán nấu giả cầy</div>
+            <div class="col price">260,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2912,12 +2810,12 @@
                 data-name="Lòng dồi lợn mán"
               />
             </div>
-            <div class="menu-col name">Lòng dồi lợn mán</div>
-            <div class="menu-col price">235,000</div>
+            <div class="col name">Lòng dồi lợn mán</div>
+            <div class="col price">235,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2925,12 +2823,12 @@
                 data-name="Canh xương nấu măng"
               />
             </div>
-            <div class="menu-col name">Canh xương nấu măng</div>
-            <div class="menu-col price">215,000</div>
+            <div class="col name">Canh xương nấu măng</div>
+            <div class="col price">215,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2938,12 +2836,12 @@
                 data-name="Giò xào"
               />
             </div>
-            <div class="menu-col name">Giò xào</div>
-            <div class="menu-col price">180,000</div>
+            <div class="col name">Giò xào</div>
+            <div class="col price">180,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2951,12 +2849,12 @@
                 data-name="Giò lụa"
               />
             </div>
-            <div class="menu-col name">Giò lụa</div>
-            <div class="menu-col price">150,000</div>
+            <div class="col name">Giò lụa</div>
+            <div class="col price">150,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2964,12 +2862,12 @@
                 data-name="Giò bò"
               />
             </div>
-            <div class="menu-col name">Giò bò</div>
-            <div class="menu-col price">190,000</div>
+            <div class="col name">Giò bò</div>
+            <div class="col price">190,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2977,12 +2875,12 @@
                 data-name="Giò đà điểu 7 phút"
               />
             </div>
-            <div class="menu-col name">Giò đà điểu 7 phút</div>
-            <div class="menu-col price">184,000</div>
+            <div class="col name">Giò đà điểu 7 phút</div>
+            <div class="col price">184,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -2990,12 +2888,12 @@
                 data-name="Giò nghé"
               />
             </div>
-            <div class="menu-col name">Giò nghé</div>
-            <div class="menu-col price">200,000</div>
+            <div class="col name">Giò nghé</div>
+            <div class="col price">200,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3003,12 +2901,12 @@
                 data-name="Chân giò hầm sen nấm"
               />
             </div>
-            <div class="menu-col name">Chân giò hầm sen nấm</div>
-            <div class="menu-col price">230,000</div>
+            <div class="col name">Chân giò hầm sen nấm</div>
+            <div class="col price">230,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3016,12 +2914,12 @@
                 data-name="Giò bò đặc biệt"
               />
             </div>
-            <div class="menu-col name">Giò bò đặc biệt</div>
-            <div class="menu-col price">172,000</div>
+            <div class="col name">Giò bò đặc biệt</div>
+            <div class="col price">172,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3029,20 +2927,20 @@
                 data-name="Giò bò ước lễ"
               />
             </div>
-            <div class="menu-col name">Giò bò ước lễ</div>
-            <div class="menu-col price">180,000</div>
+            <div class="col name">Giò bò ước lễ</div>
+            <div class="col price">180,000</div>
           </div>
         </div>
         <h2 class="menu-title">CÁC MÓN BA BA + LƯƠN</h2>
 
         <div class="menu-header-block">
-          <div class="menu-col check">Chọn</div>
-          <div class="menu-col name">Tên món ăn</div>
-          <div class="menu-col price">Giá (VNĐ / Mâm 6)</div>
+          <div class="col check">Chọn</div>
+          <div class="col name">Tên món ăn</div>
+          <div class="col price">Giá (VNĐ / Mâm 6)</div>
         </div>
         <div class="menu-table">
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3050,12 +2948,12 @@
                 data-name="Ba Ba rang muối"
               />
             </div>
-            <div class="menu-col name">Ba Ba rang muối</div>
-            <div class="menu-col price">511,000</div>
+            <div class="col name">Ba Ba rang muối</div>
+            <div class="col price">511,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3063,12 +2961,12 @@
                 data-name="Ba Ba hồng xíu"
               />
             </div>
-            <div class="menu-col name">Ba Ba hồng xíu</div>
-            <div class="menu-col price">511,000</div>
+            <div class="col name">Ba Ba hồng xíu</div>
+            <div class="col price">511,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3076,12 +2974,12 @@
                 data-name="Ba Ba om chuối đậu"
               />
             </div>
-            <div class="menu-col name">Ba Ba om chuối đậu</div>
-            <div class="menu-col price">511,000</div>
+            <div class="col name">Ba Ba om chuối đậu</div>
+            <div class="col price">511,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3089,12 +2987,12 @@
                 data-name="Ba Ba nướng muối ớt"
               />
             </div>
-            <div class="menu-col name">Ba Ba nướng muối ớt</div>
-            <div class="menu-col price">511,000</div>
+            <div class="col name">Ba Ba nướng muối ớt</div>
+            <div class="col price">511,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3102,12 +3000,12 @@
                 data-name="Lươn xào lăn"
               />
             </div>
-            <div class="menu-col name">Lươn xào lăn</div>
-            <div class="menu-col price">220,000</div>
+            <div class="col name">Lươn xào lăn</div>
+            <div class="col price">220,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3115,12 +3013,12 @@
                 data-name="Lươn om chuối đậu"
               />
             </div>
-            <div class="menu-col name">Lươn om chuối đậu</div>
-            <div class="menu-col price">220,000</div>
+            <div class="col name">Lươn om chuối đậu</div>
+            <div class="col price">220,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3128,12 +3026,12 @@
                 data-name="Lươn nướng lá nghệ"
               />
             </div>
-            <div class="menu-col name">Lươn nướng lá nghệ</div>
-            <div class="menu-col price">220,000</div>
+            <div class="col name">Lươn nướng lá nghệ</div>
+            <div class="col price">220,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3141,20 +3039,20 @@
                 data-name="Lươn chiên giòn"
               />
             </div>
-            <div class="menu-col name">Lươn chiên giòn</div>
-            <div class="menu-col price">220,000</div>
+            <div class="col name">Lươn chiên giòn</div>
+            <div class="col price">220,000</div>
           </div>
         </div>
         <h2 class="menu-title">CÁC MÓN RAU</h2>
 
         <div class="menu-header-block">
-          <div class="menu-col check">Chọn</div>
-          <div class="menu-col name">Tên món ăn</div>
-          <div class="menu-col price">Giá (VNĐ / Mâm 6)</div>
+          <div class="col check">Chọn</div>
+          <div class="col name">Tên món ăn</div>
+          <div class="col price">Giá (VNĐ / Mâm 6)</div>
         </div>
         <div class="menu-table">
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3162,12 +3060,12 @@
                 data-name="Cải thảo xào nấm"
               />
             </div>
-            <div class="menu-col name">Cải thảo xào nấm</div>
-            <div class="menu-col price">75,000</div>
+            <div class="col name">Cải thảo xào nấm</div>
+            <div class="col price">75,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3175,12 +3073,12 @@
                 data-name="Cải thảo sốt dầu hào"
               />
             </div>
-            <div class="menu-col name">Cải thảo sốt dầu hào</div>
-            <div class="menu-col price">75,000</div>
+            <div class="col name">Cải thảo sốt dầu hào</div>
+            <div class="col price">75,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3188,12 +3086,12 @@
                 data-name="Cải chíp sốt nấm hương"
               />
             </div>
-            <div class="menu-col name">Cải chíp sốt nấm hương</div>
-            <div class="menu-col price">75,000</div>
+            <div class="col name">Cải chíp sốt nấm hương</div>
+            <div class="col price">75,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3201,12 +3099,12 @@
                 data-name="Cải ngồng luộc chấm trứng"
               />
             </div>
-            <div class="menu-col name">Cải ngồng luộc chấm trứng</div>
-            <div class="menu-col price">75,000</div>
+            <div class="col name">Cải ngồng luộc chấm trứng</div>
+            <div class="col price">75,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3214,14 +3112,12 @@
                 data-name="Củ quả luộc chấm kho quẹt/ muối vừng"
               />
             </div>
-            <div class="menu-col name">
-              Củ quả luộc chấm kho quẹt/ muối vừng
-            </div>
-            <div class="menu-col price">75,000</div>
+            <div class="col name">Củ quả luộc chấm kho quẹt/ muối vừng</div>
+            <div class="col price">75,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3229,12 +3125,12 @@
                 data-name="Ngọn susu xào tỏi"
               />
             </div>
-            <div class="menu-col name">Ngọn susu xào tỏi</div>
-            <div class="menu-col price">85,000</div>
+            <div class="col name">Ngọn susu xào tỏi</div>
+            <div class="col price">85,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3242,12 +3138,12 @@
                 data-name="Rau bí xào tỏi"
               />
             </div>
-            <div class="menu-col name">Rau bí xào tỏi</div>
-            <div class="menu-col price">85,000</div>
+            <div class="col name">Rau bí xào tỏi</div>
+            <div class="col price">85,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3255,12 +3151,12 @@
                 data-name="Cải làn xào tỏi"
               />
             </div>
-            <div class="menu-col name">Cải làn xào tỏi</div>
-            <div class="menu-col price">86,000</div>
+            <div class="col name">Cải làn xào tỏi</div>
+            <div class="col price">86,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3268,12 +3164,12 @@
                 data-name="Nấm tươi xào ngũ sắc"
               />
             </div>
-            <div class="menu-col name">Nấm tươi xào ngũ sắc</div>
-            <div class="menu-col price">85,000</div>
+            <div class="col name">Nấm tươi xào ngũ sắc</div>
+            <div class="col price">85,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3281,12 +3177,12 @@
                 data-name="Lơ xanh sốt thịt cua"
               />
             </div>
-            <div class="menu-col name">Lơ xanh sốt thịt cua</div>
-            <div class="menu-col price">185,000</div>
+            <div class="col name">Lơ xanh sốt thịt cua</div>
+            <div class="col price">185,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3294,12 +3190,12 @@
                 data-name="Cải chíp xào nấm"
               />
             </div>
-            <div class="menu-col name">Cải chíp xào nấm</div>
-            <div class="menu-col price">75,000</div>
+            <div class="col name">Cải chíp xào nấm</div>
+            <div class="col price">75,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3307,12 +3203,12 @@
                 data-name="Cải ngồng xào tỏi"
               />
             </div>
-            <div class="menu-col name">Cải ngồng xào tỏi</div>
-            <div class="menu-col price">75,000</div>
+            <div class="col name">Cải ngồng xào tỏi</div>
+            <div class="col price">75,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3320,12 +3216,12 @@
                 data-name="Cải xanh xào nấm"
               />
             </div>
-            <div class="menu-col name">Cải xanh xào nấm</div>
-            <div class="menu-col price">75,000</div>
+            <div class="col name">Cải xanh xào nấm</div>
+            <div class="col price">75,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3333,20 +3229,20 @@
                 data-name="Rau lang xào tỏi"
               />
             </div>
-            <div class="menu-col name">Rau lang xào tỏi</div>
-            <div class="menu-col price">85,000</div>
+            <div class="col name">Rau lang xào tỏi</div>
+            <div class="col price">85,000</div>
           </div>
         </div>
         <h2 class="menu-title">CÁC MÓN XÔI + CƠM</h2>
 
         <div class="menu-header-block">
-          <div class="menu-col check">Chọn</div>
-          <div class="menu-col name">Tên món ăn</div>
-          <div class="menu-col price">Giá (VNĐ / Mâm 6)</div>
+          <div class="col check">Chọn</div>
+          <div class="col name">Tên món ăn</div>
+          <div class="col price">Giá (VNĐ / Mâm 6)</div>
         </div>
         <div class="menu-table">
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3354,12 +3250,12 @@
                 data-name="Xôi vò hạt sen"
               />
             </div>
-            <div class="menu-col name">Xôi vò hạt sen</div>
-            <div class="menu-col price">80,000</div>
+            <div class="col name">Xôi vò hạt sen</div>
+            <div class="col price">80,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3367,12 +3263,12 @@
                 data-name="Xôi vừng dừa Bến Tre"
               />
             </div>
-            <div class="menu-col name">Xôi vừng dừa Bến Tre</div>
-            <div class="menu-col price">80,000</div>
+            <div class="col name">Xôi vừng dừa Bến Tre</div>
+            <div class="col price">80,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3380,12 +3276,12 @@
                 data-name="Xôi Hoàng Phố ruốc hành"
               />
             </div>
-            <div class="menu-col name">Xôi Hoàng Phố ruốc hành</div>
-            <div class="menu-col price">80,000</div>
+            <div class="col name">Xôi Hoàng Phố ruốc hành</div>
+            <div class="col price">80,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3393,12 +3289,12 @@
                 data-name="Xôi trắng ruốc hành phi"
               />
             </div>
-            <div class="menu-col name">Xôi trắng ruốc hành phi</div>
-            <div class="menu-col price">80,000</div>
+            <div class="col name">Xôi trắng ruốc hành phi</div>
+            <div class="col price">80,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3406,12 +3302,12 @@
                 data-name="Xôi gấc ba tầng song hỷ"
               />
             </div>
-            <div class="menu-col name">Xôi gấc ba tầng song hỷ</div>
-            <div class="menu-col price">105,000</div>
+            <div class="col name">Xôi gấc ba tầng song hỷ</div>
+            <div class="col price">105,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3419,12 +3315,12 @@
                 data-name="Xôi cốm Tràng An"
               />
             </div>
-            <div class="menu-col name">Xôi cốm Tràng An</div>
-            <div class="menu-col price">130,000</div>
+            <div class="col name">Xôi cốm Tràng An</div>
+            <div class="col price">130,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3432,12 +3328,12 @@
                 data-name="Xôi chim câu nếp nương"
               />
             </div>
-            <div class="menu-col name">Xôi chim câu nếp nương</div>
-            <div class="menu-col price">120,000</div>
+            <div class="col name">Xôi chim câu nếp nương</div>
+            <div class="col price">120,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3445,12 +3341,12 @@
                 data-name="Bánh dày quán ghánh"
               />
             </div>
-            <div class="menu-col name">Bánh dày quán ghánh</div>
-            <div class="menu-col price">98,000</div>
+            <div class="col name">Bánh dày quán ghánh</div>
+            <div class="col price">98,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3458,12 +3354,12 @@
                 data-name="Bánh phu thê"
               />
             </div>
-            <div class="menu-col name">Bánh phu thê</div>
-            <div class="menu-col price">98,000</div>
+            <div class="col name">Bánh phu thê</div>
+            <div class="col price">98,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3471,12 +3367,12 @@
                 data-name="Cơm tám thơm"
               />
             </div>
-            <div class="menu-col name">Cơm tám thơm</div>
-            <div class="menu-col price">52,000</div>
+            <div class="col name">Cơm tám thơm</div>
+            <div class="col price">52,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3484,12 +3380,12 @@
                 data-name="Xôi gấc"
               />
             </div>
-            <div class="menu-col name">Xôi gấc</div>
-            <div class="menu-col price">80,000</div>
+            <div class="col name">Xôi gấc</div>
+            <div class="col price">80,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3497,12 +3393,12 @@
                 data-name="Xôi chiên"
               />
             </div>
-            <div class="menu-col name">Xôi chiên</div>
-            <div class="menu-col price">95,000</div>
+            <div class="col name">Xôi chiên</div>
+            <div class="col price">95,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3510,12 +3406,12 @@
                 data-name="Bánh dày song hỷ"
               />
             </div>
-            <div class="menu-col name">Bánh dày song hỷ</div>
-            <div class="menu-col price">98,000</div>
+            <div class="col name">Bánh dày song hỷ</div>
+            <div class="col price">98,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3523,12 +3419,12 @@
                 data-name="Bún"
               />
             </div>
-            <div class="menu-col name">Bún</div>
-            <div class="menu-col price">52,000</div>
+            <div class="col name">Bún</div>
+            <div class="col price">52,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3536,20 +3432,20 @@
                 data-name="Bánh chưng"
               />
             </div>
-            <div class="menu-col name">Bánh chưng</div>
-            <div class="menu-col price">80,000</div>
+            <div class="col name">Bánh chưng</div>
+            <div class="col price">80,000</div>
           </div>
         </div>
         <h2 class="menu-title">CÁC LOẠI CANH</h2>
 
         <div class="menu-header-block">
-          <div class="menu-col check">Chọn</div>
-          <div class="menu-col name">Tên món ăn</div>
-          <div class="menu-col price">Giá (VNĐ / Mâm 6)</div>
+          <div class="col check">Chọn</div>
+          <div class="col name">Tên món ăn</div>
+          <div class="col price">Giá (VNĐ / Mâm 6)</div>
         </div>
         <div class="menu-table">
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3557,12 +3453,12 @@
                 data-name="Canh ngao chua"
               />
             </div>
-            <div class="menu-col name">Canh ngao chua</div>
-            <div class="menu-col price">98,000</div>
+            <div class="col name">Canh ngao chua</div>
+            <div class="col price">98,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3570,12 +3466,12 @@
                 data-name="Canh mọc nấm tươi"
               />
             </div>
-            <div class="menu-col name">Canh mọc nấm tươi</div>
-            <div class="menu-col price">98,000</div>
+            <div class="col name">Canh mọc nấm tươi</div>
+            <div class="col price">98,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3583,12 +3479,12 @@
                 data-name="Canh mọc nấm tươi hạt sen"
               />
             </div>
-            <div class="menu-col name">Canh mọc nấm tươi hạt sen</div>
-            <div class="menu-col price">98,000</div>
+            <div class="col name">Canh mọc nấm tươi hạt sen</div>
+            <div class="col price">98,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3596,12 +3492,12 @@
                 data-name="Canh gà nấm tươi"
               />
             </div>
-            <div class="menu-col name">Canh gà nấm tươi</div>
-            <div class="menu-col price">98,000</div>
+            <div class="col name">Canh gà nấm tươi</div>
+            <div class="col price">98,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3609,12 +3505,12 @@
                 data-name="Canh Bóng thập cẩm"
               />
             </div>
-            <div class="menu-col name">Canh Bóng thập cẩm</div>
-            <div class="menu-col price">98,000</div>
+            <div class="col name">Canh Bóng thập cẩm</div>
+            <div class="col price">98,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3622,12 +3518,12 @@
                 data-name="Canh Bóng nấm thả"
               />
             </div>
-            <div class="menu-col name">Canh Bóng nấm thả</div>
-            <div class="menu-col price">98,000</div>
+            <div class="col name">Canh Bóng nấm thả</div>
+            <div class="col price">98,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3635,12 +3531,12 @@
                 data-name="Canh măng ngan"
               />
             </div>
-            <div class="menu-col name">Canh măng ngan</div>
-            <div class="menu-col price">92,000</div>
+            <div class="col name">Canh măng ngan</div>
+            <div class="col price">92,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3648,12 +3544,12 @@
                 data-name="Canh sườn măng lưỡi lợn"
               />
             </div>
-            <div class="menu-col name">Canh sườn măng lưỡi lợn</div>
-            <div class="menu-col price">105,000</div>
+            <div class="col name">Canh sườn măng lưỡi lợn</div>
+            <div class="col price">105,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3661,12 +3557,12 @@
                 data-name="Canh tôm cua mọc Hoa Viên"
               />
             </div>
-            <div class="menu-col name">Canh tôm cua mọc Hoa Viên</div>
-            <div class="menu-col price">110,000</div>
+            <div class="col name">Canh tôm cua mọc Hoa Viên</div>
+            <div class="col price">110,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3674,12 +3570,12 @@
                 data-name="Canh măng lưỡi lợn móng giò"
               />
             </div>
-            <div class="menu-col name">Canh măng lưỡi lợn móng giò</div>
-            <div class="menu-col price">105,000</div>
+            <div class="col name">Canh măng lưỡi lợn móng giò</div>
+            <div class="col price">105,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3687,12 +3583,12 @@
                 data-name="Canh chua sườn non"
               />
             </div>
-            <div class="menu-col name">Canh chua sườn non</div>
-            <div class="menu-col price">98,000</div>
+            <div class="col name">Canh chua sườn non</div>
+            <div class="col price">98,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3700,12 +3596,12 @@
                 data-name="Canh mọc thập cẩm"
               />
             </div>
-            <div class="menu-col name">Canh mọc thập cẩm</div>
-            <div class="menu-col price">98,000</div>
+            <div class="col name">Canh mọc thập cẩm</div>
+            <div class="col price">98,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3713,12 +3609,12 @@
                 data-name="Canh măng sườn"
               />
             </div>
-            <div class="menu-col name">Canh măng sườn</div>
-            <div class="menu-col price">98,000</div>
+            <div class="col name">Canh măng sườn</div>
+            <div class="col price">98,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3726,20 +3622,20 @@
                 data-name="Canh sườn sụn nấm tươi"
               />
             </div>
-            <div class="menu-col name">Canh sườn sụn nấm tươi</div>
-            <div class="menu-col price">98,000</div>
+            <div class="col name">Canh sườn sụn nấm tươi</div>
+            <div class="col price">98,000</div>
           </div>
         </div>
         <h2 class="menu-title">TRÁNG MIỆNG - HOA QUẢ</h2>
 
         <div class="menu-header-block">
-          <div class="menu-col check">Chọn</div>
-          <div class="menu-col name">Tên món ăn</div>
-          <div class="menu-col price">Giá (VNĐ / Mâm 6)</div>
+          <div class="col check">Chọn</div>
+          <div class="col name">Tên món ăn</div>
+          <div class="col price">Giá (VNĐ / Mâm 6)</div>
         </div>
         <div class="menu-table">
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3747,12 +3643,12 @@
                 data-name="Bưởi năm roi"
               />
             </div>
-            <div class="menu-col name">Bưởi năm roi</div>
-            <div class="menu-col price">90,000</div>
+            <div class="col name">Bưởi năm roi</div>
+            <div class="col price">90,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3760,12 +3656,12 @@
                 data-name="Dưa hấu"
               />
             </div>
-            <div class="menu-col name">Dưa hấu</div>
-            <div class="menu-col price">60,000</div>
+            <div class="col name">Dưa hấu</div>
+            <div class="col price">60,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3773,12 +3669,12 @@
                 data-name="Bưởi da xanh"
               />
             </div>
-            <div class="menu-col name">Bưởi da xanh</div>
-            <div class="menu-col price">98,000</div>
+            <div class="col name">Bưởi da xanh</div>
+            <div class="col price">98,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3786,12 +3682,12 @@
                 data-name="Quýt Sài Gòn"
               />
             </div>
-            <div class="menu-col name">Quýt Sài Gòn</div>
-            <div class="menu-col price">105,000</div>
+            <div class="col name">Quýt Sài Gòn</div>
+            <div class="col price">105,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3799,12 +3695,12 @@
                 data-name="Hoa quả thập cẩm"
               />
             </div>
-            <div class="menu-col name">Hoa quả thập cẩm</div>
-            <div class="menu-col price">105,000</div>
+            <div class="col name">Hoa quả thập cẩm</div>
+            <div class="col price">105,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3812,12 +3708,12 @@
                 data-name="Cam canh"
               />
             </div>
-            <div class="menu-col name">Cam canh</div>
-            <div class="menu-col price">105,000</div>
+            <div class="col name">Cam canh</div>
+            <div class="col price">105,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3825,12 +3721,12 @@
                 data-name="Dưa vàng"
               />
             </div>
-            <div class="menu-col name">Dưa vàng</div>
-            <div class="menu-col price">105,000</div>
+            <div class="col name">Dưa vàng</div>
+            <div class="col price">105,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3838,20 +3734,20 @@
                 data-name="Nho Mỹ"
               />
             </div>
-            <div class="menu-col name">Nho Mỹ</div>
-            <div class="menu-col price">175,000</div>
+            <div class="col name">Nho Mỹ</div>
+            <div class="col price">175,000</div>
           </div>
         </div>
         <h2 class="menu-title">CHÈ</h2>
 
         <div class="menu-header-block">
-          <div class="menu-col check">Chọn</div>
-          <div class="menu-col name">Tên món ăn</div>
-          <div class="menu-col price">Giá (VNĐ / Mâm 6)</div>
+          <div class="col check">Chọn</div>
+          <div class="col name">Tên món ăn</div>
+          <div class="col price">Giá (VNĐ / Mâm 6)</div>
         </div>
         <div class="menu-table">
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3859,12 +3755,12 @@
                 data-name="Chè hạt sen long nhãn"
               />
             </div>
-            <div class="menu-col name">Chè hạt sen long nhãn</div>
-            <div class="menu-col price">105,000</div>
+            <div class="col name">Chè hạt sen long nhãn</div>
+            <div class="col price">105,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3872,12 +3768,12 @@
                 data-name="Chè trân châu long nhãn"
               />
             </div>
-            <div class="menu-col name">Chè trân châu long nhãn</div>
-            <div class="menu-col price">95,000</div>
+            <div class="col name">Chè trân châu long nhãn</div>
+            <div class="col price">95,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3885,12 +3781,12 @@
                 data-name="Chè trân châu khoai môn"
               />
             </div>
-            <div class="menu-col name">Chè trân châu khoai môn</div>
-            <div class="menu-col price">95,000</div>
+            <div class="col name">Chè trân châu khoai môn</div>
+            <div class="col price">95,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3898,12 +3794,12 @@
                 data-name="Chè nếp cẩm"
               />
             </div>
-            <div class="menu-col name">Chè nếp cẩm</div>
-            <div class="menu-col price">95,000</div>
+            <div class="col name">Chè nếp cẩm</div>
+            <div class="col price">95,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3911,12 +3807,12 @@
                 data-name="Chè đỗ xanh trân châu"
               />
             </div>
-            <div class="menu-col name">Chè đỗ xanh trân châu</div>
-            <div class="menu-col price">95,000</div>
+            <div class="col name">Chè đỗ xanh trân châu</div>
+            <div class="col price">95,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3924,20 +3820,20 @@
                 data-name="Chè tuyết nhĩ hạt sen táo đỏ"
               />
             </div>
-            <div class="menu-col name">Chè tuyết nhĩ hạt sen táo đỏ</div>
-            <div class="menu-col price">95,000</div>
+            <div class="col name">Chè tuyết nhĩ hạt sen táo đỏ</div>
+            <div class="col price">95,000</div>
           </div>
         </div>
         <h2 class="menu-title">ĐỒ NGỌT KHÁC</h2>
 
         <div class="menu-header-block">
-          <div class="menu-col check">Chọn</div>
-          <div class="menu-col name">Tên món ăn</div>
-          <div class="menu-col price">Giá (VNĐ / Mâm 6)</div>
+          <div class="col check">Chọn</div>
+          <div class="col name">Tên món ăn</div>
+          <div class="col price">Giá (VNĐ / Mâm 6)</div>
         </div>
         <div class="menu-table">
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3945,12 +3841,12 @@
                 data-name="Bánh Su Kem/ kem Caramen"
               />
             </div>
-            <div class="menu-col name">Bánh Su Kem/ kem Caramen</div>
-            <div class="menu-col price">63,000</div>
+            <div class="col name">Bánh Su Kem/ kem Caramen</div>
+            <div class="col price">63,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3958,12 +3854,12 @@
                 data-name="Tào Phớ nước cốt dừa"
               />
             </div>
-            <div class="menu-col name">Tào Phớ nước cốt dừa</div>
-            <div class="menu-col price">95,000</div>
+            <div class="col name">Tào Phớ nước cốt dừa</div>
+            <div class="col price">95,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3971,12 +3867,12 @@
                 data-name="Bánh ngọt Pháp"
               />
             </div>
-            <div class="menu-col name">Bánh ngọt Pháp</div>
-            <div class="menu-col price">95,000</div>
+            <div class="col name">Bánh ngọt Pháp</div>
+            <div class="col price">95,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3984,12 +3880,12 @@
                 data-name="Sữa chua nếp cẩm"
               />
             </div>
-            <div class="menu-col name">Sữa chua nếp cẩm</div>
-            <div class="menu-col price">105,000</div>
+            <div class="col name">Sữa chua nếp cẩm</div>
+            <div class="col price">105,000</div>
           </div>
 
           <div class="menu-row">
-            <div class="menu-col check">
+            <div class="col check">
               <input
                 type="checkbox"
                 class="menu-item"
@@ -3997,8 +3893,8 @@
                 data-name="Bánh tuyết thiên sứ"
               />
             </div>
-            <div class="menu-col name">Bánh tuyết thiên sứ</div>
-            <div class="menu-col price">105,000</div>
+            <div class="col name">Bánh tuyết thiên sứ</div>
+            <div class="col price">105,000</div>
           </div>
         </div>
       </section>
@@ -4008,13 +3904,12 @@
         <ul id="selectedList"></ul>
         <p><strong>Tổng cộng:</strong> <span id="total">0</span> VNĐ/Mâm</p>
         <p class="note">Hãy chọn món ăn để tạo thực đơn của riêng bạn.</p>
-        <button class="custom-btn" id="orderBtn">Đặt thực đơn này</button>
+        <button id="orderBtn">Đặt thực đơn này</button>
       </aside>
     </main>
 
-    <!------------------------------------------------------------------------------------------------------------------------------------------------------->
-    <!-- ==== FOOTER ==== -->
-    <footer id="footer" class="footer mt-5 text-white fade-section">
+    <!-- Footer -->
+    <footer id="footer" class="footer mt-5 text-white">
       <div class="footer-top py-5">
         <div class="container-fluid px-5">
           <div class="row gy-4 justify-content-between">
@@ -4096,10 +3991,6 @@
         </p>
       </div>
     </footer>
-    <!------------------------------------------------------------------------------------------------------------------------------------------------------->
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Mâm tự chọn JS -->
-    <script src="./mamtuchon.js"></script>
+    <script src="mamtuchon.js"></script>
   </body>
 </html>
