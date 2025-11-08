@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi">
   <head>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
-      rel="stylesheet"
-    />
-    <!-- ====== THÔNG TIN CƠ BẢN ====== -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Liên hệ & Đặt tiệc | GâuGâu Food</title>
+    <title>Liên hệ & Đặt tiệc - GâuGâu Food</title>
     <link rel="icon" href="../trangchu/img/favicon.png" type="image/png" />
     <meta
       name="description"
@@ -16,44 +11,47 @@
     />
     <meta name="author" content="GâuGâu Food Team" />
     <meta name="robots" content="index, follow" />
-
-    <!-- ====== CSS LIÊN KẾT ====== -->
-    <!-- Bootstrap -->
+    <!-- Bootstrap 5 CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <!-- Font Awesome (Icon) -->
+    <!-- Font Awesome (icon) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <!-- Google Font -->
+    <!-- Font Roboto -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <!-- Bootstrap Icons -->
+    <!-- Icon -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
       rel="stylesheet"
     />
-    <!-- CSS Riêng -->
+    <!-- Trang Chủ CSS -->
+    <link rel="stylesheet" href="css/trangchu.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Liên Hệ CSS -->
     <link rel="stylesheet" href="lienhe.css" />
   </head>
-
   <body>
-    <!-- ====== THANH ĐIỀU HƯỚNG (NAVBAR) ====== -->
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-- ==== NAV ==== -->
     <nav
       class="navbar navbar-expand-lg navbar-light bg-light fixed-top custom-navbar"
     >
       <div class="container">
         <!-- Logo -->
-        <a class="navbar-brand fw-bold" href="../trangchu/index.html">
+        <a class="navbar-brand fw-bold" href="">
           GâuGâu <span class="text-danger">.</span> Food
         </a>
-
-        <!-- Nút thu gọn khi màn hình nhỏ -->
+        <!-- Toggle menu -->
         <button
           class="navbar-toggler"
           type="button"
@@ -65,52 +63,59 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-
-        <!-- Danh mục menu -->
+        <!-- Menu -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link smoothScroll" href="../trangchu/index.html"
-                >TRANG CHỦ</a
-              >
+              <a class="nav-link" href="../trangchu/index.html">TRANG CHỦ</a>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link smoothScroll"
-                href="../gioithieu/gioithieu.html"
+              <a class="nav-link" href="../gioithieu/gioithieu.html"
                 >GIỚI THIỆU</a
               >
             </li>
-
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
                 href="#"
                 id="dichVuDropdown"
                 role="button"
-                data-bs-toggle="dropdown"
+                aria-expanded="false"
               >
                 DỊCH VỤ
               </a>
               <ul class="dropdown-menu" aria-labelledby="dichVuDropdown">
-                <li><a class="dropdown-item" href="#mamco">MÂM CỖ CÚNG</a></li>
                 <li>
-                  <a class="dropdown-item" href="#giadinh">TIỆC GIA ĐÌNH</a>
+                  <a
+                    class="dropdown-item"
+                    href="../dichvu/MamCoCung/mamcocung.html"
+                    >MÂM CỖ CÚNG</a
+                  >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#cuoihoi">TIỆC CƯỚI HỎI</a>
+                  <a
+                    class="dropdown-item"
+                    href="../dichvu/TiecGiaDinh/tiecgiadinh.html"
+                    >TIỆC GIA ĐÌNH</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../dichvu/TiecCuoi/tieccuoi.html"
+                    >TIỆC CƯỚI HỎI</a
+                  >
                 </li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link smoothScroll" href="">THỰC ĐƠN</a>
+              <a class="nav-link" href="../thucdon/TiecGiaDinh/mamtuchon.html">THỰC ĐƠN</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link smoothScroll" href="#">LIÊN HỆ</a>
+              <a class="nav-link" href="#">LIÊN HỆ</a>
             </li>
           </ul>
-
-          <!-- Góc phải Navbar: SĐT & nút Đặt Tiệc -->
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" href="#">
@@ -118,7 +123,6 @@
               </a>
             </li>
             <li class="nav-item">
-              <!-- Nút popup đặt tiệc -->
               <button
                 class="btn btn-danger ms-3"
                 data-bs-toggle="modal"
@@ -131,8 +135,8 @@
         </div>
       </div>
     </nav>
-
-    <!-- ====== POPUP ĐẶT TIỆC (Modal) ====== -->
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-- ===== POPUP ĐẶT TIỆC  ===== -->
     <div
       class="modal fade"
       id="datTiecModal"
@@ -141,10 +145,7 @@
       aria-hidden="true"
     >
       <div class="modal-dialog modal-dialog-centered">
-        <div
-          class="modal-content"
-          style="background-color: #c0392b; color: white"
-        >
+        <div class="modal-content dat-tiec-modal-content">
           <div class="modal-header border-0">
             <h5 class="modal-title w-100 text-center" id="datTiecLabel">
               <i class="bi bi-clipboard-check"></i> Gửi yêu cầu đặt tiệc
@@ -156,7 +157,6 @@
               aria-label="Đóng"
             ></button>
           </div>
-
           <div class="modal-body">
             <form>
               <div class="mb-3">
@@ -169,7 +169,6 @@
                   required
                 />
               </div>
-
               <div class="row">
                 <div class="col-md-6 mb-3">
                   <label for="modalEmail" class="form-label">Email *</label>
@@ -194,7 +193,6 @@
                   />
                 </div>
               </div>
-
               <div class="mb-3">
                 <label for="modalMessage" class="form-label">Lời nhắn</label>
                 <textarea
@@ -221,19 +219,7 @@
         </div>
       </div>
     </div>
-    <!-- Nút thu gọn khi màn hình nhỏ -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!-- ====== PHẦN LIÊN HỆ & FORM ====== -->
     <section class="contact-section">
       <div class="contact-container">
@@ -252,11 +238,11 @@
           <div class="contact-info">
             <h3>Thông tin liên hệ</h3>
             <p>
-              <strong>Địa chỉ:</strong> Tòa nhà Nhật Tân, 151 Ngọc Chi, Vĩnh
+              <strong>📍 Địa chỉ:</strong> Tòa nhà Nhật Tân, 151 Ngọc Chi, Vĩnh
               Ngọc, Đông Anh, Hà Nội
             </p>
-            <p><strong>Điện thoại:</strong> 9999 999 999</p>
-            <p><strong>Email:</strong> gaugau4953@gmail.com</p>
+            <p><strong>☎️ Điện thoại:</strong> 9999 999 999</p>
+            <p><strong>✉️ Email:</strong> gaugau4953@gmail.com</p>
 
             <iframe
               src="https://www.google.com/maps?q=Tòa%20nhà%20Nhật%20Tân%2C%20151%20Ngọc%20Chi%2C%20Vĩnh%20Ngọc%2C%20Đông%20Anh%2C%20Hà%20Nội&output=embed"
@@ -291,13 +277,13 @@
                 placeholder="Nhập yêu cầu..."
               ></textarea>
 
-              <button type="submit">Gửi yêu cầu</button>
+              <button type="submit" class="btn btn-warning">Gửi yêu cầu</button>
             </form>
           </div>
         </div>
       </div>
     </section>
-
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!-- ==== FOOTER ==== -->
     <footer id="footer" class="footer mt-5 text-white">
       <div class="footer-top py-5">
@@ -381,9 +367,10 @@
         </p>
       </div>
     </footer>
-
-    <!-- ====== SCRIPT ====== -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Liên Hệ JS -->
     <script src="lienhe.js"></script>
   </body>
 </html>

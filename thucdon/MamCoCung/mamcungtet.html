@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="vi">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mâm Cỗ Truyền Thống</title>
-
-
-    <!-- style css -->
-    <link rel="stylesheet" href="./mamcungtet/css/style.css" />
-     <meta
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mâm Cúng Tết - GâuGâu Food</title>
+    <link rel="icon" href="../../trangchu/img/favicon.png" type="image/png" />
+    <meta
       name="description"
       content="GâuGâu Food chuyên đặt tiệc tại nhà, mâm cỗ cúng, tiệc cưới hỏi, tiệc gia đình tại Đông Anh. Dịch vụ nhanh chóng, chuyên nghiệp, hương vị truyền thống và hiện đại chuẩn Việt."
     />
@@ -34,16 +31,18 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
       rel="stylesheet"
     />
+    <!-- Style css -->
+    <link rel="stylesheet" href="./mamcungtet/css/style.css" />
   </head>
-
   <body>
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!-- ==== NAV ==== -->
-   <nav
+    <nav
       class="navbar navbar-expand-lg navbar-light bg-light fixed-top custom-navbar"
     >
       <div class="container">
         <!-- Logo -->
-        <a class="navbar-brand fw-bold" href="index.html">
+        <a class="navbar-brand fw-bold" href="">
           GâuGâu <span class="text-danger">.</span> Food
         </a>
         <!-- Toggle menu -->
@@ -62,67 +61,165 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link smoothScroll" href="#home">TRANG CHỦ</a>
+              <a class="nav-link" href="../../trangchu/index.html">TRANG CHỦ</a>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link smoothScroll"
-                href="../gioithieu/gioithieu.html"
+              <a class="nav-link" href="../../gioithieu/gioithieu.html"
                 >GIỚI THIỆU</a
               >
             </li>
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
                 href="#"
                 id="dichVuDropdown"
                 role="button"
+                aria-expanded="false"
               >
                 DỊCH VỤ
               </a>
               <ul class="dropdown-menu" aria-labelledby="dichVuDropdown">
-                <li><a class="dropdown-item" href="#mamco">MÂM CỖ CÚNG</a></li>
                 <li>
-                  <a class="dropdown-item" href="#giadinh">TIỆC GIA ĐÌNH</a>
+                  <a
+                    class="dropdown-item"
+                    href="../../dichvu/MamCoCung/mamcocung.html"
+                    >MÂM CỖ CÚNG</a
+                  >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#cuoihoi">TIỆC CƯỚI HỎI</a>
+                  <a
+                    class="dropdown-item"
+                    href="../../dichvu/TiecGiaDinh/tiecgiadinh.html"
+                    >TIỆC GIA ĐÌNH</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../../dichvu/TiecCuoi/tieccuoi.html"
+                    >TIỆC CƯỚI HỎI</a
+                  >
                 </li>
               </ul>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link smoothScroll"
-                href="../gioithieu/gioithieu.html"
-                >THỰC ĐƠN</a
-              >
+              <a class="nav-link" href="#">THỰC ĐƠN</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link smoothScroll" href="../lienhe/lienhe.html"
-                >LIÊN HỆ</a
-              >
+              <a class="nav-link" href="../../lienhe/lienhe.html">LIÊN HỆ</a>
             </li>
           </ul>
           <!-- Contact number / In4 -->
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                Gọi Ngay! <i class="fa fa-phone text-danger"></i> 9999.999.999
+              <a class="nav-link" href="tel: 9999999999">
+                Gọi Ngay!
+                <i class="fa-solid fa-phone text-danger"></i> 9999.999.999
               </a>
             </li>
             <li class="nav-item">
-              <a href="../lienhe" class="btn btn-danger ms-3">ĐẶT TIỆC</a>
+              <button
+                class="btn btn-danger ms-3"
+                data-bs-toggle="modal"
+                data-bs-target="#datTiecModal"
+              >
+                ĐẶT TIỆC
+              </button>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <!-- /____________________________________________________________________________________________________/ -->
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-- ===== POPUP ĐẶT TIỆC  ===== -->
+    <div
+      class="modal fade"
+      id="datTiecModal"
+      tabindex="-1"
+      aria-labelledby="datTiecLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content dat-tiec-modal-content">
+          <div class="modal-header border-0">
+            <h5 class="modal-title w-100 text-center" id="datTiecLabel">
+              <i class="bi bi-clipboard-check"></i> Gửi yêu cầu đặt tiệc
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Đóng"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="modalName" class="form-label">Họ và tên *</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="modalName"
+                  placeholder="Nhập họ và tên"
+                  required
+                />
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="modalEmail" class="form-label">Email *</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="modalEmail"
+                    placeholder="abc@gmail.com"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="modalPhone" class="form-label"
+                    >Số điện thoại *</label
+                  >
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="modalPhone"
+                    placeholder="0912xxxxxx"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="modalMessage" class="form-label">Lời nhắn</label>
+                <textarea
+                  class="form-control"
+                  id="modalMessage"
+                  rows="3"
+                  placeholder="Yêu cầu hoặc thông tin thêm..."
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-light w-100 fw-bold">
+                GỬI YÊU CẦU
+              </button>
+            </form>
+            <div
+              id="formAlert"
+              class="alert alert-success d-none mt-3"
+              role="alert"
+            >
+              ✅ Yêu cầu của bạn đã được ghi nhận! Chúng tôi sẽ liên hệ sớm
+              nhất.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------->
     <main>
-      <!-- MENU ROW  -->
+      <!-- ==== MENU ==== -->
       <section id="menu-row" class="menu-section container">
         <h2 class="section-title">Danh sách thực đơn</h2>
-
         <div class="menu-row">
           <!-- Thực Đơn 1 -->
           <div class="menu-card reveal">
@@ -130,7 +227,6 @@
               <span>Thực Đơn 1</span>
               <p>1200.000đ</p>
             </div>
-
             <div class="images">
               <img src="./mamcungtet/img/1.jfif" alt="Món 1" />
               <img src="./mamcungtet/img/2.jfif" alt="Món 2" />
@@ -139,28 +235,25 @@
               <img src="./mamcungtet/img/5.jfif" alt="Món 5" />
               <img src="./mamcungtet/img/6.jfif" alt="Món 6" />
             </div>
-
             <ul class="dish-list">
               <li>
                 Gỏi ngó sen thịt tôm <span>250.000đ</span
                 ><input type="checkbox" />
               </li>
-              <li>Thịt kho hột vịt <span>300.000đ</span><input type="checkbox" /></li>
               <li>
-                Cá lóc kho tộ <span>250.000đ</span
+                Thịt kho hột vịt <span>300.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Cá lóc kho tộ <span>250.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Canh khổ qua dồn thịt <span>200.000đ</span
                 ><input type="checkbox" />
               </li>
-              <li>Canh khổ qua dồn thịt <span>200.000đ</span><input type="checkbox" /></li>
-              <li>
-               Dưa hành <span>50.000đ</span
-                ><input type="checkbox" />
-              </li>
-              <li>
-                Bánh tét <span>150.000đ</span><input type="checkbox" />
-              </li>
+              <li>Dưa hành <span>50.000đ</span><input type="checkbox" /></li>
+              <li>Bánh tét <span>150.000đ</span><input type="checkbox" /></li>
             </ul>
           </div>
-
           <!-- Thực Đơn 2 -->
           <div class="menu-card reveal">
             <div class="ribbon">
@@ -176,28 +269,29 @@
               <img src="./mamcungtet/img/11.jfif" alt="Món E" />
               <img src="./mamcungtet/img/12.jfif" alt="Món F" />
             </div>
-
             <ul class="dish-list">
-              <li>Gỏi củ hũ dừa <span>250.000đ</span><input type="checkbox" /></li>
-              <li>Tôm chiên xù <span>300.000đ</span><input type="checkbox" /></li>
-              <li>Bò xào bông cải <span>250.000đ</span><input type="checkbox" /></li>
               <li>
-               Canh măng giò heo<span>250.000đ</span><input type="checkbox" />
+                Gỏi củ hũ dừa <span>250.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Tôm chiên xù <span>300.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Bò xào bông cải <span>250.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Canh măng giò heo<span>250.000đ</span><input type="checkbox" />
               </li>
               <li>Dưa món<span>50.000đ</span><input type="checkbox" /></li>
-              <li>
-                Bánh chưng <span>100.000đ</span><input type="checkbox" />
-              </li>
+              <li>Bánh chưng <span>100.000đ</span><input type="checkbox" /></li>
             </ul>
           </div>
-
           <!-- Thực Đơn 3 -->
           <div class="menu-card reveal">
             <div class="ribbon">
               <span>Thực Đơn 3</span>
               <p>1350.000đ</p>
             </div>
-
             <div class="images">
               <img src="./mamcungtet/img/13.jfif" alt="Món X" />
               <img src="./mamcungtet/img/14.jfif" alt="Món Y" />
@@ -206,22 +300,24 @@
               <img src="./mamcungtet/img/17.jfif" alt="Món V" />
               <img src="./mamcungtet/img/18.jfif" alt="Món U" />
             </div>
-
             <ul class="dish-list">
-              <li>Gỏi bưởi tôm thịt <span>300.000đ</span><input type="checkbox" /></li>
               <li>
-               Gà hấp hành <span>350.000đ</span><input type="checkbox" />
+                Gỏi bưởi tôm thịt <span>300.000đ</span><input type="checkbox" />
               </li>
-              <li>Cá điêu hồng chiên xù <span>300.000đ</span><input type="checkbox" /></li>
               <li>
-               Canh nấm hải sản <span>250.000đ</span
+                Gà hấp hành <span>350.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Cá điêu hồng chiên xù <span>300.000đ</span
                 ><input type="checkbox" />
               </li>
               <li>
-                Cơm trắng <span>50.000đ</span
-                ><input type="checkbox" />
+                Canh nấm hải sản <span>250.000đ</span><input type="checkbox" />
               </li>
-              <li>Chè trôi nước<span>100.000đ</span><input type="checkbox" /></li>
+              <li>Cơm trắng <span>50.000đ</span><input type="checkbox" /></li>
+              <li>
+                Chè trôi nước<span>100.000đ</span><input type="checkbox" />
+              </li>
             </ul>
           </div>
           <!-- Thực Đơn 4 -->
@@ -230,7 +326,6 @@
               <span>Thực Đơn 4</span>
               <p>1350.000đ</p>
             </div>
-
             <div class="images">
               <img src="./mamcungtet/img/19.jfif" alt="Món A" />
               <img src="./mamcungtet/img/20.jfif" alt="Món B" />
@@ -239,15 +334,24 @@
               <img src="./mamcungtet/img/23.jfif" alt="Món E" />
               <img src="./mamcungtet/img/24.jfif" alt="Món F" />
             </div>
-
             <ul class="dish-list">
-              <li>Gỏi thập cẩm <span>300.000đ</span><input type="checkbox" /></li>
-              <li>Thịt ba rọi kho nước dừa <span>300.000đ</span><input type="checkbox" /></li>
-              <li>Canh củ sen hầm giò <span>300.000đ</span><input type="checkbox" /></li>
               <li>
-               Cá thu sốt cà<span>250.000đ</span><input type="checkbox" />
+                Gỏi thập cẩm <span>300.000đ</span><input type="checkbox" />
               </li>
-              <li>Cơm chiên trứng <span>50.000đ</span><input type="checkbox" /></li>
+              <li>
+                Thịt ba rọi kho nước dừa <span>300.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Canh củ sen hầm giò <span>300.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Cá thu sốt cà<span>250.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Cơm chiên trứng <span>50.000đ</span><input type="checkbox" />
+              </li>
               <li>
                 Bánh ít lá gai <span>150.000đ</span><input type="checkbox" />
               </li>
@@ -259,7 +363,6 @@
               <span>Thực Đơn 5</span>
               <p>1500.000đ</p>
             </div>
-
             <div class="images">
               <img src="./mamcungtet/img/25.jfif" alt="Món A" />
               <img src="./mamcungtet/img/26.jfif" alt="Món B" />
@@ -268,18 +371,21 @@
               <img src="./mamcungtet/img/17.jfif" alt="Món E" />
               <img src="./mamcungtet/img/30.jfif" alt="Món F" />
             </div>
-
             <ul class="dish-list">
-              <li>Gỏi hải sản <span>300.000đ</span><input type="checkbox" /></li>
-              <li>Tôm nướng muối ớt <span>400.000đ</span><input type="checkbox" /></li>
-              <li>Bò kho bánh mì <span>350.000đ</span><input type="checkbox" /></li>
+              <li>
+                Gỏi hải sản <span>300.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Tôm nướng muối ớt <span>400.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Bò kho bánh mì <span>350.000đ</span><input type="checkbox" />
+              </li>
               <li>
                 Canh chua cá hú <span>250.000đ</span><input type="checkbox" />
               </li>
               <li>Cơm trắng <span>50.000đ</span><input type="checkbox" /></li>
-              <li>
-                Trái cây <span>150.000đ</span><input type="checkbox" />
-              </li>
+              <li>Trái cây <span>150.000đ</span><input type="checkbox" /></li>
             </ul>
           </div>
           <!-- Thực đơn 6 -->
@@ -288,7 +394,6 @@
               <span>Thực Đơn 6</span>
               <p>1500.000đ</p>
             </div>
-
             <div class="images">
               <img src="./mamcungtet/img/31.jfif" alt="Món A" />
               <img src="./mamcungtet/img/32.jfif" alt="Món B" />
@@ -297,18 +402,23 @@
               <img src="./mamcungtet/img/35.jfif" alt="Món E" />
               <img src="./mamcungtet/img/36.jfif" alt="Món F" />
             </div>
-
             <ul class="dish-list">
-              <li>Gỏi ngó sen <span>250.000đ</span><input type="checkbox" /></li>
-              <li>Cá chẽm hấp xì dầu<span>400.000đ</span><input type="checkbox" /></li>
+              <li>
+                Gỏi ngó sen <span>250.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Cá chẽm hấp xì dầu<span>400.000đ</span><input type="checkbox" />
+              </li>
               <li>Gà rô ti <span>350.000đ</span><input type="checkbox" /></li>
               <li>
-                Canh khổ qua dồn thịt <span>250.000đ</span><input type="checkbox" />
+                Canh khổ qua dồn thịt <span>250.000đ</span
+                ><input type="checkbox" />
               </li>
-              <li>Cơm chiên Dương Châu <span>150.000đ</span><input type="checkbox" /></li>
               <li>
-                Rau câu <span>100.000đ</span><input type="checkbox" />
+                Cơm chiên Dương Châu <span>150.000đ</span
+                ><input type="checkbox" />
               </li>
+              <li>Rau câu <span>100.000đ</span><input type="checkbox" /></li>
             </ul>
           </div>
           <!-- thực đơn 7 -->
@@ -317,7 +427,6 @@
               <span>Thực Đơn 7</span>
               <p>1600.000đ</p>
             </div>
-
             <div class="images">
               <img src="./mamcungtet/img/37.jfif" alt="Món A" />
               <img src="./mamcungtet/img/38.jfif" alt="Món B" />
@@ -326,18 +435,22 @@
               <img src="./mamcungtet/img/12.jfif" alt="Món E" />
               <img src="./mamcungtet/img/30.jfif" alt="Món F" />
             </div>
-
             <ul class="dish-list">
-              <li>Gỏi tôm thịt<span>250.000đ</span><input type="checkbox" /></li>
-              <li>Vịt quay Bắc Kinh <span>450.000đ</span><input type="checkbox" /></li>
-              <li>Cá diêu hồng chiên <span>350.000đ</span><input type="checkbox" /></li>
               <li>
-               Canh măng hầm giò <span>250.000đ</span><input type="checkbox" />
+                Gỏi tôm thịt<span>250.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Vịt quay Bắc Kinh <span>450.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Cá diêu hồng chiên <span>350.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Canh măng hầm giò <span>250.000đ</span><input type="checkbox" />
               </li>
               <li>Bánh chưng <span>150.000đ</span><input type="checkbox" /></li>
-              <li>
-               Trái cây <span>150.000đ</span><input type="checkbox" />
-              </li>
+              <li>Trái cây <span>150.000đ</span><input type="checkbox" /></li>
             </ul>
           </div>
           <!-- Thực đơn 8 -->
@@ -346,7 +459,6 @@
               <span>Thực Đơn 8</span>
               <p>1500.000đ</p>
             </div>
-
             <div class="images">
               <img src="./mamcungtet/img/1.jfif" alt="Món A" />
               <img src="./mamcungtet/img/44.jfif" alt="Món B" />
@@ -355,17 +467,23 @@
               <img src="./mamcungtet/img/17.jfif" alt="Món E" />
               <img src="./mamcungtet/img/36.jfif" alt="Món F" />
             </div>
-
             <ul class="dish-list">
-              <li>Gỏi xoài tôm khô <span>300.000đ</span><input type="checkbox" /></li>
-              <li>Bò né trứng ốp<span>400.000đ</span><input type="checkbox" /></li>
-              <li>Gà nướng muối ớt<span>400.000đ</span><input type="checkbox" /></li>
               <li>
-              Canh bí đỏ tôm khô <span>250.000đ</span><input type="checkbox" />
+                Gỏi xoài tôm khô <span>300.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Bò né trứng ốp<span>400.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Gà nướng muối ớt<span>400.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Canh bí đỏ tôm khô <span>250.000đ</span
+                ><input type="checkbox" />
               </li>
               <li>Cơm trắng<span>50.000đ</span><input type="checkbox" /></li>
               <li>
-               Rau câu dừa <span>100.000đ</span><input type="checkbox" />
+                Rau câu dừa <span>100.000đ</span><input type="checkbox" />
               </li>
             </ul>
           </div>
@@ -375,7 +493,6 @@
               <span>Thực Đơn 9</span>
               <p>1550.000đ</p>
             </div>
-
             <div class="images">
               <img src="./mamcungtet/img/49.jfif" alt="Món A" />
               <img src="./mamcungtet/img/50.jfif" alt="Món B" />
@@ -384,15 +501,22 @@
               <img src="./mamcungtet/img/53.jfif" alt="Món E" />
               <img src="./mamcungtet/img/54.jfif" alt="Món F" />
             </div>
-
             <ul class="dish-list">
-              <li>Gỏi tai heo <span>250.000đ</span><input type="checkbox" /></li>
-              <li>Tôm hấp bia <span>400.000đ</span><input type="checkbox" /></li>
-              <li>Bò cuốn lá lốt <span>400.000đ</span><input type="checkbox" /></li>
               <li>
-               Canh chua cá lóc <span>300.000đ</span><input type="checkbox" />
+                Gỏi tai heo <span>250.000đ</span><input type="checkbox" />
               </li>
-              <li>Cơm chiên tỏi <span>100.000đ</span><input type="checkbox" /></li>
+              <li>
+                Tôm hấp bia <span>400.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Bò cuốn lá lốt <span>400.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Canh chua cá lóc <span>300.000đ</span><input type="checkbox" />
+              </li>
+              <li>
+                Cơm chiên tỏi <span>100.000đ</span><input type="checkbox" />
+              </li>
               <li>
                 Chè hạt sen <span>100.000đ</span><input type="checkbox" />
               </li>
@@ -404,7 +528,6 @@
               <span>Thực Đơn 10</span>
               <p>1700.000đ</p>
             </div>
-
             <div class="images">
               <img src="./mamcungtet/img/55.jfif" alt="Món A" />
               <img src="./mamcungtet/img/56.jfif" alt="Món B" />
@@ -413,71 +536,71 @@
               <img src="./mamcungtet/img/23.jfif" alt="Món E" />
               <img src="./mamcungtet/img/30.jfif" alt="Món F" />
             </div>
-
             <ul class="dish-list">
-              <li>Gỏi hải sản chua cay <span>350.000đ</span><input type="checkbox" /></li>
-              <li>Cá hồi sốt chanh dây <span>450.000đ</span><input type="checkbox" /></li>
-              <li>Gà hấp muối <span>400.000đ</span><input type="checkbox" /></li>
+              <li>
+                Gỏi hải sản chua cay <span>350.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Cá hồi sốt chanh dây <span>450.000đ</span
+                ><input type="checkbox" />
+              </li>
+              <li>
+                Gà hấp muối <span>400.000đ</span><input type="checkbox" />
+              </li>
               <li>
                 Canh nấm hải sản <span>3000.000đ</span><input type="checkbox" />
               </li>
-              <li>Cơm chiên trứng<span>100.000đ</span><input type="checkbox" /></li>
               <li>
-                Trái cây <span>100.000đ</span><input type="checkbox" />
+                Cơm chiên trứng<span>100.000đ</span><input type="checkbox" />
               </li>
+              <li>Trái cây <span>100.000đ</span><input type="checkbox" /></li>
             </ul>
           </div>
         </div>
       </section>
-
-      <!-- SLIDER  -->
+      <!-- ==== SLIDER ==== -->
       <section id="thuc-don" class="thuc-don">
         <h2 class="title">🍽️ Hình ảnh <strong>Thực đơn</strong></h2>
-
         <div class="slider-container reveal">
           <div class="slider" id="menuSlider">
             <div class="slide">
-              <img
-                src="./mamcungtet/img/19.jfif"
-                alt="Gỏi"
-              />
+              <img src="./mamcungtet/img/19.jfif" alt="Gỏi" />
               <p class="caption">Gỏi thập cẩm</p>
             </div>
             <div class="slide">
-              <img
-                src="./mamcungtet/img/58.jfif"
-                alt="Canh"
-              />
+              <img src="./mamcungtet/img/58.jfif" alt="Canh" />
               <p class="caption">Canh nấm hải sản</p>
             </div>
             <div class="slide">
-              <img
-                src="./mamcungtet/img/26.jfif"
-                alt="Tôm"
-              />
+              <img src="./mamcungtet/img/26.jfif" alt="Tôm" />
               <p class="caption">Tôm nướng muối ớt</p>
             </div>
             <div class="slide">
-              <img
-                src="./mamcungtet/img/39.jfif"
-                alt="Cá"
-              />
+              <img src="./mamcungtet/img/39.jfif" alt="Cá" />
               <p class="caption">Cá diêu hồng chiên</p>
             </div>
           </div>
-
-          <button class="btn prev" aria-label="Previous" id="prevBtn">
+          <button
+            class="custom-slider-btn custom-prev"
+            aria-label="Previous"
+            id="prevBtn"
+          >
             &#10094;
           </button>
-          <button class="btn next" aria-label="Next" id="nextBtn">
+          <button
+            class="custom-slider-btn custom-next"
+            aria-label="Next"
+            id="nextBtn"
+          >
             &#10095;
           </button>
         </div>
       </section>
     </main>
-
-    <!-- FOOTER -->
-   <footer id="footer" class="footer mt-5 text-white">
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-- ==== FOOTER ==== -->
+    <footer id="footer" class="footer mt-5 text-white fade-section">
       <div class="footer-top py-5">
         <div class="container-fluid px-5">
           <div class="row gy-4 justify-content-between">
@@ -559,7 +682,10 @@
         </p>
       </div>
     </footer>
-    <!-- JS -->
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Mâm cúng tết JS -->
     <script src="./mamcungtet.js"></script>
   </body>
 </html>
